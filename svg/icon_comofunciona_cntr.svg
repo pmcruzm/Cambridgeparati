@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_comofunciona_cntr</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="DESIGN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-600.000000, -1042.000000)">
+            <g id="COMO-FUNCIONA" transform="translate(177.000000, 859.000000)">
+                <g id="icon_comofunciona_cntr" transform="translate(423.000000, 183.000000)">
+                    <circle id="Oval-2-Copy" fill="#F2F1F0" cx="120" cy="120" r="120"></circle>
+                    <g id="icon_cards_browser" transform="translate(39.000000, 79.000000)">
+                        <path d="M46.0283139,0 L122.549999,0 L122.549999,0 C127.769091,-9.58731507e-16 132,4.2309094 132,9.45000064 L132,54.296875 L132,65.5499994 L132,65.5499994 C132,70.7690906 127.769091,75 122.549999,75 L46.0283139,75 L46.0283139,75 C40.8092227,75 36.5783133,70.7690906 36.5783133,65.5499994 L36.5783133,55.46875 L36.5783133,39.84375 L36.5783133,9.45000064 L36.5783133,9.45000064 C36.5783133,4.2309094 40.8092227,2.73508835e-15 46.0283139,1.77635684e-15 Z" id="Rectangle-99" stroke="#9B9B9B" stroke-width="3.15000021"></path>
+                        <path d="M38.9638554,18.75 L129.614458,18.75" id="Line" stroke="#9B9B9B" stroke-width="3.15000021" stroke-linecap="square"></path>
+                        <ellipse id="Oval-109" fill="#9B9B9B" cx="120.86747" cy="10.9375" rx="3.18072289" ry="3.125"></ellipse>
+                        <ellipse id="Oval-109-Copy" fill="#9B9B9B" cx="111.325301" cy="10.9375" rx="3.18072289" ry="3.125"></ellipse>
+                        <ellipse id="Oval-109-Copy-2" fill="#9B9B9B" cx="101.783133" cy="10.9375" rx="3.18072289" ry="3.125"></ellipse>
+                        <path d="M67.557337,43.1517042 L55.9935869,31.8177185 L58.8983566,28.9638372 L75.3863831,45.163011 L58.5940474,61.6611628 L55.6892777,58.8072815 L67.5296725,47.2014976 L0.9689482,47.3102169 L0.92022619,43.7377507 C0.92022619,43.7377507 64.4293041,43.347053 67.557337,43.1517042 Z" id="Shape" fill="#00A4A1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

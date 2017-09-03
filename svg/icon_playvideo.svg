@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_playvideo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_playvideo">
+            <g>
+                <circle id="Oval-6" fill="#FFFFFF" cx="20" cy="20" r="20"></circle>
+                <path d="M16,26.8103924 L16,14 C20.0260385,16.1418132 24.0270706,18.2681314 28.0800769,20.4239402 C24.0388383,22.5597553 20.0373159,24.6760767 16,26.8103924 Z" id="Path-Copy" fill="#00A4A1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

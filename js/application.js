@@ -1,23 +1,15 @@
 /**********************
 FUNCIONES JQUERY
 Autor:Pedro de la Cruz
-Fecha: 18-5-2016
-Cliente: Cambridge Teacher
+Fecha: 31-8-2017
+Cliente: Cambridge Para Ti
 ***********************/
 
 
 /**********************
 VARIABLES
 **********************/
-var slider_l_post;
-var max_items=8;
-var init_items=8;
-var filter_segmento=-1;
-var filter_type1=-1;
-var filter_type2=-1;
-var hash_active=0;
-var block_filter=0;
-var s_slicks=0;
+
 
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
@@ -31,42 +23,8 @@ if(ua.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
 
 jQuery.noConflict();
 
-
-jQuery.ajaxSetup({
-	headers: {
-		'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-	}
-});
-
-
-(function(jQuery){
-	"use strict";
-
-	var getUrlParameter = function(sParam) {
-		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-			sURLVariables = sPageURL.split('&'),
-			sParameterName,
-			i;
-
-		for (i = 0; i < sURLVariables.length; i++) {
-			sParameterName = sURLVariables[i].split('=');
-
-			if (sParameterName[0] === sParam) {
-				return sParameterName[1] === undefined ? true : sParameterName[1];
-			}
-			return null;
-		}
-	}
-
-	if( ! jQuery.getUrlParameter ) {
-		jQuery.getUrlParameter = getUrlParameter;
-	}
-
-})(jQuery);
-
-
 jQuery(window).load(function(){
-
+/*
 	//Ajustamos altura de los bloques de noticias
 	if (jQuery('#list-news').is(":visible") ) {
 		//Ocultamos bloques
@@ -154,7 +112,7 @@ jQuery(window).load(function(){
 			jQuery('.slick-prev').hide().css({'visibility':'hidden'});
 			jQuery('.slick-next').hide().css({'visibility':'hidden'});
 		}
-	}
+	}*/
 
 });
 
@@ -163,9 +121,117 @@ jQuery(document).ready(function(){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
+	
+	
+	//Volver el scroll a top
+	/*jQuery('body').scrollTo( "0px", 0,function(){
+		//Pillar anclas de la url si las hay
+		var hash = window.location.hash.substring(1);
+		if(hash!=""){
+			//alert(hash);
+			if(hash.indexOf('segment') > -1){
+				if (jQuery('#all-catalogo').is(":visible") ) {
+					//Mirar si estamos en catalogo y es un filtro
+					var array_hash=hash.split("-");
+					filter_segmento=array_hash[1];
+					//Filtramos
+					filter_catalogo(filter_segmento,filter_type1,filter_type2);
+					//Marcamos opcion en el filtro de primer nivel
+					jQuery('.filter_cat a[data-filter-segment='+filter_segmento+']').addClass('active');
+					jQuery('.tipo_cat a').removeClass('active');
+					hash_active=1;
+					//Activamos Lazyload para las imágenes
+					//jQuery("img.lazy").lazyload({skip_invisible : false});
+				}
+			}else{
+				jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
+			}
+		}
+	});*/
+	
+	//Galería cabecera home
+	var slider=jQuery('.bxslider').bxSlider({
+						  pager: true,
+						  infiniteLoop: true,
+						  useCSS: false,
+						  auto: true,
+					  	  autoHover: true,
+						  controls: false,
+						  pause: 5000,
+						  speed:800,
+						  adaptiveHeight:true,
+						  onSlideBefore: function(slideElement, oldIndex, newIndex){
+						  },
+						  onSlideAfter: function(slideElement, oldIndex, newIndex){
+						  },
+						  onSlideNext: function(slideElement, oldIndex, newIndex){ 
+						  },
+						  onSlidePrev: function(slideElement, oldIndex, newIndex){
+						  },
+						});
+						
+	//Galería opiniones home
+	var slider_opinion=jQuery('.bxslider_opiniones').bxSlider({
+						  pager: true,
+						  infiniteLoop: true,
+						  useCSS: false,
+						  auto: true,
+					  	  autoHover: true,
+						  controls: false,
+						  pause: 5000,
+						  speed:800,
+						  adaptiveHeight:true,
+						  onSlideBefore: function(slideElement, oldIndex, newIndex){
+						  },
+						  onSlideAfter: function(slideElement, oldIndex, newIndex){
+						  },
+						  onSlideNext: function(slideElement, oldIndex, newIndex){ 
+						  },
+						  onSlidePrev: function(slideElement, oldIndex, newIndex){
+						  },
+						});	
+						
+	//Cuando quieres ver video del slider home 
+	jQuery(document).on('click','.enl_video',function(e){
+		e.preventDefault();
+		
+	});	
+	
+	//Desplegable Languages
+	jQuery(document).on('click',".enl_language", function(e) {
+		e.preventDefault();
+		if(!jQuery(this).parent().hasClass('active')){
+			jQuery(this).parent().addClass('active')
+		}else{
+			jQuery(this).parent().removeClass('active')
+		}
+	});	
+	
+	//Menú mobile eventos táctiles
+	jQuery(document).on('touchstart',".enl_language", function(e) {
+		e.preventDefault();
+		if(!jQuery(this).parent().hasClass('active')){
+			jQuery(this).parent().addClass('active')
+		}else{
+			jQuery(this).parent().removeClass('active')
+		}
+	});	
+	
+	//Mostrar Video a pantalla completa
+	jQuery(document).on('click',".enl_video", function(e) {
+		e.preventDefault();
+		var url_video=jQuery(this).attr('href');
+		jQuery('<div class="fullview"><span class="btn-close-player">Close</span><iframe src="'+url_video+'?autoplay=1&amp;rel=0&amp;fs=0&amp;showinfo=0" frameborder="0"></iframe></div>').appendTo('body');
+	});	
+	
+	//Eliminamos el player 
+	jQuery(document).on('click',".btn-close-player", function(e) {
+		e.preventDefault();	
+		jQuery('.fullview').remove();
+	});
 
 	//Redirección a la página mobile
-	if(device=="yes" && w_win<767 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
+/*	if(device=="yes" && w_win<767 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
 		var url_block=jQuery('meta[property="mobile-redirect-url"]').attr('content');
 		window.top.location = url_block;
 	}
@@ -365,7 +431,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Ayuda en catalogo plus click
-	/*jQuery(document).on('click','.inside-b-book',function(e){
+	jQuery(document).on('click','.inside-b-book',function(e){
 		e.preventDefault();
 		if(device=="true"){
 			if(jQuery(this).hasClass('over-plus')){
@@ -374,7 +440,7 @@ jQuery(document).ready(function(){
 				jQuery(this).addClass('over-plus');
 			}
 		}
-	});*/
+	});
 
 	//Ayudas de los registros (over)
 	jQuery(document).on("mouseenter",".help-box a", function(e) {
@@ -434,7 +500,7 @@ jQuery(document).ready(function(){
 		if(w_win<1441){max_items=8;init_items=8;}
 		if(w_win<1024){max_items=6;init_items=6;}
 		if(w_win<768){max_items=4;init_items=6;}
-		/*var cont=0;
+		var cont=0;
 		jQuery('#list-news a.new-single').each(function() {
 			if(cont<max_items){
 				jQuery(this).addClass('visible').css('display','block');
@@ -442,7 +508,7 @@ jQuery(document).ready(function(){
 			}else{
 				return true;
 			}
-		});*/
+		});
 	}
 
 	//Mostrar más noticias
@@ -819,7 +885,7 @@ jQuery(document).ready(function(){
 
 
 	});
-
+*/
 
 });
 

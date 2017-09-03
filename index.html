@@ -16,6 +16,7 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
     <link rel="stylesheet" type="text/css" href="css/fontface.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
      <!-- Font Awesome styles-->
@@ -35,144 +36,176 @@
     	<div id="header">
         	<div class="container">
                 <a href="" class="logo_h">Cambridge University Press</a>
-                <ul class="menu_h">
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li class="login_opc">
-                        <a href="#"><div>Acceder</div></a>
-                        <div class="desplegable">
-                        	<div class="cover-desplegable">
-                                <!--Box Login-->
-                                <div class="login_box">
-                                    <form id="form-login" role="form" method="POST" action="/login">
-                                        <div>
-                                        <label for="user_login">Usuario</label>
-                                        <input type="text" name="text" id="user_login" placeholder="Usuario">
-                                        </div>
-                                        <div>
-                                        <label for="password_login">Contraseña</label>
-                                        <input type="password" name="password" id="password_login" placeholder="Contraseña">
-                                        </div>
-                                        <span class="feedback"></span>
-                                        <div class="btns-login">
-                                            <input type="submit" value="ENTRAR" class="btn">
-                                            <a href="#" class="btn-register">Regístrate</a>
-                                        </div>
-                                        <p class="txt-remember">
-                                            <a class="reset_password" href="#">Recordar contraseña</a>
-                                        </p>
-                                    </form>
-                                </div>
-                                <!--Box Forget-->
-                                <div class="forget_box">
-                                    <form id="form-forgot-password" role="form" method="POST" action="/forgot-password">
-                                        <p>Introduce la cuenta de correo con la que estás registrado para restablecer la contraseña.</p>
-                                        <label for="email_forget">Email</label>
-                                        <input type="text" name="email" id="email_forget">
-                                        <span class="feedback" style="display: none;"></span>
-                                        <div class="btns-reset"><input type="submit" value="Restablecer" class="btn"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="language_opc">
-                        <a href="#"><span>Castellano</span></a>
+                	<div class="rrss_header">
+                    	<p>Síguenos</p>
+                        <ul>
+                        	<li><a href="#" class="ico-yt-h">Youtube</a></li>
+                            <li><a href="#" class="ico-tw-h">Twitter</a></li>
+                            <li><a href="#" class="ico-fb-h">Facebook</a></li>
+                            <li><a href="#" class="ico-inst-h">Instagram</a></li>
+                            <li><a href="#" class="ico-rss-h">RSS</a></li>
+                        </ul>
+                    </div>
+                    <div class="language_header">
+                        <a href="#" class="enl_language"><span>Español</span></a>
                         <div class="desplegable">
                         	<div class="cover-desplegable">
                                 <h3>IDIOMA</h3>
-                                <a href="#" class="active">Castellano</a>
+                                <a href="#" class="active">Español</a>
                                 <a href="#">English</a>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
             </div>
         </div>
         <div id="content">
-        	<div id="banner-home">
-            	<div class="txt-b-top">
-                	<p>BIENVENIDO</p>
-                    <p>A</p>
+        	<div class="cabecera_home">
+            	<div class="cab_top_home">
+                	<div class="container">
+                        <h2>Cambridge para Ti</h2>
+                        <div class="enl_top_home">
+                            <a href="#">Recursos digitales</a>
+                            <a href="#">Conócenos mejor</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="txt-b-bottom">
-                	<p>Tu plataforma integrada de contenidos digitales</p>
+                <div class="slider_home">
+                	<ul class="bxslider">
+                        <li>
+                            <div class="cont_gall" style="background-image:url(img/1146232.jpg);">
+                            	<div class="container">
+                                    <h3>ESTUDIANTES</h3>
+                                    <h2>Mejora tu inglés mientras te diviertes con nuestros recursos gratuitos</h2>
+                                    <a href="https://www.youtube.com/embed/HALN59vtbjY" class="enl_video">VIDEO PRESENTACIÓN</a>
+                                </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="cont_gall" style="background-image:url(img/1146232.jpg);">
+                            	<div class="container">
+                                    <h3>ESTUDIANTES 1</h3>
+                                    <h2>Mejora tu inglés mientras te diviertes con nuestros recursos gratuitos</h2>
+                                    <a href="https://www.youtube.com/embed/HALN59vtbjY" class="enl_video">VIDEO PRESENTACIÓN</a>
+                                </div>
+                            </div>
+                          </li>
+                      </ul>
                 </div>
-                <a href="#" class="btn-register-h">REGÍSTRATE AHORA</a>
+                <div class="enl_filters_home">
+                	<div class="container">
+                    	<a href="#" class="enl_estudiante"><span>SOY ESTUDIANTE</span></a>
+                        <a href="#" class="enl_padre"><span>SOY PADRE</span></a>
+                        <a href="#" class="enl_profesor"><span>SOY PROFESOR</span></a>
+                    </div>
+                </div>
             </div>
-            <div id="info-home">
-                <div id="modulos-home">
-                    <div class="pizarra-interectiva">
-                     	<div class="inside-pizarra">
-                        	<img src="svg/pizarra.svg"/>
-                            <div class="box-ins-home left-box">
-                        		<h3>PIZARRA INTERACTIVA</h3>
-                            	<p>Acceso online al material de pizarra interactiva y a otros productos digitales para su presentación en el aula.<strong>Todo tu contenido digital, accesible en cualquier momento y lugar.</strong></p>	
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="recursos-extra">
-                    	<div class="inside-recursos">
-                        	<img src="svg/recursos.svg"/>	
-                            <div class="box-ins-home right-box">
-                        		<h3>RECURSOS EXTRA</h3>
-                            	<p>Todo el material extra que necesitas para <strong>sacarle el máximo partido a tu curso:</strong> audios y vídeos, juegos, tests, actividades de extensión, programaciones....</strong></p>
-                            </div>
+        	<div class="how_home">
+            	<div class="container">
+                    <h2>HOW IT WORKS</h2>
+                    <h3>Vivamus euismod placerat libero sed mattis Pellentesque suscipit quam nec</h3>
+                    <div class="boxes_how">
+                        <div class="box_how">
+                            <img src="svg/icon_comofunciona_izda.svg">
+                            <p>Personaliza tu búsqueda, nivel y habilidad de inglés que quieras practicar.</p>
                         </div>
-                    </div>
-                    <div class="que-esta-pasando">
-                    	<div class="inside-pasando">
-                        	<img src="svg/news.svg"/>
-                            <div class="box-ins-home left-box">
-                        		<h3>¿QUÉ ESTÁ PASANDO?</h3>
-                            	<p>Mantente al día con todas las noticias del sector educativo y sé el primero en conocer nuestras jornadas de formación para profesores.</p>	
-                            </div>
+                        <div class="box_how">
+                            <img src="svg/icon_comofunciona_cntr.svg">
+                            <p>Accede a cada plataforma, guárdala en favoritos o descárgate el juego en tu móvil.</p>
+                        </div>
+                        <div class="box_how">
+                            <img src="svg/icon_comofunciona_dcha.svg">
+                            <p>Practica inglés y empieza a jugar. Cuando estés preparado certifica tu nivel con los exámenes de Cambridge y los libros de CUP.</p>
                         </div>
                     </div>
                 </div>
-                <div id="info-profesor">
-                	<img class="logo-info" src="img/logo_home_box.png"/>
-                    <p>Tu punto de acceso único para todos los materiales de Cambridge, desde tu ordenador, portátil o tableta.</p>
-                    <p class="desktop_opc"><strong>¿A qué esperas para convertirte en un Cambridge Teacher?</strong></p>
-                    <p class="mobile_opc">Para garantizar siempre la mejor experiencia, <strong>The Cambridge Teacher</strong> está optimizado para su uso en tablets y ordenadores. Vuelve a acceder desde otro dispositivo para poder registrarte y acceder a todos los productos digitales y recursos asociados a tus cursos.</p>
-                    <a href="#">REGÍSTRATE AHORA</a>
-                    <div id="show-examples">
-                    	<div class="shot-box"><span class="helper_bottom"></span><img src="img/shot-page-1.jpg"/></div>
-                        <div class="shot-box"><span class="helper_bottom"></span><img src="img/shot-page-2.jpg"/></div>
-                        <div class="shot-box"><span class="helper_bottom"></span><img src="img/shot-page-3.jpg"/></div>
+            </div>
+            <div class="recursos_home">
+            	<div class="container">
+                    <h2>RECURSOS DESTACADOS</h2>
+                    <h3>Pellentesque last resources suscipit quam necod placerat libero sed mattis </h3>
+                    <div class="opc_recursos">
+                    	<a href="#" class="recursos_r active">RECIENTES</a> 
+                        <a href="#" class="recursos_a">APPS</a> 
+                        <a href="#" class="recursos_v">VISITADOS</a>    
+                    </div>
+                    <div class="carrusel_recursos">
+                    
+                    </div>
+                    <a href="#" class="all_recursos">VER TODOS</a>
+                </div>
+            </div>
+            <div class="opinion_home">
+            	<div class="container">
+                    <h2>LA OPINIÓN DE LOS USUARIOS</h2>
+                    <div class="carrusel_opiniones">
+                    	<ul class="bxslider_opiniones">
+                            <li>
+                                <div class="cont_opinion">
+                                	<h4>“Vivamus euismod placerat libero sed mattis Pellentesque suscipit quam nec 1”</h4>
+                                    <p>Martha Cooper. Directora General HGS</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cont_opinion">
+                                	<h4>“Vivamus euismod placerat libero sed mattis Pellentesque suscipit quam nec 2”</h4>
+                                    <p>Martha Cooper. Directora General HGS</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cont_opinion">
+                                	<h4>“Vivamus euismod placerat libero sed mattis Pellentesque suscipit quam nec 3”</h4>
+                                    <p>Martha Cooper. Directora General HGS</p>
+                                </div>
+                            </li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter_home">
+            	<div class="container">
+                    <h2>LA OPINIÓN DE LOS USUARIOS</h2>
+                    <h3>¿Quieres estar al día sobre las últimas novedades de Cambridge English?</h3>
+                    <a href="#">SUSCRIBETE AL NEWSLETTER</a>
+               </div>
+            </div>
+            <div class="compartir_home">
+            	<div class="container">
+                    <h2>LA OPINIÓN DE LOS USUARIOS</h2>
+                    <h3>¿Quieres estar al día sobre las últimas novedades de Cambridge English?</h3>
+                    <div class="list_rrss_home">
+                    	<ul>
+                        	<li><a href="#" class="ico-yt-h">Youtube</a></li>
+                            <li><a href="#" class="ico-tw-h">Twitter</a></li>
+                            <li><a href="#" class="ico-fb-h">Facebook</a></li>
+                            <li><a href="#" class="ico-inst-h">Instagram</a></li>
+                            <li><a href="#" class="ico-rss-h">RSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box_share">
+                	<div class="box_share_fb">
+                        <div class="inside_s_box">
+                            <div>
+                                <a href="#">Facebook.com/CambridgeEnglish</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tellus finibus, posuere est sit amet, lobortis lectus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_share_tw">
+                        <div class="inside_s_box">
+                        	<div>
+                            
+                            	<a href="#">@IELTSOfficial</a>
+                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tellus finibus, posuere est sit amet, lobortis lectus. </p>
+                            </div>    
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="footer">
         	<div class="container">
-                <div class="left_footer">
-                	<a href="#" class="logo_f">Cambridge University Press</a>
-                </div>
-                <div class="right_footer">
-                    <div class="block_visita">
-                        <h4>VISITA TAMBIÉN</h4>	
-                        <ul>
-                            <li><a href="#" target="_blank">Cambridge.es</a></li>
-                            <li><a href="#" target="_blank">The Primary Box</a> | <a href="#">The Secondary Box</a></li>
-                            <li><a href="#" target="_blank">Cambridge Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="block_siguenos">
-                    	<div class="box-helpdesk" >
-                        	<h4>SUPPORT</h4>
-                    		<a href="http://www.thecambridgeteacher.es/helpdesk" class="link_helpdesk">Helpdesk</a>
-                        </div>
-                    	<h4>SÍGUENOS</h4>	
-                        <ul>
-                            <li><a href="#" class="ico_facebook">Facebook</a></li>
-                            <li><a href="#" class="ico_twitter">Twitter</a></li>
-                            <li><a href="#" class="ico_instagram">Instagram</a></li>
-                            <li><a href="#" class="ico_youtube">Youtube</a></li>
-                        </ul>
-                    </div>
-                    <p class="txt-footer">© Cambridge University Press 2016 / <a href="#">Aviso Legal</a> / <a href="#">Politica de privacidad</a></p>
-                </div>
+            	<a href="" class="logo_h">Cambridge University Press</a>	
             </div>
         </div>
         <!--Bloque Cookies-->
@@ -195,6 +228,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/jquery.lazyload.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/application.js"></script>
 </body>
 </html>
