@@ -155,7 +155,7 @@ PROPIEDADES HOME
 .opc_recursos a:hover{background:#00A4A1;color:#ffffff;}
 .opc_recursos a.active{background:#00A4A1;color:#ffffff;}
 .opc_recursos a:first-child{margin-left:0px;}
-.carrusel_recursos{margin-bottom:60px;}
+.carrusel_recursos{padding-bottom:50px;padding-top:50px;padding-left:calc(50% - 570px);}
 .all_recursos{height: 48px;	width:260px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;}
 
 .opinion_home{padding-top:100px;padding-bottom:100px;}
@@ -198,8 +198,36 @@ PROPIEDADES HOME
 .box_share_tw .inside_s_box a:before{content:'';display:block;margin:0 auto;width:54px;height:44px;background:url(../svg/icon_twitter_big.svg) top left no-repeat;background-size:54px;margin-bottom:37px;}
 
 .fullview iframe {border: medium none;bottom: 0;height: 100%;left: 0;margin: 0;overflow: hidden;padding: 0;position: fixed;right: 0;top: 0;width: 100%;z-index: 98;}
-.fullview .btn-close-player{background: rgba(0, 0, 0, 0) url("../svg/icon-menu-close.svg") no-repeat scroll center center;cursor: pointer;height: 22px;position: fixed;right: 25px;text-indent: -9999px;top: 25px;width: 22px;z-index: 99;}
+.fullview .btn-close-player{background: rgba(0, 0, 0, 0) url("../img/close-player.png") no-repeat scroll center center;cursor: pointer;height: 22px;position: fixed;right: 25px;text-indent: -9999px;top: 25px;width: 22px;z-index: 99;}
 
+.box_recurso{display:block;height:480px;width:360px;box-sizing:border-box;padding:15px;background:#ffffff;border-radius:6px;margin-right:30px;}
+.header_recurso{height:82px;text-align:center;}
+.header_recurso img{max-width:100%;max-height:56px;margin:0 auto;}
+.body_recurso{background-position:center center;background-repeat:no-repeat;background-size:cover;height:368px;position:relative;border-radius:4px;}
+.new_tag{display:block;width:50px;height:50px;color: #171614;font-size:11px;line-height:50px;background-color: #FFD101;border-radius:40px;text-align:center;font-family:'sofia-pro-black', Helvetica, sans-serif;position:absolute;top:-25px;right:20px;z-index:10;}
+.text_recurso{height:330px;overflow:hidden;padding:30px;box-sizing:border-box;}
+.body_recurso p{font-size: 16px;line-height: 24px;color:#ffffff;z-index:10;position:relative;}
+.cat_recurso{border-top:1px solid #ffffff;z-index:10;position:relative;height:38px;overflow:hidden;}
+.cat_recurso p{height:38px;line-height:38px;}
+.cat_recurso p:first-child{float:left;margin-left:20px;display:inline-block;}
+.cat_recurso p:last-child{float:right;margin-right:20px;display:inline-block;}
+
+.body_recurso.recurso_1:after{content:'';display:block;height:368px;width:100%;background:rgba(160,222,100,0.5);position:absolute;top:0;left:0px;}
+.body_recurso.recurso_2:after{content:'';display:block;height:368px;width:100%;background:rgba(228,60,16,0.5);position:absolute;top:0;left:0px;}
+
+
+/*****************************
+CONOCENOS
+******************************/
+.bg_cab_conocenos{height:610px;padding-top:112px;background:url(../img/cab_conocenos.jpg) center center no-repeat;background-size:cover;}
+.bg_cab_conocenos h3{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
+.body_generico{background:#F2F1F0;}
+.box-body-generico{background:#ffffff;box-sizing:border-box;padding:160px;margin-top:-360px;}
+.row-txt-box{overflow:hidden;padding-bottom:40px;}
+.left-txt-box{float:left;width:30%;}
+.right-txt-box{float:right;width:70%;}
+.left-txt-box h4{font-family:'sofia-pro-black', Helvetica, sans-serif;color:#00A4A1;font-size:14px;}
+.right-txt-box p{font-size:16px;line-height:24px;color:#4A4A4A;margin-bottom:40px;}
 
 /*****************************
 PROPIEDADES REGISTRO

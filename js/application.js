@@ -229,6 +229,21 @@ jQuery(document).ready(function(){
 		e.preventDefault();	
 		jQuery('.fullview').remove();
 	});
+	
+	//Galería de recursos
+	//Carrusel de Mi Catalogo
+	if (jQuery('.carrusel_recursos').is(":visible") ) {
+		jQuery('.carrusel-list').slick({
+		  dots: false,
+		  infinite: false,
+		  speed: 300,
+		  slidesToShow: 1,
+		  centerMode: false,
+		  variableWidth: true,
+		  arrows:false,
+		  slidesToScroll: 2
+		});
+	}
 
 	//Redirección a la página mobile
 /*	if(device=="yes" && w_win<767 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
