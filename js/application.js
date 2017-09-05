@@ -9,6 +9,7 @@ Cliente: Cambridge Para Ti
 /**********************
 VARIABLES
 **********************/
+var resources, filterValues;
 
 
 //Eventos para dispositivos móviles
@@ -149,6 +150,14 @@ jQuery(document).ready(function(){
 		}
 	});*/
 	
+	//Reseteamos los checkbox si son visibles 
+	if (jQuery('.body-filtros').is(":visible") ) {	
+		jQuery('.body-filtros input[type=checkbox]').attr('checked',false);
+		jQuery('.body-filtros label').removeClass('active');
+	}
+	
+	
+	if (jQuery('.bxslider').is(":visible") ) {
 	//Galería cabecera home
 	var slider=jQuery('.bxslider').bxSlider({
 						  pager: true,
@@ -190,6 +199,7 @@ jQuery(document).ready(function(){
 						  onSlidePrev: function(slideElement, oldIndex, newIndex){
 						  },
 						});	
+	}
 						
 	//Cuando quieres ver video del slider home 
 	jQuery(document).on('click','.enl_video',function(e){
@@ -231,7 +241,6 @@ jQuery(document).ready(function(){
 	});
 	
 	//Galería de recursos
-	//Carrusel de Mi Catalogo
 	if (jQuery('.carrusel_recursos').is(":visible") ) {
 		jQuery('.carrusel-list').slick({
 		  dots: false,
@@ -243,6 +252,123 @@ jQuery(document).ready(function(){
 		  arrows:false,
 		  slidesToScroll: 2
 		});
+	}
+	
+	//Checkbox recursos 
+	jQuery(document).on('change','.body-filtros input[type=checkbox]',function(event){
+		event.preventDefault();
+			//alert(jQuery(this).attr('class'));
+			if(jQuery(this).parent().hasClass('active')){
+				jQuery(this).parent().removeClass('active');
+			}else{
+				jQuery(this).parent().addClass('active');
+			}
+			
+			//Funciones para el cambio de bloques
+	});
+	
+	//Limpiar filtros 
+	jQuery(document).on('click','clear_all_filters',function(event){
+		event.preventDefault();
+			//alert(jQuery(this).attr('class'));
+			jQuery('.body-filtros input[type=checkbox]').attr('checked',false);
+			jQuery('.body-filtros label').removeClass('active');
+			//Falta mostrar todos los bloques 
+			
+				
+	});
+	
+	//Operaciones para mostrar y ocultar cuadros
+	if (jQuery('.body-filtros').is(":visible") ) {	
+		resources = jQuery('.box_recurso');
+	
+		if ( resources.length == 0 ) {
+				return;
+		 }
+	
+		 jQuery('span.count').text(resources.length)
+	
+		 //jQuery(document).on('change', '.box-filtros input[type=checkbox]', filterChange);
+		
+		//Ocultar o mostrar checkbox según filtros
+		var filterChange = function () {
+			filterValues = {};
+	
+			//Get cambridgeexams filter:
+			filterValues.cambridgeexams = [];
+	
+			jQuery('input[name="cambridgeexams[]"]:checked').each(function(){
+				filterValues.cambridgeexams.push( jQuery(this).val() )
+			});
+	
+			//Get mcer filter:
+			filterValues.mcer = [];
+	
+			jQuery('input[name="mcer[]"]:checked').each(function(){
+				filterValues.mcer.push( jQuery(this).val() )
+			});
+	
+			//Get abilities filter:
+			filterValues.abilities = [];
+	
+			jQuery('input[name="abilities[]"]:checked').each(function(){
+				filterValues.abilities.push( jQuery(this).val() )
+			});
+	
+			//Get other filters:
+			filterValues.is_new = jQuery('input[name="is_new"]').is(':checked')
+			filterValues.is_app = jQuery('input[name="is_app"]').is(':checked')
+			filterValues.is_beta = jQuery('input[name="is_beta"]').is(':checked')
+	
+			var count = 0;
+	
+			resources.each(function(){
+				var item = jQuery(this);
+	
+				var hide = shouldHide(item);
+	
+				if( ! hide) count++;
+	
+				item.toggleClass('hide', hide );
+			});
+	
+			jQuery('span.count').text(count);
+	
+		}
+	
+		var shouldHide = function (item) {
+	
+			var itemData = item.data();
+	
+			if( itemData.alwaysVisible ) {
+				return false;
+			}
+	
+			if ( filterValues.is_new && ! itemData.isNew) { return true; }
+			if ( filterValues.is_app && ! itemData.isApp) { return true; }
+			if ( filterValues.is_beta && ! itemData.isBeta) { return true; }
+	
+	
+			if( filterValues.cambridgeexams.length && ! findOne(filterValues.cambridgeexams, itemData.cambridgeexams)) {
+				return true;
+			}
+	
+			if( filterValues.mcer.length && ! findOne(filterValues.mcer, itemData.mcer)) {
+				return true;
+			}
+	
+			if( filterValues.abilities.length && ! findOne(filterValues.abilities, itemData.abilities) ) {
+				return true;
+			}
+	
+			return false;
+		};
+	
+		var findOne = function (haystack, arr) {
+			return arr.some(function (v) {
+				return haystack.indexOf(v) >= 0;
+			});
+		};
 	}
 
 	//Redirección a la página mobile

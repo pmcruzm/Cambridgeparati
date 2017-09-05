@@ -1,4 +1,4 @@
- <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<meta charset="UTF-8" />
@@ -64,45 +64,206 @@
                 	<div class="container">
                         <h2>Cambridge para Ti</h2>
                         <div class="enl_top_home">
-                            <a href="#">Recursos digitales</a>
+                            <a href="recursos.html">Recursos digitales</a>
                             <a href="conocenos.html">Conócenos mejor</a>
                         </div>
                     </div>
                 </div>
                 <div class="bg_cab_conocenos">
                 	<div class="container">
-                		<h3>Sobre Nosotros</h3>
+                		<h3>Recursos Digitales</h3>
                     </div>
                 </div>
             </div>
             <div class="body_generico">
             	<div class="container">
-                	<div class="box-body-generico">
-                    	<div class="row-txt-box">
-                        	<div class="left-txt-box">
-                            	<h4>WHO ARE ME?</h4>
-                            </div>
-                            <div class="right-txt-box">
-                            	<p>Cambridge English Language Assessment develops and produces Cambridge English exams – the most valuable range of qualifications for learners and teachers of English in the world. Nearly 4 million people take our exams each year in 130 countries. Around the world, more than 13,000 universities, employers, government ministries and other organisations rely on Cambridge English qualifications as proof of English language ability. Cambridge English exams are backed by the work of the largest dedicated research team of any UK language test provider.</p>
-								<p>Cambridge English Language Assessment is a not-for-profit department of the University of Cambridge and part of the Cambridge Assessment group.</p>
-                            </div>
+                	<div class="box-body-recursos">
+                    	<div class="selector-filtros">
+                        	<div class="header-filtros">
+                            	<a href="#" class="enl_estudiante active"><span>SOY ESTUDIANTE</span></a>
+                                <a href="#" class="enl_padre"><span>SOY PADRE</span></a>
+                                <a href="#" class="enl_profesor"><span>SOY PROFESOR</span></a>
+                            </div> 
+                            <div class="body-filtros">
+                            	<div class="box-filtros">
+                                	<div class="examenes-filter">
+                                    	<h4>EXÁMENES</h4>
+                                    	<label><input name="cambridgeexams[]" value="YOUNG-LEARNERS-STARTERS" type="checkbox"> Young learners: Starters</label>
+                                        <label><input name="cambridgeexams[]" value="YOUNG-LEARNERS-MOVERS" type="checkbox"> Young learners: Movers</label>
+                                        <label><input name="cambridgeexams[]" value="YOUNG-LEARNERS-FLYERS" type="checkbox"> Young learners: Flyers</label>
+                                        <label><input name="cambridgeexams[]" value="KEY" type="checkbox"> Key</label>
+                                        <label><input name="cambridgeexams[]" value="KEY-FOR-SCHOOLS" type="checkbox"> Key for schools</label>
+                                        <label><input name="cambridgeexams[]" value="PRELIMINARY" type="checkbox"> Preliminary</label>
+                                        <label><input name="cambridgeexams[]" value="PRELIMINARY-FOR-SCHOOLS" type="checkbox"> Preliminary for schools</label>
+                                        <label><input name="cambridgeexams[]" value="FIRST" type="checkbox"> First</label>
+                                        <label><input name="cambridgeexams[]" value="FIRST-FOR-SCHOOLS" type="checkbox"> First for schools</label>
+                                        <label><input name="cambridgeexams[]" value="ADVANCED" type="checkbox"> Advanced</label>
+                                        <label><input name="cambridgeexams[]" value="PROFICIENCY" type="checkbox"> Proficiency</label>
+                                    </div>
+                                    <div class="mcer-filter">
+                                    	<h4>MCER</h4>
+                                    	<label><input name="mcer[]" value="PRE-A1" type="checkbox"> Pre A1</label>
+                                        <label><input name="mcer[]" value="A1" type="checkbox"> A1</label>
+                                        <label><input name="mcer[]" value="A2" type="checkbox"> A2</label>
+                                        <label><input name="mcer[]" value="B1" type="checkbox"> B1</label>
+                                        <label><input name="mcer[]" value="B2" type="checkbox"> B2</label>
+                                        <label><input name="mcer[]" value="C1" type="checkbox"> C1</label>
+                                        <label><input name="mcer[]" value="C2" type="checkbox"> C2</label>
+                                    </div>
+                                    <div class="abilities-filter">
+                                    	<h4>ABILITIES</h4>
+                                    	<label><input name="abilities[]" value="LISTENING" type="checkbox"> Listening</label>
+                                        <label><input name="abilities[]" value="READING" type="checkbox"> Reading</label>
+                                        <label><input name="abilities[]" value="VOCABULARY" type="checkbox"> Vocabulary</label>
+                                        <label><input name="abilities[]" value="WRITING" type="checkbox"> Writing</label>
+                                        <label><input name="abilities[]" value="GRAMMAR" type="checkbox"> Grammar</label>
+                                    </div>
+                                	 <div class="properties-filter">
+                                     	<h4>PROPERTIES</h4>
+                                    	<label><input name="is_app" type="checkbox"> Is app</label><br>
+                                    </div>
+                                    <a href="#" class="clear_all_filters">Eliminar Filtros</a>
+                                </div>
+                            </div>       
                         </div>
-                        <div class="row-txt-box">
-                        	<div class="left-txt-box">
-                            	<h4>WHAT WE DO</h4>
+                        <div class="contenedor-recursos">
+                        	<!--Box Recurso-->
+                            <div class="item">
+                                <a class="box_recurso" href="#" data-cambridgeexams="["YOUNG-LEARNERS-STARTERS"]" data-mcer="["PRE-A1"]" data-abilities="["LISTENING"]" data-is-app="false" data-is-new="false" data-is-beta="false" data-teacher-training="false" data-always-visible="false">
+                                    <div class="header_recurso">
+                                        <img src="img/logo_regurso.png"/>
+                                    </div>
+                                    <div class="body_recurso recurso_1" style="background-image:url(img/bg_recurso.png);">
+                                        <span class="new_tag">NUEVO</span>
+                                        <div class="text_recurso">
+                                            <p>Penfriends es una plataforma online gratuita para profesores de inglés que trabajen en un colegio o centro. El profesor registra su colegio y clase de alumnos para que sus estudiantespuedan practicar sus habilidades de comprensión y expresión escritas (reading and writing) asi como su creatividad, enviando tarjetas en inglés a otras escuelas alrededor del mundo.</p>
+                                        </div>
+                                        <div class="cat_recurso">
+                                            <p>Nivel MCER</p>
+                                            <p>PRE-A1 |A1 | A2 | B1</p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="right-txt-box">
-                            	<p>We provide the world’s leading range of qualifications for learners and teachers of English. Our expertise, gathered over 100 years of language learning and assessment, has led us to working with educational institutions and local and regional governments around the world.</p>
+                            <!--Fin Box Recurso-->
+                            <!--Box Recurso-->
+                            <div class="item">
+                                <a class="box_recurso" href="#" data-cambridgeexams="["YOUNG-LEARNERS-STARTERS"]" data-mcer="["PRE-A1"]" data-abilities="["LISTENING"]" data-is-app="false" data-is-new="false" data-is-beta="false" data-teacher-training="false" data-always-visible="false">
+                                    <div class="header_recurso">
+                                        <img src="img/logo_regurso.png"/>
+                                    </div>
+                                    <div class="body_recurso recurso_1" style="background-image:url(img/bg_recurso.png);">
+                                        <span class="mobile_tag">APP</span>
+                                        <div class="text_recurso">
+                                            <p>Penfriends es una plataforma online gratuita para profesores de inglés que trabajen en un colegio o centro. El profesor registra su colegio y clase de alumnos para que sus estudiantespuedan practicar sus habilidades de comprensión y expresión escritas (reading and writing) asi como su creatividad, enviando tarjetas en inglés a otras escuelas alrededor del mundo.</p>
+                                        </div>
+                                        <div class="cat_recurso">
+                                            <p>Nivel MCER</p>
+                                            <p>PRE-A1 |A1 | A2 | B1</p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
+                            <!--Fin Box Recurso-->
+                            <!--Box Recurso-->
+                            <div class="item">
+                                <a class="box_recurso" href="#" data-cambridgeexams="["YOUNG-LEARNERS-STARTERS"]" data-mcer="["PRE-A1"]" data-abilities="["LISTENING"]" data-is-app="false" data-is-new="false" data-is-beta="false" data-teacher-training="false" data-always-visible="false">
+                                    <div class="header_recurso">
+                                        <img src="img/logo_regurso.png"/>
+                                    </div>
+                                    <div class="body_recurso recurso_1" style="background-image:url(img/bg_recurso.png);">
+                                        <span class="new_tag">NUEVO</span>
+                                        <div class="text_recurso">
+                                            <p>Penfriends es una plataforma online gratuita para profesores de inglés que trabajen en un colegio o centro. El profesor registra su colegio y clase de alumnos para que sus estudiantespuedan practicar sus habilidades de comprensión y expresión escritas (reading and writing) asi como su creatividad, enviando tarjetas en inglés a otras escuelas alrededor del mundo.</p>
+                                        </div>
+                                        <div class="cat_recurso">
+                                            <p>Nivel MCER</p>
+                                            <p>PRE-A1 |A1 | A2 | B1</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Fin Box Recurso-->
+                            <!--Box Recurso-->
+                            <div class="item">
+                                <a class="box_recurso" href="#" data-cambridgeexams="["YOUNG-LEARNERS-STARTERS"]" data-mcer="["PRE-A1"]" data-abilities="["LISTENING"]" data-is-app="false" data-is-new="false" data-is-beta="false" data-teacher-training="false" data-always-visible="false">
+                                    <div class="header_recurso">
+                                        <img src="img/logo_regurso.png"/>
+                                    </div>
+                                    <div class="body_recurso recurso_1" style="background-image:url(img/bg_recurso.png);">
+                                        <span class="mobile_tag">APP</span>
+                                        <div class="text_recurso">
+                                            <p>Penfriends es una plataforma online gratuita para profesores de inglés que trabajen en un colegio o centro. El profesor registra su colegio y clase de alumnos para que sus estudiantespuedan practicar sus habilidades de comprensión y expresión escritas (reading and writing) asi como su creatividad, enviando tarjetas en inglés a otras escuelas alrededor del mundo.</p>
+                                        </div>
+                                        <div class="cat_recurso">
+                                            <p>Nivel MCER</p>
+                                            <p>PRE-A1 |A1 | A2 | B1</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Fin Box Recurso-->
+                            <!--Box Recurso-->
+                            <div class="item">
+                                <a class="box_recurso" href="#" data-cambridgeexams="["YOUNG-LEARNERS-STARTERS"]" data-mcer="["PRE-A1"]" data-abilities="["LISTENING"]" data-is-app="false" data-is-new="false" data-is-beta="false" data-teacher-training="false" data-always-visible="false">
+                                    <div class="header_recurso">
+                                        <img src="img/logo_regurso.png"/>
+                                    </div>
+                                    <div class="body_recurso recurso_1" style="background-image:url(img/bg_recurso.png);">
+                                        <span class="new_tag">NUEVO</span>
+                                        <div class="text_recurso">
+                                            <p>Penfriends es una plataforma online gratuita para profesores de inglés que trabajen en un colegio o centro. El profesor registra su colegio y clase de alumnos para que sus estudiantespuedan practicar sus habilidades de comprensión y expresión escritas (reading and writing) asi como su creatividad, enviando tarjetas en inglés a otras escuelas alrededor del mundo.</p>
+                                        </div>
+                                        <div class="cat_recurso">
+                                            <p>Nivel MCER</p>
+                                            <p>PRE-A1 |A1 | A2 | B1</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Fin Box Recurso-->
+                            <!--Box Recurso-->
+                            <div class="item">
+                                <a class="box_recurso" href="#" data-cambridgeexams="["YOUNG-LEARNERS-STARTERS"]" data-mcer="["PRE-A1"]" data-abilities="["LISTENING"]" data-is-app="false" data-is-new="false" data-is-beta="false" data-teacher-training="false" data-always-visible="false">
+                                    <div class="header_recurso">
+                                        <img src="img/logo_regurso.png"/>
+                                    </div>
+                                    <div class="body_recurso recurso_1" style="background-image:url(img/bg_recurso.png);">
+                                        <span class="mobile_tag">APP</span>
+                                        <div class="text_recurso">
+                                            <p>Penfriends es una plataforma online gratuita para profesores de inglés que trabajen en un colegio o centro. El profesor registra su colegio y clase de alumnos para que sus estudiantespuedan practicar sus habilidades de comprensión y expresión escritas (reading and writing) asi como su creatividad, enviando tarjetas en inglés a otras escuelas alrededor del mundo.</p>
+                                        </div>
+                                        <div class="cat_recurso">
+                                            <p>Nivel MCER</p>
+                                            <p>PRE-A1 |A1 | A2 | B1</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Fin Box Recurso-->
+                            <!--Box Recurso-->
+                            <div class="item">
+                                <a class="box_recurso" href="#" data-cambridgeexams="["YOUNG-LEARNERS-STARTERS"]" data-mcer="["PRE-A1"]" data-abilities="["LISTENING"]" data-is-app="false" data-is-new="false" data-is-beta="false" data-teacher-training="false" data-always-visible="false">
+                                    <div class="header_recurso">
+                                        <img src="img/logo_regurso.png"/>
+                                    </div>
+                                    <div class="body_recurso recurso_1" style="background-image:url(img/bg_recurso.png);">
+                                        <span class="new_tag">NUEVO</span>
+                                        <div class="text_recurso">
+                                            <p>Penfriends es una plataforma online gratuita para profesores de inglés que trabajen en un colegio o centro. El profesor registra su colegio y clase de alumnos para que sus estudiantespuedan practicar sus habilidades de comprensión y expresión escritas (reading and writing) asi como su creatividad, enviando tarjetas en inglés a otras escuelas alrededor del mundo.</p>
+                                        </div>
+                                        <div class="cat_recurso">
+                                            <p>Nivel MCER</p>
+                                            <p>PRE-A1 |A1 | A2 | B1</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Fin Box Recurso-->
                         </div>
-                        <div class="row-txt-box">
-                        	<div class="left-txt-box">
-                            	<h4>OUR NETWORK</h4>
-                            </div>
-                            <div class="right-txt-box">
-                            	<p>The quality of our exams and the positive impact we have depends on the work of thousands of professionals. They include 2,800 authorised examination centres, over 52,000 registered preparation centres and tens of thousands of examiners, teachers and publishers. </p>
-                            </div>
-                        </div>	
+                        <div class="more-box-recursos">
+                        	<a href="#" class="all_recursos">VER TODOS</a>
+                        </div>
                     </div>
                 </div>	
            	</div>

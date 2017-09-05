@@ -205,6 +205,7 @@ PROPIEDADES HOME
 .header_recurso img{max-width:100%;max-height:56px;margin:0 auto;}
 .body_recurso{background-position:center center;background-repeat:no-repeat;background-size:cover;height:368px;position:relative;border-radius:4px;}
 .new_tag{display:block;width:50px;height:50px;color: #171614;font-size:11px;line-height:50px;background-color: #FFD101;border-radius:40px;text-align:center;font-family:'sofia-pro-black', Helvetica, sans-serif;position:absolute;top:-25px;right:20px;z-index:10;}
+.mobile_tag{display:block;width:50px;height:50px;color: #171614;text-indent:-99999px;background:#FFD101 url(../img/ico_mobile.png) center center no-repeat;border-radius:40px;text-align:center;font-family:'sofia-pro-black', Helvetica, sans-serif;position:absolute;top:-25px;right:20px;z-index:10;}
 .text_recurso{height:330px;overflow:hidden;padding:30px;box-sizing:border-box;}
 .body_recurso p{font-size: 16px;line-height: 24px;color:#ffffff;z-index:10;position:relative;}
 .cat_recurso{border-top:1px solid #ffffff;z-index:10;position:relative;height:38px;overflow:hidden;}
@@ -212,8 +213,8 @@ PROPIEDADES HOME
 .cat_recurso p:first-child{float:left;margin-left:20px;display:inline-block;}
 .cat_recurso p:last-child{float:right;margin-right:20px;display:inline-block;}
 
-.body_recurso.recurso_1:after{content:'';display:block;height:368px;width:100%;background:rgba(160,222,100,0.5);position:absolute;top:0;left:0px;}
-.body_recurso.recurso_2:after{content:'';display:block;height:368px;width:100%;background:rgba(228,60,16,0.5);position:absolute;top:0;left:0px;}
+.body_recurso.recurso_1:after{content:'';display:block;height:368px;width:100%;background:rgba(160,222,100,0.8);position:absolute;top:0;left:0px;}
+.body_recurso.recurso_2:after{content:'';display:block;height:368px;width:100%;background:rgba(228,60,16,0.8);position:absolute;top:0;left:0px;}
 
 
 /*****************************
@@ -228,6 +229,58 @@ CONOCENOS
 .right-txt-box{float:right;width:70%;}
 .left-txt-box h4{font-family:'sofia-pro-black', Helvetica, sans-serif;color:#00A4A1;font-size:14px;}
 .right-txt-box p{font-size:16px;line-height:24px;color:#4A4A4A;margin-bottom:40px;}
+
+/*****************************
+RECURSOS
+******************************/
+.box-body-recursos{box-sizing:border-box;margin-top:-360px;}
+.header-filtros{overflow:hidden;background:#E33C10;}
+.header-filtros{height:176px;}
+.header-filtros .container{overflow:hidden;background:#E33C10;}
+.header-filtros a{display:block;width:33.3333%;float:left;height:176px;line-height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
+.header-filtros a span{z-index:10;position:relative;}
+.header-filtros a:hover{background:#FF5427;}
+.header-filtros a.active{background:#FF5427;}
+.body-filtros{background:#FF5427;}
+
+
+.header-filtros .enl_estudiante:before{background-position:0px -94px;}
+.header-filtros .enl_estudiante:hover:before{background-position:0px 0px;}
+.header-filtros .enl_estudiante.active:before{background-position:0px 0px;}
+.header-filtros .enl_padre:before{background-position:0px -116px;}
+.header-filtros .enl_padre:hover:before{background-position:0px 0px;}
+.header-filtros .enl_padre.active:before{background-position:0px 0px;}
+.header-filtros .enl_profesor:before{background-position:0px -116px;}
+.header-filtros .enl_profesor:hover:before{background-position:0px 0px;}
+.header-filtros .enl_profesor.active:before{background-position:0px 0px;}
+.box-filtros{overflow:hidden;box-sizing:border-box;padding:30px;position:relative;}
+.examenes-filter,.mcer-filter,.abilities-filter,.properties-filter{display:inline-block; float:left;}
+.examenes-filter h4,.mcer-filter h4,.abilities-filter h4,.properties-filter h4{color:#ffffff;font-size:14px;margin-bottom:9px;}
+
+
+.examenes-filter{width:430px;}
+.examenes-filter input{display:none;}
+.examenes-filter label{display:inline-block;height:30px;width:210px;background:#E33C10;line-height:30px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
+.examenes-filter label:hover{background:#ffffff;color:#E33C10;}
+.examenes-filter label.active{background:#ffffff;color:#E33C10;}
+
+.mcer-filter,.abilities-filter,.properties-filter{width:130px;margin-left:20px;}
+.mcer-filter input,.abilities-filter input,.properties-filter input{display:none;}
+.mcer-filter label,.abilities-filter label,.properties-filter label{display:inline-block;height:30px;width:130px;background:#E33C10;line-height:30px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
+.mcer-filter label:hover,.abilities-filter label:hover,.properties-filter label:hover{background:#ffffff;color:#E33C10;}
+.mcer-filter label.active,.abilities-filter label.active,.properties-filter label.active{background:#ffffff;color:#E33C10;}
+
+.clear_all_filters{display:block;height:30px;width:130px;background:#E33C10;line-height:30px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;position:absolute;bottom:20px;right:20px;}
+.clear_all_filters:hover{background:#ffffff;color:#E33C10;}
+
+.contenedor-recursos{padding-top:50px;overflow:hidden;}
+.contenedor-recursos .item{width:33.3333%;float:left;margin-bottom:30px;text-align:center;}
+.contenedor-recursos .item .box_recurso{width:100%;max-width:360px;display:inline-block;margin-right:0;}
+.contenedor-recursos .item:nth-child(3n+0) {text-align:right;}
+.contenedor-recursos .item:nth-child(3n+1) {text-align:left;}
+
+.more-box-recursos{padding-top:50px;padding-bottom:100px;}
+
 
 /*****************************
 PROPIEDADES REGISTRO
@@ -309,43 +362,6 @@ PROPIEDADES CONTACT
 #banner-generico{position:relative;height:180px;background-image:url(../img/bg-contacto.png);background-size:496px;background-color:#fde052;background-position:calc(50% - 254px) 10px;background-repeat:no-repeat;}
 #banner-generico h2{font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;width:100%;max-width:660px;position:absolute;bottom:60px;left:0;right:0;margin:0 auto;text-align:left;line-height:40px;}
 
-/*****************************
-PROPIEDADES FAQs
-******************************/
-#box-faqs{margin: 0 auto;max-width: 660px;width:100%;}
-
-.top-faqs{padding:50px 90px;box-sizing:border-box;}
-.top-faqs p{margin-top:40px;font-size:16px;line-height:24px;}
-.top-faqs p:first-child{margin-top:0;}
-.top-faqs p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-.top-faqs p a{color:#30c0d8;text-decoration:underline;}
-
-.btns-faqs{overflow:hidden;height:70px;}
-.btns-faqs a{width:50%;float:left;height:70px;line-height:25px;padding-top:10px;text-transform:uppercase;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:18px;color:#7d7974;background:#faf8f5;text-align:center;}
-.btns-faqs a.active{color:#2e2e2e;background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
-.btns-faqs a:hover{color:#2e2e2e;background:#ffffff;}
-
-.bottom-faqs{padding:0 !important;}
-
-.contenidos-faqs{padding-top:40px;box-sizing:border-box;padding-left:85px;padding-right:85px;padding-bottom:50px;}
-.single-faq{}
-.single-faq>a{color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:30px;display:block;position:relative;text-transform: uppercase;}
-.single-faq>a:hover:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
-.single-faq>a.active:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
-.single-faq .desplegable{display:none;padding-bottom:30px;}
-.single-faq .desplegable p{margin-bottom:14px;}
-.single-faq .desplegable p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-.single-faq .desplegable p a{color:#30c0d8;text-decoration:underline;}
-
-.single-faq .desplegable ul,.single-faq .desplegable ol{margin-bottom:14px;padding-left:30px;}
-.single-faq .desplegable ul li{list-style:disc;}
-.single-faq .desplegable ol li{list-style:decimal;}
-
-.single-faq .desplegable b,.single-faq .desplegable strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-.single-faq .desplegable em,.single-faq .desplegable i{font-style:italic;}
-
-.single-faq .desplegable img.icon-img{width:21px;height:21px;vertical-align:middle;margin-right:3px;margin-left:3px;}
-.single-faq .desplegable img.panoramica{max-width:100%;margin-bottom:14px;margin-top:14px;}
 
 /*****************************
 PROPIEDADES DETALLE
@@ -538,7 +554,7 @@ PROPIEDADES FOOTER
 /**********************************
 PROPIEDADES DE CUSTOM RADIO | CHECKBOX BUTTON
 **********************************/
-#foo:checked::before,
+/*#foo:checked::before,
 input[type="radio"] {
     position:absolute;
     clip: rect(0,0,0,0);
@@ -634,7 +650,7 @@ input[type="checkbox"]:checked + label::before {
     background:url(../img/check_state.png) no-repeat;
     background-position:0px -20px;
     background-size:20px;
-}
+}*/
 
 
 /*****************************
