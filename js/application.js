@@ -10,6 +10,8 @@ Cliente: Cambridge Para Ti
 VARIABLES
 **********************/
 var resources, filterValues;
+var n_load=1;
+var n_elems=12;
 
 
 //Eventos para dispositivos móviles
@@ -242,7 +244,7 @@ jQuery(document).ready(function(){
 	
 	//Galería de recursos
 	if (jQuery('.carrusel_recursos').is(":visible") ) {
-		jQuery('.carrusel-list').slick({
+		jQuery('.carrusel-recientes').slick({
 		  dots: false,
 		  infinite: false,
 		  speed: 300,
@@ -252,6 +254,45 @@ jQuery(document).ready(function(){
 		  arrows:false,
 		  slidesToScroll: 2
 		});
+		
+		jQuery('.carrusel-app').slick({
+		  dots: false,
+		  infinite: false,
+		  speed: 300,
+		  slidesToShow: 1,
+		  centerMode: false,
+		  variableWidth: true,
+		  arrows:false,
+		  slidesToScroll: 2
+		});
+		
+		jQuery('.carrusel-visitados').slick({
+		  dots: false,
+		  infinite: false,
+		  speed: 300,
+		  slidesToShow: 1,
+		  centerMode: false,
+		  variableWidth: true,
+		  arrows:false,
+		  slidesToScroll: 2
+		});
+	}
+	
+	if (jQuery('.box-body-recursos').is(":visible") ) {
+		//Funciones para el cambio de bloques
+			
+		resources = jQuery('.box_recurso');
+		if ( resources.length == 0  ) {
+			jQuery('.more-box-recursos h4').show();
+			jQuery('.more-box-recursos .all_recursos').hide();
+		}else{
+			if(resources.length<=n_elems){
+				jQuery('.more-box-recursos .all_recursos').hide();	
+			}
+			n_load=1;
+			calc_pagination();
+		}
+			 
 	}
 	
 	//Checkbox recursos 
@@ -265,111 +306,58 @@ jQuery(document).ready(function(){
 			}
 			
 			//Funciones para el cambio de bloques
+			
+			/*resources = jQuery('.box_recurso');
+			if ( resources.length == 0 ) {
+					return;
+			}*/
+			filterChange();
 	});
 	
 	//Limpiar filtros 
-	jQuery(document).on('click','clear_all_filters',function(event){
+	jQuery(document).on('click','.clear_all_filters',function(event){
 		event.preventDefault();
 			//alert(jQuery(this).attr('class'));
 			jQuery('.body-filtros input[type=checkbox]').attr('checked',false);
 			jQuery('.body-filtros label').removeClass('active');
 			//Falta mostrar todos los bloques 
-			
+			jQuery('.contenedor-recursos .item').removeClass('hide');
+			n_load=1;
+			calc_pagination();
 				
 	});
 	
-	//Operaciones para mostrar y ocultar cuadros
-	if (jQuery('.body-filtros').is(":visible") ) {	
-		resources = jQuery('.box_recurso');
+	//Más recursos en la páginación 
+	jQuery(document).on('click','.more-box-recursos .all_recursos',function(event){
+		event.preventDefault();
+			n_load++;
+			calc_pagination();
+	});
 	
-		if ( resources.length == 0 ) {
-				return;
-		 }
-	
-		 jQuery('span.count').text(resources.length)
-	
-		 //jQuery(document).on('change', '.box-filtros input[type=checkbox]', filterChange);
-		
-		//Ocultar o mostrar checkbox según filtros
-		var filterChange = function () {
-			filterValues = {};
-	
-			//Get cambridgeexams filter:
-			filterValues.cambridgeexams = [];
-	
-			jQuery('input[name="cambridgeexams[]"]:checked').each(function(){
-				filterValues.cambridgeexams.push( jQuery(this).val() )
-			});
-	
-			//Get mcer filter:
-			filterValues.mcer = [];
-	
-			jQuery('input[name="mcer[]"]:checked').each(function(){
-				filterValues.mcer.push( jQuery(this).val() )
-			});
-	
-			//Get abilities filter:
-			filterValues.abilities = [];
-	
-			jQuery('input[name="abilities[]"]:checked').each(function(){
-				filterValues.abilities.push( jQuery(this).val() )
-			});
-	
-			//Get other filters:
-			filterValues.is_new = jQuery('input[name="is_new"]').is(':checked')
-			filterValues.is_app = jQuery('input[name="is_app"]').is(':checked')
-			filterValues.is_beta = jQuery('input[name="is_beta"]').is(':checked')
-	
-			var count = 0;
-	
-			resources.each(function(){
-				var item = jQuery(this);
-	
-				var hide = shouldHide(item);
-	
-				if( ! hide) count++;
-	
-				item.toggleClass('hide', hide );
-			});
-	
-			jQuery('span.count').text(count);
-	
-		}
-	
-		var shouldHide = function (item) {
-	
-			var itemData = item.data();
-	
-			if( itemData.alwaysVisible ) {
-				return false;
+	//Más recursos en la páginación 
+	jQuery(document).on('click','.opc_recursos a',function(event){
+		event.preventDefault();
+			jQuery('.opc_recursos a').removeClass('active');
+			var clase_enl=jQuery(this).attr('class');
+			switch(clase_enl){
+				case 'recursos_r':
+					jQuery('.carrusel-recientes').show();
+					jQuery('.carrusel-app').hide();
+					jQuery('.carrusel-visitados').hide();
+				break;
+				case 'recursos_a':
+					jQuery('.carrusel-recientes').hide();
+					jQuery('.carrusel-app').show();
+					jQuery('.carrusel-visitados').hide();
+				break;
+				case 'recursos_v':
+					jQuery('.carrusel-recientes').hide();
+					jQuery('.carrusel-app').hide();
+					jQuery('.carrusel-visitados').show();
+				break;
 			}
-	
-			if ( filterValues.is_new && ! itemData.isNew) { return true; }
-			if ( filterValues.is_app && ! itemData.isApp) { return true; }
-			if ( filterValues.is_beta && ! itemData.isBeta) { return true; }
-	
-	
-			if( filterValues.cambridgeexams.length && ! findOne(filterValues.cambridgeexams, itemData.cambridgeexams)) {
-				return true;
-			}
-	
-			if( filterValues.mcer.length && ! findOne(filterValues.mcer, itemData.mcer)) {
-				return true;
-			}
-	
-			if( filterValues.abilities.length && ! findOne(filterValues.abilities, itemData.abilities) ) {
-				return true;
-			}
-	
-			return false;
-		};
-	
-		var findOne = function (haystack, arr) {
-			return arr.some(function (v) {
-				return haystack.indexOf(v) >= 0;
-			});
-		};
-	}
+			jQuery(this).addClass('active');
+	});
 
 	//Redirección a la página mobile
 /*	if(device=="yes" && w_win<767 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
@@ -1034,6 +1022,116 @@ jQuery(document).ready(function(){
 /*************************
 FUNCIONES JAVASCRIPT
 **************************/
+	function filterChange() {
+			
+			filterValues = {};
+	
+			//Get cambridgeexams filter:
+			filterValues.cambridgeexams = [];
+	
+			jQuery('input[name="cambridgeexams[]"]:checked').each(function(){
+				filterValues.cambridgeexams.push( jQuery(this).val() )
+			});
+	
+			//Get mcer filter:
+			filterValues.mcer = [];
+	
+			jQuery('input[name="mcer[]"]:checked').each(function(){
+				filterValues.mcer.push( jQuery(this).val() )
+			});
+	
+			//Get abilities filter:
+			filterValues.abilities = [];
+	
+			jQuery('input[name="abilities[]"]:checked').each(function(){
+				filterValues.abilities.push( jQuery(this).val() )
+			});
+	
+			//Get other filters:
+			filterValues.is_new = jQuery('input[name="is_new"]').is(':checked')
+			filterValues.is_app = jQuery('input[name="is_app"]').is(':checked')
+			filterValues.is_beta = jQuery('input[name="is_beta"]').is(':checked')
+	
+			var count = 0;
+	
+			resources.each(function(){
+				var item = jQuery(this);
+	
+				var hide = shouldHide(item);
+	
+				if( ! hide) count++;
+	
+				item.parent().toggleClass('hide', hide );
+			});
+			
+			if(count==0){
+				//No hay elementos
+				jQuery('.more-box-recursos h4').show();
+				jQuery('.more-box-recursos .all_recursos').hide();
+			}else{
+				//Miramos si hay que paginar	
+				n_load=1;
+				calc_pagination();
+			}
+	
+			//jQuery('span.count').text(count);
+	
+		}
+	
+		function shouldHide(item) {
+	
+			var itemData = item.data();
+	
+			if( itemData.alwaysVisible ) {
+				return false;
+			}
+	
+			if ( filterValues.is_new && ! itemData.isNew) { return true; }
+			if ( filterValues.is_app && ! itemData.isApp) { return true; }
+			if ( filterValues.is_beta && ! itemData.isBeta) { return true; }
+			
+	
+			if( filterValues.cambridgeexams.length && ! findOne(filterValues.cambridgeexams, itemData.cambridgeexams)) {
+				return true;
+			}
+	
+			if( filterValues.mcer.length && ! findOne(filterValues.mcer, itemData.mcer)) {
+				return true;
+			}
+	
+			if( filterValues.abilities.length && ! findOne(filterValues.abilities, itemData.abilities) ) {
+				return true;
+			}
+	
+			return false;
+		}
+		
+		function findOne(haystack, arr) {
+			//alert(filterValues.cambridgeexams.toString()+'--'+arr.toString());
+			return arr.some(function (v) {
+				return haystack.indexOf(v) >= 0;
+			});
+		}
+		
+function calc_pagination(){
+	elems_show = jQuery('.item').not(".hide");
+	var all_elems=elems_show.length;
+	var count=0;
+	elems_show.each(function(){
+			if(count>=(n_load*n_elems)){
+				jQuery(this).addClass('hide-page');
+				//Mostramos botón de más 
+				jQuery('.more-box-recursos .all_recursos').show();	
+			}else{
+				jQuery(this).removeClass('hide-page');
+				count++;
+			}
+	});
+	//ELiminamos si alguna de las páginas 
+	if(count==all_elems){jQuery('.more-box-recursos .all_recursos').hide();}	
+}		
+
+
 
 //Ajusta tamaño de noticias
 function ajusta_news(){
