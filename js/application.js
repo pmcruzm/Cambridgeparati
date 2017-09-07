@@ -27,95 +27,6 @@ if(ua.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
 jQuery.noConflict();
 
 jQuery(window).load(function(){
-/*
-	//Ajustamos altura de los bloques de noticias
-	if (jQuery('#list-news').is(":visible") ) {
-		//Ocultamos bloques
-		jQuery('#list-news a.new-single').hide().css('visibility','visible');
-		//Mostramos los 8 primeros
-		var cont=0;
-		jQuery('#list-news a.new-single').each(function() {
-			if(cont<init_items){
-				jQuery(this).addClass('visible').css('display','block');
-				cont++;
-			}else{
-				return true;
-			}
-		});
-
-		//Ajustamos altura
-		var heights = jQuery('#list-news a.new-single.visible div.inside-new').map(function ()
-		{
-			return jQuery(this).outerHeight();
-		}).get(),
-		//Obtenemos tamaño max de los cuadros
-		maxHeight = Math.max.apply(null, heights);
-		jQuery('#list-news a.new-single.visible div.inside-new').each(function() {
-			jQuery(this).css('height',maxHeight+30);
-		});
-
-		//Miramos si nos hay más noticias por mostrar
-		var all_elem=jQuery('#list-news a.new-single').length;
-		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
-		//console.log(all_elem+'--'+all_elem_v);
-		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}else{jQuery('.btn-more').show();}
-	}
-
-	//Ajustamos altura de los cuadros de catalogo
-	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-	}
-
-	//Ajustamos Shot de la home
-	if (jQuery('#show-examples').is(":visible") ) {
-		var heights = jQuery('#show-examples div.shot-box').map(function ()
-		{
-			return jQuery(this).outerHeight();
-		}).get(),
-		//Obtenemos tamaño max de los cuadros
-		maxHeight = Math.max.apply(null, heights);
-		jQuery('#show-examples div.shot-box').each(function() {
-			jQuery(this).css('height',maxHeight);
-		});
-	}
-
-	//Ajustamos altura de detalle de producto
-	if (jQuery('.cover-detalle img').is(":visible") ) {
-		var w_img=jQuery('.cover-detalle img').width();
-		var h_img=jQuery('.cover-detalle img').height();
-		var mitad_ancho=133;
-		//Añadimos altura y anchura al div padre
-		jQuery('.cover-detalle img').parent().width(w_img);
-		jQuery('.cover-detalle img').parent().height(h_img);
-		//Miramos si tiene span
-		if(jQuery('.cover-detalle img').parent().find('span').length>0){
-			jQuery('.cover-detalle img').parent().find('span').css({bottom:20});
-		}
-		//Ajustamos en la izquierda
-		jQuery('.cover-detalle img').parent().css({'left':(133-(w_img/2))});
-	}
-
-	//Ocultamos flechas según contenido
-	if (jQuery('.carrusel-coleccion').is(":visible") ) {
-		var lengh_items=0;
-		var block_item=0;
-		jQuery('.carrusel-list div.item').each(function() {
-			if(jQuery(this).hasClass('slick-active')){
-				block_item=1;
-			}
-			if(block_item==1){
-				lengh_items+=jQuery(this).outerWidth();
-			}
-		});
-
-		//Mostramos/ocultamos las flechas si es mayor
-		if(lengh_items >= jQuery(window).width()){
-			jQuery('.slick-prev').show().css({'visibility':'visible'});
-			jQuery('.slick-next').show().css({'visibility':'visible'});
-		}else{
-			jQuery('.slick-prev').hide().css({'visibility':'hidden'});
-			jQuery('.slick-next').hide().css({'visibility':'hidden'});
-		}
-	}*/
 
 });
 
@@ -305,12 +216,6 @@ jQuery(document).ready(function(){
 				jQuery(this).parent().addClass('active');
 			}
 			
-			//Funciones para el cambio de bloques
-			
-			/*resources = jQuery('.box_recurso');
-			if ( resources.length == 0 ) {
-					return;
-			}*/
 			filterChange();
 	});
 	
@@ -357,6 +262,34 @@ jQuery(document).ready(function(){
 				break;
 			}
 			jQuery(this).addClass('active');
+	});
+	
+	//Cuando pulsamos sobre un recurso
+	jQuery(document).on('click','.box_recurso',function(event){
+		event.preventDefault();
+		var id_recurso=jQuery(this).attr('data-id');
+		var url_recurso=jQuery(this).attr('href');
+		if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
+			jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
+		}else{
+			var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
+			var arr_recursos=list_recusos.split(",");
+			//Eliminamos el primer recursos de la pila 
+			//Si es mayor que 15
+			if(arr_recursos.length>15){
+				if(arr_recursos.indexOf(id_recurso)<0){
+					arr_recursos.shift(); 
+					arr_recursos.push(id_recurso);
+				}
+			}else{
+				if(arr_recursos.indexOf(id_recurso)<0){
+					arr_recursos.push(id_recurso);
+				}
+			}
+			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
+			//alert(arr_recursos.toString());
+		}
+		window.open(url_recurso,'_blank');
 	});
 
 	//Redirección a la página mobile
@@ -870,7 +803,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Miramos si la cookie de aceptación está creada
-	if(jQuery.cookie('cambridge-teacher') == 'acepta'){
+	if(jQuery.cookie('cambridge-para-ti') == 'acepta'){
 		//Ocultamos info cookies
 		jQuery('.block-cookies').hide();
 		var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
@@ -897,7 +830,7 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('.block-cookies').fadeOut(600,function(){
 			//Creamos la cookie de aceptación
-			jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
+			jQuery.cookie('cambridge-para-ti', 'acepta', { expires: 365 * 10 ,path: '/' });
 			var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 			//Añadimos GA
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -1158,10 +1091,10 @@ function control_scroll(e){
 
   //Añadir Cookie si se hace scroll a +100px
   if(scrollAmount>100){
- 		if(jQuery.cookie('cambridge-teacher') != 'acepta'){
+ 		if(jQuery.cookie('cambridge-para-ti') != 'acepta'){
 			jQuery('.block-cookies').fadeOut(600,function(){
 				//Creamos la cookie de aceptación
-				jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
+				jQuery.cookie('cambridge-para-ti', 'acepta', { expires: 365 * 10 ,path: '/' });
 				var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 				//Añadimos GA
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

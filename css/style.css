@@ -155,7 +155,7 @@ PROPIEDADES HOME
 .opc_recursos a:hover{background:#00A4A1;color:#ffffff;}
 .opc_recursos a.active{background:#00A4A1;color:#ffffff;}
 .opc_recursos a:first-child{margin-left:0px;}
-.carrusel_recursos{padding-bottom:50px;padding-top:50px;padding-left:30px;}
+.carrusel_recursos{padding-bottom:50px;padding-top:50px;}
 .all_recursos{height: 48px;	width:260px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;font-family: 'Montserrat', sans-serif;}
 
 .opinion_home{padding-top:100px;padding-bottom:100px;}
@@ -223,6 +223,8 @@ PROPIEDADES HOME
 .cat_recurso p:first-child{float:left;margin-left:20px;display:inline-block;}
 .cat_recurso p:last-child{float:right;margin-right:20px;display:inline-block;}
 
+.carrusel-recientes .slick-list,.carrusel-app .slick-list,.carrusel-visitados .slick-list{padding-top:30px;padding-bottom:30px;padding-left:30px;}
+
 
 
 /*****************************
@@ -287,7 +289,7 @@ RECURSOS
 .clear_all_filters{display:block;height:30px;width:130px;background:#E33C10;line-height:30px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;position:absolute;bottom:20px;right:20px;}
 .clear_all_filters:hover{background:#ffffff;color:#E33C10;}
 
-.contenedor-recursos{padding-top:50px;overflow:hidden;}
+.contenedor-recursos{padding-top:50px;/*overflow:hidden;*/}
 .contenedor-recursos .item{width:33.3333%;float:left;margin-bottom:30px;text-align:center;}
 .contenedor-recursos .item .box_recurso{width:100%;max-width:360px;display:inline-block;margin-right:0;}
 .contenedor-recursos .item:nth-child(3n+0) {text-align:right;}
