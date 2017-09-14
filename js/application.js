@@ -291,6 +291,29 @@ jQuery(document).ready(function(){
 		}
 		window.open(url_recurso,'_blank');
 	});
+	
+	//Over de las fichas en desktop
+	jQuery(document).on("mouseenter",".box_recurso", function(e) {
+		e.preventDefault();
+		if(device!='yes'){
+			jQuery(this).addClass('over');
+		}
+	}).on("mouseleave",".box_recurso", function(e) {
+		e.preventDefault();
+		if(device!='yes'){
+			jQuery(this).removeClass('over');
+		}
+	});
+	
+	//Over de las fichas mobile
+	jQuery(document).on('touchstart',".box_recurso", function(e) {
+		e.preventDefault();
+		if(jQuery(this).hasClass('over')){
+			jQuery(this).removeClass('over');
+		}else{
+			jQuery(this).addClass('over');
+		}
+	});
 
 	//Redirección a la página mobile
 /*	if(device=="yes" && w_win<767 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
