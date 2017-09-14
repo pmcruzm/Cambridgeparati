@@ -341,10 +341,12 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace 
-			 if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
+			alert(jQuery(this).find('a.btn-playstore').length);
+			/* if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
 			 	alert('No app');
 			 	jQuery(this).removeClass('over');
-			 }
+			 }*/
+			 jQuery(this).removeClass('over');
 		}else{
 			jQuery(this).addClass('over');
 		}
