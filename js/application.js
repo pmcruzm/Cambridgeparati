@@ -344,8 +344,6 @@ jQuery(document).ready(function(){
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace 
 			if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
-			 	alert('No app');
-				/*
 				var id_recurso=jQuery(this).attr('data-id');
 				var url_recurso=jQuery(this).attr('href');
 				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
@@ -366,10 +364,9 @@ jQuery(document).ready(function(){
 						}
 					}
 					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-					//alert(arr_recursos.toString());
+					alert('aquinormal'+arr_recursos.toString());
 				}
 				window.open(url_recurso,'_blank');
-				*/
 			 }
 			 jQuery(this).removeClass('over');
 		}else{
@@ -400,7 +397,7 @@ jQuery(document).ready(function(){
 				}
 			}
 			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-			alert('aqui'+arr_recursos.toString());
+			alert('aquiapp'+arr_recursos.toString());
 		}
 		window.open(url_recurso,'_blank');
 	});
