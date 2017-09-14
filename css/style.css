@@ -292,8 +292,8 @@ RECURSOS
 .contenedor-recursos{padding-top:50px;/*overflow:hidden;*/}
 .contenedor-recursos .item{width:33.3333%;float:left;margin-bottom:30px;text-align:center;}
 .contenedor-recursos .item .box_recurso{width:100%;max-width:360px;display:inline-block;margin-right:0;}
-.contenedor-recursos .item:nth-child(3n+0) {text-align:right;}
-.contenedor-recursos .item:nth-child(3n+1) {text-align:left;}
+/*.contenedor-recursos .item:nth-child(3n+0) {text-align:right;}
+.contenedor-recursos .item:nth-child(3n+1) {text-align:left;}*/
 
 .more-box-recursos{padding-top:50px;padding-bottom:100px;}
 .more-box-recursos h4{display:none;text-align:center;font-size:20px;}
