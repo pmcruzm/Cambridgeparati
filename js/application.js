@@ -337,8 +337,9 @@ jQuery(document).ready(function(){
 	jQuery(document).on('touchstart',".box_recurso", function(e) {
 		e.preventDefault();
 		if(jQuery(this).hasClass('over')){
+			//Miramos si hay enlace de app si no abrimos enlace 
+			 
 			jQuery(this).removeClass('over');
-			//Miramos si hay enlace 
 		}else{
 			jQuery(this).addClass('over');
 		}
@@ -367,7 +368,7 @@ jQuery(document).ready(function(){
 				}
 			}
 			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-			alert(arr_recursos.toString());
+			alert('aqui'+arr_recursos.toString());
 		}
 		window.open(url_recurso,'_blank');
 	});
