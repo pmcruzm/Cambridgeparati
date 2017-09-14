@@ -343,11 +343,34 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace 
-			alert(jQuery(this).find('a.btn-playstore').length);
-			/* if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
+			if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
 			 	alert('No app');
-			 	jQuery(this).removeClass('over');
-			 }*/
+				/*
+				var id_recurso=jQuery(this).attr('data-id');
+				var url_recurso=jQuery(this).attr('href');
+				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
+					jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
+				}else{
+					var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
+					var arr_recursos=list_recusos.split(",");
+					//Eliminamos el primer recursos de la pila 
+					//Si es mayor que 15
+					if(arr_recursos.length>15){
+						if(arr_recursos.indexOf(id_recurso)<0){
+							arr_recursos.shift(); 
+							arr_recursos.push(id_recurso);
+						}
+					}else{
+						if(arr_recursos.indexOf(id_recurso)<0){
+							arr_recursos.push(id_recurso);
+						}
+					}
+					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
+					//alert(arr_recursos.toString());
+				}
+				window.open(url_recurso,'_blank');
+				*/
+			 }
 			 jQuery(this).removeClass('over');
 		}else{
 			jQuery(this).addClass('over');
@@ -357,7 +380,6 @@ jQuery(document).ready(function(){
 	//Touch sobre enlaces de de app store
 	jQuery(document).on('touchstart',"a.btn-playstore,a.btn-applestore", function(e) {
 		e.preventDefault();
-		touch_control=1;
 		var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
 		var url_recurso=jQuery(this).attr('href');
 		if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
@@ -378,10 +400,9 @@ jQuery(document).ready(function(){
 				}
 			}
 			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-			//alert('aqui'+arr_recursos.toString());
+			alert('aqui'+arr_recursos.toString());
 		}
 		window.open(url_recurso,'_blank');
-		touch_control=0;
 	});
 
 	//Redirección a la página mobile
