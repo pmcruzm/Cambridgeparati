@@ -265,7 +265,7 @@ jQuery(document).ready(function(){
 	});
 	
 	//Cuando pulsamos sobre un recurso
-	jQuery(document).on('click','.box_recurso',function(event){
+	jQuery(document).on('click','a.box_recurso',function(event){
 		event.preventDefault();
 		var id_recurso=jQuery(this).attr('data-id');
 		var url_recurso=jQuery(this).attr('href');
@@ -287,7 +287,35 @@ jQuery(document).ready(function(){
 				}
 			}
 			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-			//alert(arr_recursos.toString());
+			alert(arr_recursos.toString());
+		}
+		window.open(url_recurso,'_blank');
+	});
+	
+	//Cuando pulsamos sobre un enlace de un recurso app
+	jQuery(document).on('click','a.btn-playstore,a.btn-applestore',function(event){
+		event.preventDefault();
+		var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
+		var url_recurso=jQuery(this).attr('href');
+		if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
+			jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
+		}else{
+			var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
+			var arr_recursos=list_recusos.split(",");
+			//Eliminamos el primer recursos de la pila 
+			//Si es mayor que 15
+			if(arr_recursos.length>15){
+				if(arr_recursos.indexOf(id_recurso)<0){
+					arr_recursos.shift(); 
+					arr_recursos.push(id_recurso);
+				}
+			}else{
+				if(arr_recursos.indexOf(id_recurso)<0){
+					arr_recursos.push(id_recurso);
+				}
+			}
+			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
+			alert(arr_recursos.toString());
 		}
 		window.open(url_recurso,'_blank');
 	});
