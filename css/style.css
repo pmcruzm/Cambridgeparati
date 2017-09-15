@@ -85,6 +85,7 @@ PROPIEDADES HEADER
 .rrss_header ul li a.ico-fb-h{background:url(../svg/btn_topbar_fb.svg) center center no-repeat;background-size:26px;}
 .rrss_header ul li a.ico-inst-h{background:url(../svg/btn_topbar_ig.svg) center center no-repeat;background-size:26px;}
 .rrss_header ul li a.ico-rss-h{background:url(../svg/btn_topbar_rss.svg) center center no-repeat;background-size:26px;}
+.rrss_header ul li a.ico-lk-h{background:url(../svg/btn_topbar_lk.svg) center center no-repeat;background-size:26px;}
 
 .language_header{position:absolute;right:30px;;top:0;}
 .language_header>a{color:#9B9B9B;font-size:13px;}
@@ -140,26 +141,30 @@ PROPIEDADES HOME
 .enl_profesor:hover:before{background-position:0px -116px;}
 
 .how_home{padding-top:75px;padding-bottom:90px;}
-.how_home h2{color:#00A4A1;text-align:center;font-size:14px;margin-bottom:20px;}
-.how_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:712px;margin:0 auto;}
+.how_home h2{color:#FAB200;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;}
+.how_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;margin:0 auto;}
+.how_home p.txt_how_home{max-width: 712px;	color: #4A4A4A;	font-family: "Source Sans Pro";	font-size: 18px;line-height: 32px;text-align: center;margin:0 auto;margin-top:32px;}
+
 .boxes_how{overflow:hidden;margin-top:47px;}
 .box_how{width:33.3333%;display:block;float:left;text-align:center;}
 .box_how img{max-width:100%;}
-.box_how p{color:#4A4A4A;font-size:16px;line-height:24px;max-width:306px;margin:0 auto;margin-top:26px;}
+.box_how p{color:#4A4A4A;font-size:18px;line-height:32px;max-width:306px;margin:0 auto;margin-top:26px;}
+.box_how p strong{font-weight:bold;}
 
 .recursos_home{background:#F2F1F0;padding-top:83px;padding-bottom:100px;}
-.recursos_home h2{color:#00A4A1;text-align:center;font-size:14px;margin-bottom:20px;}
+.recursos_home h2{color:#009FDA;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;}
 .recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:712px;margin:0 auto;margin-bottom:40px;}
 .opc_recursos{text-align:center;}
 .opc_recursos a{height: 36px;width:192px;border-radius: 24px;line-height:36px;display:inline-block;background:rgba(255,255,255,0.5);font-size:14px;color:#9B9B9B;margin-left:30px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
-.opc_recursos a:hover{background:#00A4A1;color:#ffffff;}
-.opc_recursos a.active{background:#00A4A1;color:#ffffff;}
+.opc_recursos a:hover{background:#009FDA;color:#ffffff;}
+.opc_recursos a.active{background:#009FDA;color:#ffffff;}
 .opc_recursos a:first-child{margin-left:0px;}
 .carrusel_recursos{padding-bottom:50px;padding-top:50px;}
 .all_recursos{height: 48px;	width:260px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;font-family: 'Montserrat', sans-serif;}
+.recursos_home .all_recursos{border: 2px solid #9B9B9B;background:none;color:#9B9B9B;}
 
 .opinion_home{padding-top:100px;padding-bottom:100px;}
-.opinion_home h2{color:#00A4A1;text-align:center;font-size:14px;margin-bottom:40px;}
+.opinion_home h2{color:#C81F66;text-align:center;font-size:14px;margin-bottom:40px;font-family: 'Montserrat', sans-serif;}
 .cont_opinion{}
 .cont_opinion h4{text-align:center;font-size:30px;line-height:40px;color:#000000;max-width:712px;margin:0 auto;margin-bottom:20px;font-style:italic;}
 .cont_opinion p{font-size:14px;line-height:20px;text-align:center;padding-bottom:20px;}
@@ -227,8 +232,6 @@ PROPIEDADES HOME
 .cat_recurso p:last-child{float:right;margin-right:20px;display:inline-block;}
 
 .carrusel-recientes .slick-list,.carrusel-app .slick-list,.carrusel-visitados .slick-list{padding-top:30px;padding-bottom:30px;padding-left:30px;}
-
-
 
 /*****************************
 CONOCENOS
@@ -300,6 +303,17 @@ RECURSOS
 
 .more-box-recursos{padding-top:50px;padding-bottom:100px;}
 .more-box-recursos h4{display:none;text-align:center;font-size:20px;}
+
+/*****************************
+CONTACTO
+******************************/
+.cont_contacto{min-height:1000px;overflow:hidden;box-sizing:border-box;padding:0px 95px;margin-top:-50px;}
+.contact_filter{overflow:hidden;height:176px;background:#ff5427;margin-top:0 !important;}
+.txt_contacto{float:left;width:30%;height:176px;display:table;}
+.txt_contacto p{color:#4A4A4A;font-size: 16px;line-height: 32px;display:table-cell;vertical-align:middle;box-sizing:border-box;padding-right:40px;}
+.body_contacto{float:left;width:70%;}
+
+
 
 /*****************************
 PROPIEDADES REGISTRO
