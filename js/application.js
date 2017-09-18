@@ -1177,21 +1177,6 @@ function calc_pagination(){
 	if(count==all_elems){jQuery('.more-box-recursos .all_recursos').hide();}	
 }		
 
-
-
-//Ajusta tamaño de noticias
-function ajusta_news(){
-	var heights = jQuery('#list-news div.inside-new').map(function ()
-	{
-		return jQuery(this).outerHeight();
-	}).get(),
-	//Obtenemos tamaño max de los cuadros
-	maxHeight = Math.max.apply(null, heights);
-	jQuery('#list-news div.inside-new').each(function() {
-		jQuery(this).css('height',maxHeight+30);
-	});
-}
-
 //Función para capturar eventos scroll
 function control_scroll(e){
   //Variable de scroll
@@ -1428,18 +1413,6 @@ function removeHash () {
 	}
 }
 
-//Función para mostrar las notificaciones
-function showNotification(msg,time){
-   var t_visible;
-   if (time === undefined || time === null) {
-	  t_visible=2000;
-   }else{
-	  t_visible=time;
-   }
-   jQuery('#box-notificacion').html(msg).stop().clearQueue().fadeIn(400,function(){
-	  jQuery(this).delay(t_visible).fadeOut(400);
-   });
-}
 
 //Función para el cambio de orientación
 function doOnOrientationChange()

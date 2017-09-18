@@ -333,13 +333,13 @@ CONTACTO
 .form-group>label{color:#4A4A4A;font-size: 16px;line-height:48px;height:48px;}
 .form-group>label span,.checkbox span{color: #FAB200;}
 #contact_teachers_recaptcha{width:458px;float:right;}
-.form-group>.checkbox{width:458px;float:right;margin-bottom: 18px;padding-left: 30px;color:#4A4A4A;}
+.form-group>.checkbox{width:458px;float:right;margin-bottom: 18px;padding-left: 30px;color:#4A4A4A;padding-left:30px;box-sizing:border-box;position:relative;}
 .form-group>.checkbox a{color:#4A4A4A;text-decoration:underline;}
 .form-contact select{border-radius: 4px;background-color: #F2F1F0;}
 #contact_teachers_step2,#contact_teachers_step3,#contact_teachers_step4{margin-top:52px;}
 #contact_teachers_cambridge_certificates,#contact_teachers_cambridge_english_level,#contact_teachers_cambridge_exams{overflow:hidden;padding-bottom:54px;}
-#contact_teachers_cambridge_certificates .checkbox,#contact_teachers_cambridge_exams .checkbox{width:50%;float:left;padding-bottom:16px;color:#4A4A4A;font-size:16px;}
-#contact_teachers_cambridge_english_level .checkbox{width:25%;float:left;padding-bottom:16px;color:#4A4A4A;font-size:16px;}
+#contact_teachers_cambridge_certificates .checkbox,#contact_teachers_cambridge_exams .checkbox{width:50%;float:left;padding-bottom:16px;color:#4A4A4A;font-size:16px;padding-left:30px;box-sizing:border-box;position:relative;}
+#contact_teachers_cambridge_english_level .checkbox{width:25%;float:left;padding-bottom:16px;color:#4A4A4A;font-size:16px;padding-left:30px;box-sizing:border-box;position:relative;}
 .label-pregunta{line-height:24px !important;padding-bottom:16px;height:auto !important;display:block;}
 .textarea-group label{display:none;}
 .textarea-group textarea{width:100%;height: 191px;border: 1px solid #D8D8D8;box-sizing:border-box;padding:40px;font-family:'Source Sans Pro', Helvetica, sans-serif;font-size:16px;line-height:32px;}
@@ -395,7 +395,7 @@ PROPIEDADES FOOTER
 /**********************************
 PROPIEDADES DE CUSTOM CHECKBOX BUTTON
 **********************************/
-/*#foo:checked::before,
+#foo:checked::before,
 input[type="checkbox"] {
     position:absolute;
     clip: rect(0,0,0,0);
@@ -403,7 +403,7 @@ input[type="checkbox"] {
 }
 
 #foo:checked,
-input[type="checkbox"] + label::before {
+.form-contact input[type="checkbox"] + label::before {
     content:'';
     cursor:pointer;
     display:inline-block;
@@ -411,12 +411,14 @@ input[type="checkbox"] + label::before {
     height:16px;
     background:url(../img/sprite_checkbox.png) no-repeat;
     background-position:0px 0px;
-    margin-left:-50px;
+    margin-left:-30px;
     background-size:16px;
+	position:relative;
+	top:3px;
 }
 
 #foo:checked,
-input[type="checkbox"].error + label::before {
+.form-contact input[type="checkbox"].error + label::before {
     content:'';
     cursor:pointer;
     display:inline-block;
@@ -424,11 +426,13 @@ input[type="checkbox"].error + label::before {
     height:16px;
     background:url(../img/sprite_checkbox.png) no-repeat;
     background-position:0px -32px;
-    margin-left:-50px;
+    margin-left:-30px;
     background-size:16px;
+	position:relative;
+	top:3px;
 }
 
-input[type="checkbox"]:checked + label::before {
+.form-contact input[type="checkbox"]:checked + label::before {
     content:'';
     cursor:pointer;
     display:inline-block;
@@ -436,9 +440,11 @@ input[type="checkbox"]:checked + label::before {
     height:16px;
     background:url(../img/sprite_checkbox.png) no-repeat;
     background-position:0px -16px;
-    margin-left:-16px;
+    margin-left:-30px;
     background-size:16px;
-}*/
+	position:relative;
+	top:3px;
+}
 
 
 /*****************************
