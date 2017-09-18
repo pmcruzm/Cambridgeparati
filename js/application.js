@@ -409,11 +409,12 @@ jQuery(document).ready(function(){
 	jQuery(document).on('focus','form input,form textarea,form select',function(event){
 		event.preventDefault();
 		if(jQuery(this).attr('type')!='submit'){
-			if(jQuery(this).attr('type')=='select'){
+			if(jQuery(this).attr('data-validation-rule')=='select-option'){
 				if(jQuery(this).parent().hasClass('error')){
 					jQuery(this).parent().removeClass('error');
 				}
 			}else{
+				alert('no-select');
 				if(jQuery(this).hasClass('error')){
 					jQuery(this).removeClass('error');
 				}
