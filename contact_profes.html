@@ -91,28 +91,28 @@
                                     <a href="contact_profes.html" class="enl_profesor active"><span>SOY PROFESOR</span></a>
                                 </div>
                                 <div class="body_forms">
-                                	<form name="contact_teachers" method="post" action="http://cambridgeparati.es/contact" novalidate class="form-horizontal form-contact">
+                                	<form name="contact_teachers" method="post" action="http://cambridgeparati.es/contact" class="form-horizontal form-contact" data-validate="true" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados" >
                                     <div id="contact_teachers_step1">
                                     	<h3>SOBRE TÍ</h3>
                                     </div>
                                     <div class="form-group">                                        
                                         <label class="control-label required" for="contact_teachers_first_name">Nombre <span>*</span></label>
-                                        <input id="contact_teachers_first_name" name="contact_teachers[first_name]" required class="form-control" type="text">
+                                        <input id="contact_teachers_first_name" name="contact_teachers[first_name]" class="form-control" type="text" data-validation-rule="not-empty">
                                     </div>
                                     <div class="form-group">                                        
                                         <label class="control-label required" for="contact_teachers_last_name">Apellidos <span>*</span></label>
-                                        <input id="contact_teachers_last_name" name="contact_teachers[last_name]" required class="form-control" type="text">
+                                        <input id="contact_teachers_last_name" name="contact_teachers[last_name]" class="form-control" type="text" data-validation-rule="not-empty">
                                     </div>
                                     <div class="form-group">                                        
                                     	<label class="control-label required" for="contact_teachers_email">Email <span>*</span></label>
-                                    	<input id="contact_teachers_email" name="contact_teachers[email]" required class="form-control" type="email">
+                                    	<input id="contact_teachers_email" name="contact_teachers[email]" class="form-control" type="email" autocorrect="off" data-validation-rule="email" data-error-msg="El email no es válido">
                                     </div>
                                     <div class="form-group">                    
                                     	<label for="contact_teachers_telephone">Teléfono</label>
                                     	<input id="contact_teachers_telephone" name="contact_teachers[telephone]" class="form-control" type="text">
                                     </div>
                                     <div class="form-group">
-                                        <div class="checkbox"><input id="contact_teachers_accept_legal_terms" name="contact_teachers[accept_legal_terms]" value="1" type="checkbox"><label for="contact_teachers_accept_legal_terms"></label>Acepto los <a href="http://cambridgeparati.es/legal">términos legales</a>. <span>*</span></div>
+                                        <div class="checkbox"><input id="contact_teachers_accept_legal_terms" data-validation-rule="checkbox" data-error-msg="Debe aceptar política de privacidad." name="contact_teachers[accept_legal_terms]" value="1" type="checkbox"><label for="contact_teachers_accept_legal_terms"></label>Acepto los <a href="http://cambridgeparati.es/legal">términos legales</a>. <span>*</span></div>
                                     </div>
                                     <div class="form-group">
                                         <div class="checkbox"><input id="contact_teachers_decline_promos" name="contact_teachers[decline_promos]" value="1" type="checkbox"><label for="contact_teachers_decline_promos"></label>No estoy interesado en que Cambridge me mande emails y boletines sobre recursos digitales y nuevos productos.</div>
@@ -136,106 +136,113 @@
                                </div>
                                 <div class="form-group">
                                 	<label class="control-label required" for="contact_teachers_centre_name">Nombre del centro <span>*</span></label>
-                                    <input id="contact_teachers_centre_name" name="contact_teachers[centre_name]" required class="form-control" type="text">
+                                    <input id="contact_teachers_centre_name" name="contact_teachers[centre_name]" class="form-control" type="text" data-validation-rule="not-empty">
                                 </div>
                                 <div class="form-group">
                                 <label class="control-label required" for="contact_teachers_centre_type">Tipo de centro <span>*</span></label>
-                                <select id="contact_teachers_centre_type" name="contact_teachers[centre_type]" required="required" class="form-control">
-                                	<option value="" selected="selected">Selecciona opción:</option>
-                                    <option value="Educación primaria/secundaria">Educación primaria/secundaria</option>
-                                    <option value="Academia">Academia</option>
-                                    <option value="Escuela Oficial de Idiomas">Escuela Oficial de Idiomas</option>
-                                    <option value="Universidad">Universidad</option>
-                                    <option value="Profesor particular">Profesor particular</option>
-                                    <option value="Formación profesional">Formación profesional</option>
-                                </select>
+                                    <div class="cover-select">
+                                        <select id="contact_teachers_centre_type" name="contact_teachers[centre_type]" class="form-control" data-validation-rule="select-option">
+                                            <option value="" selected="selected">Selecciona opción:</option>
+                                            <option value="Educación primaria/secundaria">Educación primaria/secundaria</option>
+                                            <option value="Academia">Academia</option>
+                                            <option value="Escuela Oficial de Idiomas">Escuela Oficial de Idiomas</option>
+                                            <option value="Universidad">Universidad</option>
+                                            <option value="Profesor particular">Profesor particular</option>
+                                            <option value="Formación profesional">Formación profesional</option>
+                                        </select>
+                                    </div>    
                                 </div>
                                 <div class="form-group">
                                 	<label class="control-label required" for="contact_teachers_country">País <span>*</span></label>
-                                	<select id="contact_teachers_country" name="contact_teachers[country]" required="required" class="form-control">
-                                		<option value="ES" selected="selected">España</option>
-                                    </select>
+                                    <div class="cover-select">
+                                        <select id="contact_teachers_country" name="contact_teachers[country]" class="form-control" data-validation-rule="select-option">
+                                        	<option value="" selected="selected">Selecciona opción:</option>
+                                            <option value="ES" selected="selected">España</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                 	<label class="control-label required" for="contact_teachers_province">Provincia <span>*</span></label>
-                                    <select id="contact_teachers_province" name="contact_teachers[province]" required="required" class="form-control">
-                                    	<option value="" selected="selected">Selecciona opción:</option>
-                                        <option value="ÁLAVA">ÁLAVA</option>
-                                        <option value="ALBACETE">ALBACETE</option>
-                                        <option value="ALICANTE">ALICANTE</option>
-                                        <option value="ALMERÍA">ALMERÍA</option>
-                                        <option value="ASTURIAS">ASTURIAS</option>
-                                        <option value="ÁVILA">ÁVILA</option>
-                                        <option value="BADAJOZ">BADAJOZ</option>
-                                        <option value="CANTABRIA">CANTABRIA</option>
-                                        <option value="CEUTA">CEUTA</option>
-                                        <option value="BARCELONA">BARCELONA</option>
-                                        <option value="BURGOS">BURGOS</option>
-                                        <option value="CÁCERES">CÁCERES</option>
-                                        <option value="CÁDIZ">CÁDIZ</option>
-                                        <option value="CASTELLÓN">CASTELLÓN</option>
-                                        <option value="CIUDAD REAL">CIUDAD REAL</option>
-                                        <option value="CÓRDOBA">CÓRDOBA</option>
-                                        <option value="CORUÑA, A">CORUÑA, A</option>
-                                        <option value="CUENCA">CUENCA</option>
-                                        <option value="GIRONA">GIRONA</option>
-                                        <option value="GRANADA">GRANADA</option>
-                                        <option value="GUADALAJARA">GUADALAJARA</option>
-                                        <option value="GUIPÚZCOA">GUIPÚZCOA</option>
-                                        <option value="HUELVA">HUELVA</option>
-                                        <option value="HUESCA">HUESCA</option>
-                                        <option value="ILLES BALEARS">ILLES BALEARS</option>
-                                        <option value="JAÉN">JAÉN</option>
-                                        <option value="LEÓN">LEÓN</option>
-                                        <option value="LLEIDA">LLEIDA</option>
-                                        <option value="LUGO">LUGO</option>
-                                        <option value="MADRID">MADRID</option>
-                                        <option value="MÁLAGA">MÁLAGA</option>
-                                        <option value="MELILLA">MELILLA</option>
-                                        <option value="MURCIA">MURCIA</option>
-                                        <option value="NAVARRA">NAVARRA</option>
-                                        <option value="OURENSE">OURENSE</option>
-                                        <option value="PALENCIA">PALENCIA</option>
-                                        <option value="PALMAS, LAS">PALMAS, LAS</option>
-                                        <option value="PONTEVEDRA">PONTEVEDRA</option>
-                                        <option value="RIOJA, LA">RIOJA, LA</option>
-                                        <option value="SALAMANCA">SALAMANCA</option>
-                                        <option value="SANTA CRUZ DE TENERIFE">SANTA CRUZ DE TENERIFE</option>
-                                        <option value="SEGOVIA">SEGOVIA</option>
-                                        <option value="SEVILLA">SEVILLA</option>
-                                        <option value="SORIA">SORIA</option>
-                                        <option value="TARRAGONA">TARRAGONA</option>
-                                        <option value="TERUEL">TERUEL</option>
-                                        <option value="TOLEDO">TOLEDO</option>
-                                        <option value="VALENCIA">VALENCIA</option>
-                                        <option value="VALLADOLID">VALLADOLID</option>
-                                        <option value="VIZCAYA">VIZCAYA</option>
-                                        <option value="ZAMORA">ZAMORA</option>
-                                        <option value="ZARAGOZA">ZARAGOZA</option>
-                                        </select>
+                                    <div class="cover-select">
+                                        <select id="contact_teachers_province" name="contact_teachers[province]" class="form-control" data-validation-rule="select-option">
+                                            <option value="" selected="selected">Selecciona opción:</option>
+                                            <option value="ÁLAVA">ÁLAVA</option>
+                                            <option value="ALBACETE">ALBACETE</option>
+                                            <option value="ALICANTE">ALICANTE</option>
+                                            <option value="ALMERÍA">ALMERÍA</option>
+                                            <option value="ASTURIAS">ASTURIAS</option>
+                                            <option value="ÁVILA">ÁVILA</option>
+                                            <option value="BADAJOZ">BADAJOZ</option>
+                                            <option value="CANTABRIA">CANTABRIA</option>
+                                            <option value="CEUTA">CEUTA</option>
+                                            <option value="BARCELONA">BARCELONA</option>
+                                            <option value="BURGOS">BURGOS</option>
+                                            <option value="CÁCERES">CÁCERES</option>
+                                            <option value="CÁDIZ">CÁDIZ</option>
+                                            <option value="CASTELLÓN">CASTELLÓN</option>
+                                            <option value="CIUDAD REAL">CIUDAD REAL</option>
+                                            <option value="CÓRDOBA">CÓRDOBA</option>
+                                            <option value="CORUÑA, A">CORUÑA, A</option>
+                                            <option value="CUENCA">CUENCA</option>
+                                            <option value="GIRONA">GIRONA</option>
+                                            <option value="GRANADA">GRANADA</option>
+                                            <option value="GUADALAJARA">GUADALAJARA</option>
+                                            <option value="GUIPÚZCOA">GUIPÚZCOA</option>
+                                            <option value="HUELVA">HUELVA</option>
+                                            <option value="HUESCA">HUESCA</option>
+                                            <option value="ILLES BALEARS">ILLES BALEARS</option>
+                                            <option value="JAÉN">JAÉN</option>
+                                            <option value="LEÓN">LEÓN</option>
+                                            <option value="LLEIDA">LLEIDA</option>
+                                            <option value="LUGO">LUGO</option>
+                                            <option value="MADRID">MADRID</option>
+                                            <option value="MÁLAGA">MÁLAGA</option>
+                                            <option value="MELILLA">MELILLA</option>
+                                            <option value="MURCIA">MURCIA</option>
+                                            <option value="NAVARRA">NAVARRA</option>
+                                            <option value="OURENSE">OURENSE</option>
+                                            <option value="PALENCIA">PALENCIA</option>
+                                            <option value="PALMAS, LAS">PALMAS, LAS</option>
+                                            <option value="PONTEVEDRA">PONTEVEDRA</option>
+                                            <option value="RIOJA, LA">RIOJA, LA</option>
+                                            <option value="SALAMANCA">SALAMANCA</option>
+                                            <option value="SANTA CRUZ DE TENERIFE">SANTA CRUZ DE TENERIFE</option>
+                                            <option value="SEGOVIA">SEGOVIA</option>
+                                            <option value="SEVILLA">SEVILLA</option>
+                                            <option value="SORIA">SORIA</option>
+                                            <option value="TARRAGONA">TARRAGONA</option>
+                                            <option value="TERUEL">TERUEL</option>
+                                            <option value="TOLEDO">TOLEDO</option>
+                                            <option value="VALENCIA">VALENCIA</option>
+                                            <option value="VALLADOLID">VALLADOLID</option>
+                                            <option value="VIZCAYA">VIZCAYA</option>
+                                            <option value="ZAMORA">ZAMORA</option>
+                                            <option value="ZARAGOZA">ZARAGOZA</option>
+                                       </select>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                 	<label class="control-label required" for="contact_teachers_city">Ciudad <span>*</span></label>
-                                    <input id="contact_teachers_city" name="contact_teachers[city]" required class="form-control" type="text">
+                                    <input id="contact_teachers_city" name="contact_teachers[city]" class="form-control" type="text" data-validation-rule="not-empty">
                                 </div>
                                 <div class="form-group">
                                 	<label class="control-label required" for="contact_teachers_postal_code">Código postal <span>*</span></label>
-                                    <input id="contact_teachers_postal_code" name="contact_teachers[postal_code]" required class="form-control" type="text">
+                                    <input id="contact_teachers_postal_code" name="contact_teachers[postal_code]" class="form-control" type="text" data-validation-rule="zip">
                                 </div>    
                                 <div id="contact_teachers_step3">
                                 	<h3>Sobre tus alumnos</h3>
                                 </div>
                                 <div class="form-group">
                                 	<label class="control-label label-pregunta">¿Estás preparando a tus alumnos a alguno de los exámenes de Cambridge? <span>*</span></label>
-                                    <div id="contact_teachers_cambridge_exams">
+                                    <div id="contact_teachers_cambridge_exams" data-validation-rule="multi-checkbox">
                                     	<div class="checkbox">
                                         	<input id="contact_teachers_cambridge_exams_0" name="contact_teachers[cambridge_exams][]" value="Cambridge English Young Learners" type="checkbox"><label for="contact_teachers_cambridge_exams_0" class=""></label>Cambridge English Young Learners
                                     	</div>
                                     	<div class="checkbox">
-                                        	<label class=""><input id="contact_teachers_cambridge_exams_1" name="contact_teachers[cambridge_exams][]" value="Cambridge English Key" type="checkbox"><label for="contact_teachers_cambridge_exams_1" class=""></label>Cambridge English Key
+                                        	<input id="contact_teachers_cambridge_exams_1" name="contact_teachers[cambridge_exams][]" value="Cambridge English Key" type="checkbox"><label for="contact_teachers_cambridge_exams_1" class=""></label>Cambridge English Key
                                     	</div>
                                     	<div class="checkbox">
-                                        	<input id="contact_teachers_cambridge_exams_1" name="contact_teachers[cambridge_exams][]" value="Cambridge English Preliminary" type="checkbox"><label for="contact_teachers_cambridge_exams_1" class=""></label>Cambridge English Preliminary
+                                        	<input id="contact_teachers_cambridge_exams_2" name="contact_teachers[cambridge_exams][]" value="Cambridge English Preliminary" type="checkbox"><label for="contact_teachers_cambridge_exams_2" class=""></label>Cambridge English Preliminary
                                     	</div>
                                         <div class="checkbox">
                                         	<input id="contact_teachers_cambridge_exams_3" name="contact_teachers[cambridge_exams][]" value="Cambridge English First" type="checkbox"><label for="contact_teachers_cambridge_exams_3" class=""></label>Cambridge English First
@@ -253,7 +260,7 @@
                                 </div>
                                 <div class="form-group">
                                 	<label class="control-label label-pregunta">¿Cuál es el nivel de inglés de tus alumnos? <span>*</span></label>
-                                    <div id="contact_teachers_cambridge_english_level">
+                                    <div id="contact_teachers_cambridge_english_level" data-validation-rule="multi-checkbox">
                                         <div class="checkbox">
                                         	<input id="contact_teachers_cambridge_english_level_0" name="contact_teachers[cambridge_english_level][]" value="Pre A1" type="checkbox"><label for="contact_teachers_cambridge_english_level_0" class=""></label>Pre A1
                                         </div>
@@ -322,8 +329,9 @@
                                </div>
                             	<div class="form-group textarea-group">
                                 	<label class="control-label" for="contact_teachers_message">Mensaje</label>
-                                    <textarea id="contact_teachers_message" name="contact_teachers[message]" rows="3" placeholder="Cuéntanos como podemos ayudarte, o déjanos tu opinión sobre esta plataforma." class="form-control"></textarea>
+                                    <textarea id="contact_teachers_message" name="contact_teachers[message]" data-validation-rule="not-empty" rows="3" placeholder="Cuéntanos como podemos ayudarte, o déjanos tu opinión sobre esta plataforma." class="form-control"></textarea>
                                 </div>
+                                	<div class="errores"></div>
                                     <div class="form-group">
                                     	<p class="txt-required"><span>*</span> Campos oblogatorios</p>
                                         <button type="submit" id="contact_teachers_submit" name="contact_teachers[submit]" class="btn-primary btn">ENVIAR</button>

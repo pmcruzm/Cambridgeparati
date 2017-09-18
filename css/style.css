@@ -337,7 +337,11 @@ CONTACTO
 
 .form-contact{padding-top:44px;}
 #contact_teachers_step1 h3,#contact_teachers_step2 h3,#contact_teachers_step3 h3,#contact_teachers_step4 h3{color:#FAB200;font-family:'Montserrat', Helvetica, sans-serif;line-height: 24px;border-bottom:4px solid #FAB200;padding-bottom:22px;margin-bottom:32px;}
-.form-contact input[type=text],.form-contact input[type=email],.form-contact select{height:48px;width: 458px;border: 1px solid #D8D8D8;line-height:48px;float:right;box-sizing:border-box;padding-left:48px;padding-right:48px;color:#4A4A4A;font-size:16px;margin-bottom:16px;-webkit-appearance:none;}
+.form-contact input[type=text],.form-contact input[type=email]{height:48px;width: 458px;border: 1px solid #D8D8D8;line-height:48px;float:right;box-sizing:border-box;padding-left:48px;padding-right:48px;color:#4A4A4A;font-size:16px;margin-bottom:16px;-webkit-appearance:none;}
+.form-contact input[type=text].error,.form-contact input[type=email].error{border: 1px solid #ff0000;}
+.form-contact .cover-select{height:48px;width: 458px;line-height:48px;float:right;margin-bottom:16px;overflow:hidden;border-radius:4px;background:#F2F1F0 url(../svg/symbol_select.svg) 95% 50% no-repeat;box-sizing:border-box;}
+.form-contact .cover-select.error{border: 1px solid #ff0000;}
+.form-contact select{-webkit-appearance:none;width:110%;height:48px;display:block;box-sizing:border-box;padding-left:48px;padding-right:48px;color:#4A4A4A;font-size:16px;border:none;background-color:transparent;}
 .form-contact input[type=text]:focus,.form-contact input[type=email]:focus{border: 1px solid #FAB200;}
 .form-group{overflow:hidden;}
 .form-group>label{color:#4A4A4A;font-size: 16px;line-height:48px;height:48px;}
@@ -345,7 +349,6 @@ CONTACTO
 #contact_teachers_recaptcha{width:458px;float:right;}
 .form-group>.checkbox{width:458px;float:right;margin-bottom: 18px;padding-left: 30px;color:#4A4A4A;padding-left:30px;box-sizing:border-box;position:relative;}
 .form-group>.checkbox a{color:#4A4A4A;text-decoration:underline;}
-.form-contact select{border-radius: 4px;background-color: #F2F1F0;}
 #contact_teachers_step2,#contact_teachers_step3,#contact_teachers_step4{margin-top:52px;}
 #contact_teachers_cambridge_certificates,#contact_teachers_cambridge_english_level,#contact_teachers_cambridge_exams{overflow:hidden;padding-bottom:54px;}
 #contact_teachers_cambridge_certificates .checkbox,#contact_teachers_cambridge_exams .checkbox{width:50%;float:left;padding-bottom:16px;color:#4A4A4A;font-size:16px;padding-left:30px;box-sizing:border-box;position:relative;}
@@ -353,11 +356,12 @@ CONTACTO
 .label-pregunta{line-height:24px !important;padding-bottom:16px;height:auto !important;display:block;}
 .textarea-group label{display:none;}
 .textarea-group textarea{width:100%;height: 191px;border: 1px solid #D8D8D8;box-sizing:border-box;padding:40px;font-family:'Source Sans Pro', Helvetica, sans-serif;font-size:16px;line-height:32px;}
-.txt-required{float:right;display:inline-block;font-size: 12px;	line-height: 20px;color:#4A4A4A;margin-top:81px;}
+.textarea-group textarea.error{border: 1px solid #ff0000;}
+.txt-required{float:right;display:inline-block;font-size: 12px;	line-height: 20px;color:#4A4A4A;}
 .txt-required span{color:#FAB200;}
 
-.form-contact button{display:block;height:48px;width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;margin-top:81px;}
-
+.form-contact button{display:block;height:48px;width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;}
+.errores{font-size:14px;color:red;padding-top:40px;padding-bottom:40px;}
 
 
 
@@ -425,6 +429,7 @@ input[type="checkbox"] {
     background-size:16px;
 	position:relative;
 	top:3px;
+	margin-right:10px;
 }
 
 #foo:checked,
@@ -440,6 +445,7 @@ input[type="checkbox"] {
     background-size:16px;
 	position:relative;
 	top:3px;
+	margin-right:10px;
 }
 
 .form-contact input[type="checkbox"]:checked + label::before {
@@ -454,6 +460,7 @@ input[type="checkbox"] {
     background-size:16px;
 	position:relative;
 	top:3px;
+	margin-right:10px;
 }
 
 

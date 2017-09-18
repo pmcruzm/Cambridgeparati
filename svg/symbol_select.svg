@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Affordance</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Form_Select_cerrado" transform="translate(-433.000000, -19.000000)" fill="#494949">
+            <g id="Selector">
+                <path d="M440,23 L433,23 L436.5,19 L440,23 Z M433,26 L439.832532,26 L436.416266,30.3695386 L433,26 Z" id="Affordance"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -404,6 +404,37 @@ jQuery(document).ready(function(){
 		}
 		window.open(url_recurso,'_blank');
 	});
+	
+	//Eliminar marco de error cuando se hace click sobre un input con error
+	jQuery(document).on('focus','form input,form textarea,form select',function(event){
+		event.preventDefault();
+		if(jQuery(this).attr('type')!='submit'){
+			if(jQuery(this).attr('type')=='select'){
+				if(jQuery(this).parent().hasClass('error')){
+					jQuery(this).parent().removeClass('error');
+				}
+			}else{
+				if(jQuery(this).hasClass('error')){
+					jQuery(this).removeClass('error');
+				}
+			}
+		}
+	});
+	
+	//Detectar cambios en checkbox
+	jQuery(document).on('change','form input[type=checkbox]',function(event){
+		event.preventDefault();
+			if(jQuery(this).hasClass('error')){
+				jQuery(this).parents('.form-group').find('input[type=checkbox]').removeClass('error');
+			}
+	});
+	
+	//Validación de formularios de contacto
+	jQuery('form[data-validate="true"]').on('submit', function(event){
+		if( ! validateForm.validate(event) ) {
+			event.preventDefault();
+		}
+	});
 
 	//Redirección a la página mobile
 /*	if(device=="yes" && w_win<767 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
@@ -1208,192 +1239,6 @@ function control_scroll(e){
 
 }
 
-//Funcion para mostrar los elementos filtrados
-function filter_catalogo(segmento,type1,type2){
-	var allCourses = jQuery('#all-catalogo .content-catalogo div[data-type]');
-
-	//allCourses.show();
-
-	if(segmento==-1 & type1==-1 & type2==-1 ){
-		//Cerrarmos alert de 0 libros
-		jQuery('.empty-catalogo').hide();
-
-		allCourses.show();
-
-		//Reseteamos botones
-		jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('bloqueado');
-		jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('bloqueado');
-
-		//Calculamos demos y evalución para los correspondientes al filtro
-		var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
-		var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
-
-		//Asignamos valores a enlaces correspondientes
-		jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
-		if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
-		jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
-		if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
-
-		//Desbloqueamos filtros
-		block_filter=0;
-		//Activamos Lazyload para las imágenes
-		jQuery("img.lazy:visible").lazyload({
-			threshold : 1,
-			load : function()
-			{
-				//Miramos span de Sample
-					if(jQuery(this).parent().find('span').length>0){
-						var alto_img=jQuery(this).height();
-						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
-						jQuery(this).parent().find('span.featured').css({marginTop:Math.round(-alto_img/2)+13}).show();
-						jQuery(this).parent().find('span.cover').css({marginTop:Math.round(-alto_img/2)+16}).show();
-					}
-					//Miramos cover check
-					if(jQuery(this).parents('.single-box-book').hasClass('check')){
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
-					}else{
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
-					}
-			}
-		});
-	}else{
-		//Cerrarmos alert de 0 libros
-		jQuery('.empty-catalogo').hide();
-
-		allCourses.hide();
-
-		//Filtro de primer nivel
-		if(segmento!=-1) {
-
-			allCourses.each(function(i, e){
-					if( jQuery(e).data('segment') == segmento ) {
-						if(type1==-1 && type2==-1){
-							jQuery(e).show();
-						}else{
-							if( jQuery(e).data('type') == 'demo' && type1!=-1 ){
-								jQuery(e).show();
-							}
-							if( jQuery(e).data('type') == 'centre' && type2!=-1 ){
-								jQuery(e).show();
-							}
-						}
-					}
-			});
-
-			//Reseteamos botones
-			jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('bloqueado');
-			jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('bloqueado');
-
-			//Calculamos demos y evalución para los correspondientes al filtro
-			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo][data-segment='+segmento+']').length;
-			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre][data-segment='+segmento+']').length;
-
-			//Asignamos valores a enlaces correspondientes
-			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
-			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
-			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
-			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
-
-			//Miramos si no hay libros
-			if(all_demos==0 && all_evaluacion==0 ){
-				jQuery('.empty-catalogo').show();
-			}
-
-			//Desbloqueamos filtros
-			block_filter=0;
-			//Activamos Lazyload para las imágenes
-			jQuery("img.lazy:visible").lazyload({
-				threshold : 1,
-				load : function()
-				{
-					//Miramos span de Sample
-					if(jQuery(this).parent().find('span').length>0){
-						var alto_img=jQuery(this).height();
-						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
-						jQuery(this).parent().find('span.featured').css({marginTop:Math.round(-alto_img/2)+13}).show();
-						jQuery(this).parent().find('span.cover').css({marginTop:Math.round(-alto_img/2)+16}).show();
-					}
-					//Miramos cover check
-					if(jQuery(this).parents('.single-box-book').hasClass('check')){
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
-					}else{
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
-					}
-				}
-			});
-		}else{
-
-			allCourses.each(function(i, e){
-					if(type1==-1 && type2==-1){
-						jQuery(e).show();
-					}else{
-						if( jQuery(e).data('type') == 'demo' && type1!=-1 ){
-							jQuery(e).show();
-						}
-						if( jQuery(e).data('type') == 'centre' && type2!=-1 ){
-							jQuery(e).show();
-						}
-					}
-			});
-
-			//Reseteamos botones
-			jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('bloqueado');
-			jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('bloqueado');
-
-			//Calculamos demos y evalución para todos
-			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
-			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
-
-			//Asignamos valores a enlaces correspondientes
-			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
-			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
-			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
-			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
-
-			//Miramos si no hay libros
-			if(all_demos==0 && all_evaluacion==0 ){
-				jQuery('.empty-catalogo').show();
-			}
-
-			//Desbloqueamos filtros
-			block_filter=0;
-			//Activamos Lazyload para las imágenes
-			jQuery("img.lazy:visible").lazyload({
-				threshold : 1,
-				load : function()
-				{
-					//Miramos span de Sample
-					if(jQuery(this).parent().find('span').length>0){
-						var alto_img=jQuery(this).height();
-						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
-						jQuery(this).parent().find('span.featured').css({marginTop:Math.round(-alto_img/2)+13}).show();
-						jQuery(this).parent().find('span.cover').css({marginTop:Math.round(-alto_img/2)+16}).show();
-					}
-					//Miramos cover check
-					if(jQuery(this).parents('.single-box-book').hasClass('check')){
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
-					}else{
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
-					}
-				}
-			});
-		}
-
-	}
-
-}
 
 //Función para eliminar hash
 function removeHash () {
