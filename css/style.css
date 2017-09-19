@@ -335,8 +335,8 @@ CONTACTO
 .contact_filter .enl_profesor:hover:before{background-position:0px -116px;}
 .contact_filter .enl_profesor.active:before{background-position:0px -116px;}
 
-.form-contact{padding-top:44px;}
-#contact_teachers_step1 h3,#contact_teachers_step2 h3,#contact_teachers_step3 h3,#contact_teachers_step4 h3{color:#FAB200;font-family:'Montserrat', Helvetica, sans-serif;line-height: 24px;border-bottom:4px solid #FAB200;padding-bottom:22px;margin-bottom:32px;}
+.form-contact{}
+.form-contact .form-heading {color:#FAB200;font-family:'Montserrat', Helvetica, sans-serif;line-height: 24px;border-bottom:4px solid #FAB200;padding-bottom:22px;margin-bottom:32px;margin-top:52px; text-transform: uppercase;}
 .form-contact input[type=text],.form-contact input[type=email]{height:48px;width: 458px;border: 1px solid #D8D8D8;line-height:48px;float:right;box-sizing:border-box;padding-left:48px;padding-right:48px;color:#4A4A4A;font-size:16px;margin-bottom:16px;-webkit-appearance:none;}
 .form-contact input[type=text].error,.form-contact input[type=email].error{border: 1px solid #ff0000;}
 .form-contact .cover-select{height:48px;width: 458px;line-height:48px;float:right;margin-bottom:16px;overflow:hidden;border-radius:4px;background:#F2F1F0 url(../svg/symbol_select.svg) 95% 50% no-repeat;box-sizing:border-box;}
@@ -345,11 +345,10 @@ CONTACTO
 .form-contact input[type=text]:focus,.form-contact input[type=email]:focus{border: 1px solid #FAB200;}
 .form-group{overflow:hidden;}
 .form-group>label{color:#4A4A4A;font-size: 16px;line-height:48px;height:48px;}
-.form-group>label span,.checkbox span{color: #FAB200;}
-#contact_teachers_recaptcha{width:458px;float:right;}
+.form-group span.hint-required{color: #FAB200;}
+.form-group>.recaptcha{width:458px;float:right;}
 .form-group>.checkbox{width:458px;float:right;margin-bottom: 18px;padding-left: 30px;color:#4A4A4A;padding-left:30px;box-sizing:border-box;position:relative;}
 .form-group>.checkbox a{color:#4A4A4A;text-decoration:underline;}
-#contact_teachers_step2,#contact_teachers_step3,#contact_teachers_step4{margin-top:52px;}
 #contact_teachers_cambridge_certificates,#contact_teachers_cambridge_english_level,#contact_teachers_cambridge_exams{overflow:hidden;padding-bottom:54px;}
 #contact_teachers_cambridge_certificates .checkbox,#contact_teachers_cambridge_exams .checkbox{width:50%;float:left;padding-bottom:16px;color:#4A4A4A;font-size:16px;padding-left:30px;box-sizing:border-box;position:relative;}
 #contact_teachers_cambridge_english_level .checkbox{width:25%;float:left;padding-bottom:16px;color:#4A4A4A;font-size:16px;padding-left:30px;box-sizing:border-box;position:relative;}

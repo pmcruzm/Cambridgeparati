@@ -36,8 +36,8 @@ jQuery(document).ready(function(){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
-	
-	
+
+
 	//Volver el scroll a top
 	/*jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
@@ -63,14 +63,14 @@ jQuery(document).ready(function(){
 			}
 		}
 	});*/
-	
-	//Reseteamos los checkbox si son visibles 
-	if (jQuery('.body-filtros').is(":visible") ) {	
+
+	//Reseteamos los checkbox si son visibles
+	if (jQuery('.body-filtros').is(":visible") ) {
 		jQuery('.body-filtros input[type=checkbox]').attr('checked',false);
 		jQuery('.body-filtros label').removeClass('active');
 	}
-	
-	
+
+
 	if (jQuery('.bxslider').is(":visible") ) {
 	//Galería cabecera home
 	var slider=jQuery('.bxslider').bxSlider({
@@ -87,12 +87,12 @@ jQuery(document).ready(function(){
 						  },
 						  onSlideAfter: function(slideElement, oldIndex, newIndex){
 						  },
-						  onSlideNext: function(slideElement, oldIndex, newIndex){ 
+						  onSlideNext: function(slideElement, oldIndex, newIndex){
 						  },
 						  onSlidePrev: function(slideElement, oldIndex, newIndex){
 						  },
 						});
-						
+
 	//Galería opiniones home
 	var slider_opinion=jQuery('.bxslider_opiniones').bxSlider({
 						  pager: true,
@@ -108,19 +108,19 @@ jQuery(document).ready(function(){
 						  },
 						  onSlideAfter: function(slideElement, oldIndex, newIndex){
 						  },
-						  onSlideNext: function(slideElement, oldIndex, newIndex){ 
+						  onSlideNext: function(slideElement, oldIndex, newIndex){
 						  },
 						  onSlidePrev: function(slideElement, oldIndex, newIndex){
 						  },
-						});	
+						});
 	}
-						
-	//Cuando quieres ver video del slider home 
+
+	//Cuando quieres ver video del slider home
 	jQuery(document).on('click','.enl_video',function(e){
 		e.preventDefault();
-		
-	});	
-	
+
+	});
+
 	//Desplegable Languages
 	jQuery(document).on('click',".enl_language", function(e) {
 		e.preventDefault();
@@ -129,8 +129,8 @@ jQuery(document).ready(function(){
 		}else{
 			jQuery(this).parent().removeClass('active')
 		}
-	});	
-	
+	});
+
 	//Menú mobile eventos táctiles
 	jQuery(document).on('touchstart',".enl_language", function(e) {
 		e.preventDefault();
@@ -139,21 +139,21 @@ jQuery(document).ready(function(){
 		}else{
 			jQuery(this).parent().removeClass('active')
 		}
-	});	
-	
+	});
+
 	//Mostrar Video a pantalla completa
 	jQuery(document).on('click',".enl_video", function(e) {
 		e.preventDefault();
 		var url_video=jQuery(this).attr('href');
 		jQuery('<div class="fullview"><span class="btn-close-player">Close</span><iframe src="'+url_video+'?autoplay=1&amp;rel=0&amp;fs=0&amp;showinfo=0" frameborder="0"></iframe></div>').appendTo('body');
-	});	
-	
-	//Eliminamos el player 
+	});
+
+	//Eliminamos el player
 	jQuery(document).on('click',".btn-close-player", function(e) {
-		e.preventDefault();	
+		e.preventDefault();
 		jQuery('.fullview').remove();
 	});
-	
+
 	//Galería de recursos
 	if (jQuery('.carrusel_recursos').is(":visible") ) {
 		jQuery('.carrusel-recientes').slick({
@@ -166,7 +166,7 @@ jQuery(document).ready(function(){
 		  arrows:false,
 		  slidesToScroll: 2
 		});
-		
+
 		jQuery('.carrusel-app').slick({
 		  dots: false,
 		  infinite: false,
@@ -177,7 +177,7 @@ jQuery(document).ready(function(){
 		  arrows:false,
 		  slidesToScroll: 2
 		});
-		
+
 		jQuery('.carrusel-visitados').slick({
 		  dots: false,
 		  infinite: false,
@@ -189,25 +189,25 @@ jQuery(document).ready(function(){
 		  slidesToScroll: 2
 		});
 	}
-	
+
 	if (jQuery('.box-body-recursos').is(":visible") ) {
 		//Funciones para el cambio de bloques
-			
+
 		resources = jQuery('.box_recurso');
 		if ( resources.length == 0  ) {
 			jQuery('.more-box-recursos h4').show();
 			jQuery('.more-box-recursos .all_recursos').hide();
 		}else{
 			if(resources.length<=n_elems){
-				jQuery('.more-box-recursos .all_recursos').hide();	
+				jQuery('.more-box-recursos .all_recursos').hide();
 			}
 			n_load=1;
 			calc_pagination();
 		}
-			 
+
 	}
-	
-	//Checkbox recursos 
+
+	//Checkbox recursos
 	jQuery(document).on('change','.body-filtros input[type=checkbox]',function(event){
 		event.preventDefault();
 			//alert(jQuery(this).attr('class'));
@@ -216,31 +216,31 @@ jQuery(document).ready(function(){
 			}else{
 				jQuery(this).parent().addClass('active');
 			}
-			
+
 			filterChange();
 	});
-	
-	//Limpiar filtros 
+
+	//Limpiar filtros
 	jQuery(document).on('click','.clear_all_filters',function(event){
 		event.preventDefault();
 			//alert(jQuery(this).attr('class'));
 			jQuery('.body-filtros input[type=checkbox]').attr('checked',false);
 			jQuery('.body-filtros label').removeClass('active');
-			//Falta mostrar todos los bloques 
+			//Falta mostrar todos los bloques
 			jQuery('.contenedor-recursos .item').removeClass('hide');
 			n_load=1;
 			calc_pagination();
-				
+
 	});
-	
-	//Más recursos en la páginación 
+
+	//Más recursos en la páginación
 	jQuery(document).on('click','.more-box-recursos .all_recursos',function(event){
 		event.preventDefault();
 			n_load++;
 			calc_pagination();
 	});
-	
-	//Más recursos en la páginación 
+
+	//Más recursos en la páginación
 	jQuery(document).on('click','.opc_recursos a',function(event){
 		event.preventDefault();
 			jQuery('.opc_recursos a').removeClass('active');
@@ -264,7 +264,7 @@ jQuery(document).ready(function(){
 			}
 			jQuery(this).addClass('active');
 	});
-	
+
 	//Cuando pulsamos sobre un recurso
 	jQuery(document).on('click','a.box_recurso',function(event){
 		event.preventDefault();
@@ -276,11 +276,11 @@ jQuery(document).ready(function(){
 			}else{
 				var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
 				var arr_recursos=list_recusos.split(",");
-				//Eliminamos el primer recursos de la pila 
+				//Eliminamos el primer recursos de la pila
 				//Si es mayor que 15
 				if(arr_recursos.length>15){
 					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.shift(); 
+						arr_recursos.shift();
 						arr_recursos.push(id_recurso);
 					}
 				}else{
@@ -294,7 +294,7 @@ jQuery(document).ready(function(){
 			window.open(url_recurso,'_blank');
 		}
 	});
-	
+
 	//Cuando pulsamos sobre un enlace de un recurso app
 	jQuery(document).on('click','a.btn-playstore,a.btn-applestore',function(event){
 		event.preventDefault();
@@ -306,11 +306,11 @@ jQuery(document).ready(function(){
 			}else{
 				var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
 				var arr_recursos=list_recusos.split(",");
-				//Eliminamos el primer recursos de la pila 
+				//Eliminamos el primer recursos de la pila
 				//Si es mayor que 15
 				if(arr_recursos.length>15){
 					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.shift(); 
+						arr_recursos.shift();
 						arr_recursos.push(id_recurso);
 					}
 				}else{
@@ -324,7 +324,7 @@ jQuery(document).ready(function(){
 			window.open(url_recurso,'_blank');
 		}
 	});
-	
+
 	//Over de las fichas en desktop
 	jQuery(document).on("mouseenter",".box_recurso", function(e) {
 		e.preventDefault();
@@ -337,12 +337,12 @@ jQuery(document).ready(function(){
 			jQuery(this).removeClass('over');
 		}
 	});
-	
+
 	//Over de las fichas mobile
 	jQuery(document).on('touchstart',".box_recurso", function(e) {
 		e.preventDefault();
 		if(jQuery(this).hasClass('over')){
-			//Miramos si hay enlace de app si no abrimos enlace 
+			//Miramos si hay enlace de app si no abrimos enlace
 			if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
 			 	alert('No app');
 				/*
@@ -353,11 +353,11 @@ jQuery(document).ready(function(){
 				}else{
 					var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
 					var arr_recursos=list_recusos.split(",");
-					//Eliminamos el primer recursos de la pila 
+					//Eliminamos el primer recursos de la pila
 					//Si es mayor que 15
 					if(arr_recursos.length>15){
 						if(arr_recursos.indexOf(id_recurso)<0){
-							arr_recursos.shift(); 
+							arr_recursos.shift();
 							arr_recursos.push(id_recurso);
 						}
 					}else{
@@ -376,7 +376,7 @@ jQuery(document).ready(function(){
 			jQuery(this).addClass('over');
 		}
 	});
-	
+
 	//Touch sobre enlaces de de app store
 	jQuery(document).on('touchstart',"a.btn-playstore,a.btn-applestore", function(e) {
 		e.preventDefault();
@@ -387,11 +387,11 @@ jQuery(document).ready(function(){
 		}else{
 			var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
 			var arr_recursos=list_recusos.split(",");
-			//Eliminamos el primer recursos de la pila 
+			//Eliminamos el primer recursos de la pila
 			//Si es mayor que 15
 			if(arr_recursos.length>15){
 				if(arr_recursos.indexOf(id_recurso)<0){
-					arr_recursos.shift(); 
+					arr_recursos.shift();
 					arr_recursos.push(id_recurso);
 				}
 			}else{
@@ -404,7 +404,7 @@ jQuery(document).ready(function(){
 		}
 		window.open(url_recurso,'_blank');
 	});
-	
+
 	//Eliminar marco de error cuando se hace click sobre un input con error
 	jQuery(document).on('focus','form input,form textarea,form select',function(event){
 		event.preventDefault();
@@ -414,14 +414,14 @@ jQuery(document).ready(function(){
 					jQuery(this).parent().removeClass('error');
 				}
 			}else{
-				alert('no-select');
+				//alert('no-select');
 				if(jQuery(this).hasClass('error')){
 					jQuery(this).removeClass('error');
 				}
 			}
 		}
 	});
-	
+
 	//Detectar cambios en checkbox
 	jQuery(document).on('change','form input[type=checkbox]',function(event){
 		event.preventDefault();
@@ -429,7 +429,7 @@ jQuery(document).ready(function(){
 				jQuery(this).parents('.form-group').find('input[type=checkbox]').removeClass('error');
 			}
 	});
-	
+
 	//Validación de formularios de contacto
 	jQuery('form[data-validate="true"]').on('submit', function(event){
 		if( ! validateForm.validate(event) ) {
@@ -1101,96 +1101,96 @@ jQuery(document).ready(function(){
 FUNCIONES JAVASCRIPT
 **************************/
 	function filterChange() {
-			
+
 			filterValues = {};
-	
+
 			//Get cambridgeexams filter:
 			filterValues.cambridgeexams = [];
-	
+
 			jQuery('input[name="cambridgeexams[]"]:checked').each(function(){
 				filterValues.cambridgeexams.push( jQuery(this).val() )
 			});
-	
+
 			//Get mcer filter:
 			filterValues.mcer = [];
-	
+
 			jQuery('input[name="mcer[]"]:checked').each(function(){
 				filterValues.mcer.push( jQuery(this).val() )
 			});
-	
+
 			//Get abilities filter:
 			filterValues.abilities = [];
-	
+
 			jQuery('input[name="abilities[]"]:checked').each(function(){
 				filterValues.abilities.push( jQuery(this).val() )
 			});
-	
+
 			//Get other filters:
 			filterValues.is_new = jQuery('input[name="is_new"]').is(':checked')
 			filterValues.is_app = jQuery('input[name="is_app"]').is(':checked')
 			filterValues.is_beta = jQuery('input[name="is_beta"]').is(':checked')
-	
+
 			var count = 0;
-	
+
 			resources.each(function(){
 				var item = jQuery(this);
-	
+
 				var hide = shouldHide(item);
-	
+
 				if( ! hide) count++;
-	
+
 				item.parent().toggleClass('hide', hide );
 			});
-			
+
 			if(count==0){
 				//No hay elementos
 				jQuery('.more-box-recursos h4').show();
 				jQuery('.more-box-recursos .all_recursos').hide();
 			}else{
-				//Miramos si hay que paginar	
+				//Miramos si hay que paginar
 				n_load=1;
 				calc_pagination();
 			}
-	
+
 			//jQuery('span.count').text(count);
-	
+
 		}
-	
+
 		function shouldHide(item) {
-	
+
 			var itemData = item.data();
-	
+
 			if( itemData.alwaysVisible ) {
 				return false;
 			}
-	
+
 			if ( filterValues.is_new && ! itemData.isNew) { return true; }
 			if ( filterValues.is_app && ! itemData.isApp) { return true; }
 			if ( filterValues.is_beta && ! itemData.isBeta) { return true; }
-			
-	
+
+
 			if( filterValues.cambridgeexams.length && ! findOne(filterValues.cambridgeexams, itemData.cambridgeexams)) {
 				return true;
 			}
-	
+
 			if( filterValues.mcer.length && ! findOne(filterValues.mcer, itemData.mcer)) {
 				return true;
 			}
-	
+
 			if( filterValues.abilities.length && ! findOne(filterValues.abilities, itemData.abilities) ) {
 				return true;
 			}
-	
+
 			return false;
 		}
-		
+
 		function findOne(haystack, arr) {
 			//alert(filterValues.cambridgeexams.toString()+'--'+arr.toString());
 			return arr.some(function (v) {
 				return haystack.indexOf(v) >= 0;
 			});
 		}
-		
+
 function calc_pagination(){
 	elems_show = jQuery('.item').not(".hide");
 	var all_elems=elems_show.length;
@@ -1198,16 +1198,16 @@ function calc_pagination(){
 	elems_show.each(function(){
 			if(count>=(n_load*n_elems)){
 				jQuery(this).addClass('hide-page');
-				//Mostramos botón de más 
-				jQuery('.more-box-recursos .all_recursos').show();	
+				//Mostramos botón de más
+				jQuery('.more-box-recursos .all_recursos').show();
 			}else{
 				jQuery(this).removeClass('hide-page');
 				count++;
 			}
 	});
-	//ELiminamos si alguna de las páginas 
-	if(count==all_elems){jQuery('.more-box-recursos .all_recursos').hide();}	
-}		
+	//ELiminamos si alguna de las páginas
+	if(count==all_elems){jQuery('.more-box-recursos .all_recursos').hide();}
+}
 
 //Función para capturar eventos scroll
 function control_scroll(e){

@@ -18,8 +18,8 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
     <link rel="stylesheet" type="text/css" href="css/fontface.css" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
      <!-- Font Awesome styles-->
     <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
@@ -92,54 +92,41 @@
                                 </div>
                                 <div class="body_forms">
                                 	<form name="contact_teachers" method="post" action="http://cambridgeparati.es/contact" class="form-horizontal form-contact" data-validate="true" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados" >
-                                    <div id="contact_teachers_step1">
-                                    	<h3>SOBRE TÍ</h3>
-                                    </div>
-                                    <div class="form-group">                                        
-                                        <label class="control-label required" for="contact_teachers_first_name">Nombre <span>*</span></label>
+                                	<h3 class="form-heading">SOBRE TÍ</h3>
+                                    <div class="form-group">
+                                        <label class="control-label required" for="contact_teachers_first_name">Nombre <span class="hint-required">*</span></label>
                                         <input id="contact_teachers_first_name" name="contact_teachers[first_name]" class="form-control" type="text" data-validation-rule="not-empty">
                                     </div>
-                                    <div class="form-group">                                        
-                                        <label class="control-label required" for="contact_teachers_last_name">Apellidos <span>*</span></label>
+                                    <div class="form-group">
+                                        <label class="control-label required" for="contact_teachers_last_name">Apellidos <span class="hint-required">*</span></label>
                                         <input id="contact_teachers_last_name" name="contact_teachers[last_name]" class="form-control" type="text" data-validation-rule="not-empty">
                                     </div>
-                                    <div class="form-group">                                        
-                                    	<label class="control-label required" for="contact_teachers_email">Email <span>*</span></label>
+                                    <div class="form-group">
+                                    	<label class="control-label required" for="contact_teachers_email">Email <span class="hint-required">*</span></label>
                                     	<input id="contact_teachers_email" name="contact_teachers[email]" class="form-control" type="email" autocorrect="off" data-validation-rule="email" data-error-msg="El email no es válido">
                                     </div>
-                                    <div class="form-group">                    
+                                    <div class="form-group">
                                     	<label for="contact_teachers_telephone">Teléfono</label>
                                     	<input id="contact_teachers_telephone" name="contact_teachers[telephone]" class="form-control" type="text">
                                     </div>
                                     <div class="form-group">
-                                        <div class="checkbox"><input id="contact_teachers_accept_legal_terms" data-validation-rule="checkbox" data-error-msg="Debe aceptar política de privacidad." name="contact_teachers[accept_legal_terms]" value="1" type="checkbox"><label for="contact_teachers_accept_legal_terms"></label>Acepto los <a href="http://cambridgeparati.es/legal">términos legales</a>. <span>*</span></div>
+                                        <div class="checkbox"><input id="contact_teachers_accept_legal_terms" data-validation-rule="checkbox" data-error-msg="Debe aceptar política de privacidad." name="contact_teachers[accept_legal_terms]" value="1" type="checkbox"><label for="contact_teachers_accept_legal_terms"></label>Acepto los <a href="http://cambridgeparati.es/legal">términos legales</a>. <span class="hint-required">*</span></div>
                                     </div>
                                     <div class="form-group">
                                         <div class="checkbox"><input id="contact_teachers_decline_promos" name="contact_teachers[decline_promos]" value="1" type="checkbox"><label for="contact_teachers_decline_promos"></label>No estoy interesado en que Cambridge me mande emails y boletines sobre recursos digitales y nuevos productos.</div>
-                                    </div>  
+                                    </div>
                                     <div class="form-group">
-                                        <div id="contact_teachers_recaptcha" data-validation-rule="recaptcha" data-error-msg="¿Eres un robot?">
-                                             <div class="g-recaptcha" data-sitekey="6Ld8pSUUAAAAAOSOYWK6TUeUjOSf4JjUICe4nZjL">
-                                             	<div style="width: 304px; height: 78px;">
-                                                	<div>
-                                                		<iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Ld8pSUUAAAAAOSOYWK6TUeUjOSf4JjUICe4nZjL&amp;co=aHR0cDovL2NhbWJyaWRnZXBhcmF0aS5lczo4MA..&amp;hl=es&amp;v=r20170913120556&amp;size=normal&amp;cb=nevmumk5it9b" title="widget del recaptcha" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" height="78" frameborder="0" width="304">
-                                                        </iframe>
-                                                	</div>
-                                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; ">
-                                                    </textarea>
-                                                 </div>
-                                             </div>
+                                        <div class="recaptcha" data-validation-rule="recaptcha" data-error-msg="¿Eres un robot?">
+                                             <div class="g-recaptcha" data-sitekey="6Ld8pSUUAAAAAOSOYWK6TUeUjOSf4JjUICe4nZjL"></div>
                                          </div>
                                       </div>
-                               <div id="contact_teachers_step2">
-                               		<h3>Sobre tu centro</h3>
-                               </div>
+                           		<h3 class="form-heading">Sobre tu centro</h3>
                                 <div class="form-group">
-                                	<label class="control-label required" for="contact_teachers_centre_name">Nombre del centro <span>*</span></label>
+                                	<label class="control-label required" for="contact_teachers_centre_name">Nombre del centro <span class="hint-required">*</span></label>
                                     <input id="contact_teachers_centre_name" name="contact_teachers[centre_name]" class="form-control" type="text" data-validation-rule="not-empty">
                                 </div>
                                 <div class="form-group">
-                                <label class="control-label required" for="contact_teachers_centre_type">Tipo de centro <span>*</span></label>
+                                <label class="control-label required" for="contact_teachers_centre_type">Tipo de centro <span class="hint-required">*</span></label>
                                     <div class="cover-select">
                                         <select id="contact_teachers_centre_type" name="contact_teachers[centre_type]" class="form-control" data-validation-rule="select-option">
                                             <option value="" selected="selected">Selecciona opción:</option>
@@ -150,10 +137,10 @@
                                             <option value="Profesor particular">Profesor particular</option>
                                             <option value="Formación profesional">Formación profesional</option>
                                         </select>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                	<label class="control-label required" for="contact_teachers_country">País <span>*</span></label>
+                                	<label class="control-label required" for="contact_teachers_country">País <span class="hint-required">*</span></label>
                                     <div class="cover-select">
                                         <select id="contact_teachers_country" name="contact_teachers[country]" class="form-control" data-validation-rule="select-option">
                                         	<option value="" selected="selected">Selecciona opción:</option>
@@ -162,7 +149,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                	<label class="control-label required" for="contact_teachers_province">Provincia <span>*</span></label>
+                                	<label class="control-label required" for="contact_teachers_province">Provincia <span class="hint-required">*</span></label>
                                     <div class="cover-select">
                                         <select id="contact_teachers_province" name="contact_teachers[province]" class="form-control" data-validation-rule="select-option">
                                             <option value="" selected="selected">Selecciona opción:</option>
@@ -222,18 +209,18 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                	<label class="control-label required" for="contact_teachers_city">Ciudad <span>*</span></label>
+                                	<label class="control-label required" for="contact_teachers_city">Ciudad <span class="hint-required">*</span></label>
                                     <input id="contact_teachers_city" name="contact_teachers[city]" class="form-control" type="text" data-validation-rule="not-empty">
                                 </div>
                                 <div class="form-group">
-                                	<label class="control-label required" for="contact_teachers_postal_code">Código postal <span>*</span></label>
+                                	<label class="control-label required" for="contact_teachers_postal_code">Código postal <span class="hint-required">*</span></label>
                                     <input id="contact_teachers_postal_code" name="contact_teachers[postal_code]" class="form-control" type="text" data-validation-rule="zip">
-                                </div>    
+                                </div>
                                 <div id="contact_teachers_step3">
                                 	<h3>Sobre tus alumnos</h3>
                                 </div>
                                 <div class="form-group">
-                                	<label class="control-label label-pregunta">¿Estás preparando a tus alumnos a alguno de los exámenes de Cambridge? <span>*</span></label>
+                                	<label class="control-label label-pregunta">¿Estás preparando a tus alumnos a alguno de los exámenes de Cambridge? <span class="hint-required">*</span></label>
                                     <div id="contact_teachers_cambridge_exams" data-validation-rule="multi-checkbox">
                                     	<div class="checkbox">
                                         	<input id="contact_teachers_cambridge_exams_0" name="contact_teachers[cambridge_exams][]" value="Cambridge English Young Learners" type="checkbox"><label for="contact_teachers_cambridge_exams_0" class=""></label>Cambridge English Young Learners
@@ -259,7 +246,7 @@
                                    </div>
                                 </div>
                                 <div class="form-group">
-                                	<label class="control-label label-pregunta">¿Cuál es el nivel de inglés de tus alumnos? <span>*</span></label>
+                                	<label class="control-label label-pregunta">¿Cuál es el nivel de inglés de tus alumnos? <span class="hint-required">*</span></label>
                                     <div id="contact_teachers_cambridge_english_level" data-validation-rule="multi-checkbox">
                                         <div class="checkbox">
                                         	<input id="contact_teachers_cambridge_english_level_0" name="contact_teachers[cambridge_english_level][]" value="Pre A1" type="checkbox"><label for="contact_teachers_cambridge_english_level_0" class=""></label>Pre A1
@@ -324,16 +311,14 @@
                                     	</div>
                                    </div>
                                 </div>
-                                <div id="contact_teachers_step4">
-                               		<h3>TU CONSULTA</h3>
-                               </div>
+                           		<h3 class="form-heading">TU CONSULTA</h3>
                             	<div class="form-group textarea-group">
                                 	<label class="control-label" for="contact_teachers_message">Mensaje</label>
                                     <textarea id="contact_teachers_message" name="contact_teachers[message]" data-validation-rule="not-empty" rows="3" placeholder="Cuéntanos como podemos ayudarte, o déjanos tu opinión sobre esta plataforma." class="form-control"></textarea>
                                 </div>
                                 	<div class="errores"></div>
                                     <div class="form-group">
-                                    	<p class="txt-required"><span>*</span> Campos oblogatorios</p>
+                                    	<p class="txt-required"><span class="hint-required">*</span> Campos oblogatorios</p>
                                         <button type="submit" id="contact_teachers_submit" name="contact_teachers[submit]" class="btn-primary btn">ENVIAR</button>
                                     </div>
                                     <input id="token" name="_token" value="icc5v6BbMTKEuook58oTFJzIvXSKH8OEk59Wc8ht" type="hidden">
@@ -342,12 +327,12 @@
                             </div>
                         </div>
                     </div>
-                </div>	
+                </div>
            	</div>
         </div>
         <div id="footer">
         	<div class="container">
-            	<a href="" class="logo_h">Cambridge University Press</a>	
+            	<a href="" class="logo_h">Cambridge University Press</a>
             </div>
         </div>
         <!--Bloque Cookies-->
