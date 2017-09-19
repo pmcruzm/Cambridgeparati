@@ -346,7 +346,7 @@ CONTACTO
 .form-group{overflow:hidden;}
 .form-group>label{color:#4A4A4A;font-size: 16px;line-height:48px;height:48px;}
 .form-group span.hint-required{color: #FAB200;}
-.form-group>.recaptcha{width:458px;float:right;}
+.form-group>.recaptcha{width:458px;float:right;margin-bottom:50px;}
 .form-group>.checkbox{width:458px;float:right;margin-bottom: 18px;padding-left: 30px;color:#4A4A4A;padding-left:30px;box-sizing:border-box;position:relative;}
 .form-group>.checkbox a{color:#4A4A4A;text-decoration:underline;}
 .multi-checkbox{overflow:hidden;padding-bottom:54px;}
