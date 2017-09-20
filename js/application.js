@@ -370,6 +370,8 @@ jQuery(document).ready(function(){
 				}
 				window.open(url_recurso,'_blank');
 				*/
+			 }else{
+			 	alert('No app');
 			 }
 			 jQuery(this).removeClass('over');
 		}else{
@@ -380,7 +382,8 @@ jQuery(document).ready(function(){
 	//Touch sobre enlaces de de app store
 	jQuery(document).on('touchend',"a.btn-playstore,a.btn-applestore", function(e) {
 		e.preventDefault();
-		var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
+		alert('enlace-app');
+		/*var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
 		var url_recurso=jQuery(this).attr('href');
 		if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
 			jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
@@ -402,7 +405,7 @@ jQuery(document).ready(function(){
 			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
 			//alert('aqui'+arr_recursos.toString());
 		}
-		window.open(url_recurso,'_blank');
+		window.open(url_recurso,'_blank');*/
 	});
 
 	//Eliminar marco de error cuando se hace click sobre un input con error
