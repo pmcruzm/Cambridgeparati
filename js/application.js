@@ -371,7 +371,7 @@ jQuery(document).ready(function(){
 				window.open(url_recurso,'_blank');
 				*/
 			 }else{
-			 	alert('No app');
+			 	alert('app');
 			 }
 			 jQuery(this).removeClass('over');
 		}else{
