@@ -343,10 +343,7 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace
-			alert(jQuery(this).find('a.btn-playstore').length+'--'+jQuery(this).find('a.btn-applestore').length);
-			if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
-			 	alert('No app');
-				/*
+			if(jQuery(this).find('a.btn-playstore').length==0 && jQuery(this).find('a.btn-applestore').length==0 ){
 				var id_recurso=jQuery(this).attr('data-id');
 				var url_recurso=jQuery(this).attr('href');
 				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
@@ -367,12 +364,9 @@ jQuery(document).ready(function(){
 						}
 					}
 					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-					//alert(arr_recursos.toString());
+					alert('no-app'+arr_recursos.toString());
 				}
 				window.open(url_recurso,'_blank');
-				*/
-			 }else{
-			 	alert('app');
 			 }
 			 jQuery(this).removeClass('over');
 		}else{
@@ -383,8 +377,7 @@ jQuery(document).ready(function(){
 	//Touch sobre enlaces de de app store
 	jQuery(document).on('touchend',"a.btn-playstore,a.btn-applestore", function(e) {
 		e.preventDefault();
-		alert('enlace-app');
-		/*var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
+		var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
 		var url_recurso=jQuery(this).attr('href');
 		if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
 			jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
@@ -404,9 +397,9 @@ jQuery(document).ready(function(){
 				}
 			}
 			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-			//alert('aqui'+arr_recursos.toString());
+			alert('app'+arr_recursos.toString());
 		}
-		window.open(url_recurso,'_blank');*/
+		window.open(url_recurso,'_blank');
 	});
 
 	//Eliminar marco de error cuando se hace click sobre un input con error
