@@ -343,6 +343,7 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace
+			alert(jQuery(this).find('a.btn-playstore').length+'--'+jQuery(this).find('a.btn-applestore').length);
 			if(jQuery(this).find('a.btn-playstore').length<0 && jQuery(this).find('a.btn-applestore').length<0 ){
 			 	alert('No app');
 				/*
