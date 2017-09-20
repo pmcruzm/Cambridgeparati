@@ -108,8 +108,8 @@ PROPIEDADES HOME
 .enl_top_home a{color:#ffffff;font-size:18px;margin-right:70px;}
 .enl_top_home a:last-child{margin-right:0;}
 .enl_top_home a:before{display:inline-block;content:'';width:20px;height:20px;vertical-align:middle;margin-right:19px;}
-.enl_top_home a:first-child:before{background:url(../img/ico_recursos.png) center center no-repeat;background-size:20px;vertical-align:middle;}
-.enl_top_home a:last-child:before{background:url(../img/ico_conocenos.png) center center no-repeat;background-size:18px;vertical-align:middle;}
+.enl_top_home a:first-child:before{background:url(../svg/icon_menu_recursosdigitales.svg) center center no-repeat;background-size:20px;vertical-align:middle;}
+.enl_top_home a:last-child:before{background:url(../svg/icon_menu_conocenos.svg) center center no-repeat;background-size:18px;vertical-align:middle;}
 
 .slider_home{height:640px;}
 .cont_gall{height:640px;width:100%;box-sizing:border-box;background-size:cover;background-position:center center;background-repeat:no-repeat;position:relative;padding-top:189px;}
@@ -153,7 +153,8 @@ PROPIEDADES HOME
 
 .recursos_home{background:#F2F1F0;padding-top:83px;padding-bottom:100px;}
 .recursos_home h2{color:#009FDA;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;}
-.recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:712px;margin:0 auto;margin-bottom:40px;}
+.recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:1024px;margin:0 auto;margin-bottom:40px;}
+.recursos_home h3 a{color:#000000;text-decoration:underline;}
 .opc_recursos{text-align:center;}
 .opc_recursos a{height: 36px;width:192px;border-radius: 24px;line-height:36px;display:inline-block;background:rgba(255,255,255,0.5);font-size:14px;color:#9B9B9B;margin-left:30px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .opc_recursos a:hover{background:#009FDA;color:#ffffff;}
@@ -204,6 +205,7 @@ PROPIEDADES HOME
 .inside_s_box{width:565px;height:330px;background:green;margin-top:10px;margin-left:10px;margin-right:10px;box-sizing:border-box;display:inline-block;position:relative;}
 .inside_s_box a{color:#ffffff;font-size:20px;}
 .inside_s_box p{color:#ffffff;font-size:16px;margin-top:20px;}
+.inside_s_box p strong{color:#FAB200;}
 .inside_s_box > div{position:absolute;padding:40px;bottom:0;box-sizing:border-box;}
 .box_share_fb .inside_s_box span.data-fb{display:block;text-align:center;color: #FFFFFF;font-family: 'Montserrat', sans-serif;font-size: 18px;line-height: 24px;margin-bottom:30px;}
 .box_share_fb .inside_s_box{text-align:center;background-color:rgba(66,103,178,0.8);}
@@ -251,16 +253,21 @@ CONOCENOS
 .body_generico{background:#F2F1F0;}
 .box-body-generico{background:#ffffff;box-sizing:border-box;margin-top:-360px;padding-top:100px;padding-bottom:100px;border-bottom:80px solid #f2f1f0;}
 .row-txt-box{overflow:hidden;padding-bottom:40px;padding-left:140px;padding-right:140px;}
+.row-logo{}
 .left-txt-box{float:left;width:30%;box-sizing:border-box;}
-.right-txt-box{float:right;width:70%;box-sizing:border-box;padding-left:100px;}
-.left-txt-box h4{font-family:'Montserrat', Helvetica, sans-serif;color:#00A4A1;font-size:14px;font-weight:600;text-align:right;}
-.right-txt-box p{font-size:16px;line-height:24px;color:#4A4A4A;margin-bottom:40px;}
-.right-txt-box p a{color:#4A4A4A;}
+.right-txt-box{float:right;width:70%;box-sizing:border-box;padding-left:32px;}
+.left-txt-box img{max-width:100%;margin-top:51px;}
+.right-txt-box h4{font-family:'Montserrat', Helvetica, sans-serif;color:#E1523D;font-size: 18px;line-height: 24px;border-bottom:4px solid #E1523D;padding-bottom:27px;margin-bottom:38px;}
+.right-txt-box h4.titul_cup{color:#00A4A1;border-bottom:4px solid #00A4A1;}
+.right-txt-box p{font-size:16px;line-height:32px;color:#4A4A4A;margin-bottom:40px;}
+.right-txt-box p a{color:#4A4A4A;text-decoration:underline;}
+.right-txt-box p strong{font-weight:bold;}
 .img-logo-conocenos{margin-bottom:40px;}
 .separador-c{height:15px;background:#f2f1f0;margin-bottom:100px;margin-top:60px;}
-.ico-tw-c,.ico-fb-c{display:inline-block;width:32px;height:32px;background:red;text-indent:-99999px;margin-right:10px;margin-top:10px;background-size:32px;box-shadow: 0px 0px 6px rgba(0,0,0,0.5);border-radius:32px;}
+.ico-tw-c,.ico-fb-c,.ico-inst-c{display:inline-block;width:32px;height:32px;background:red;text-indent:-99999px;margin-right:10px;margin-top:10px;background-size:32px;box-shadow: 0px 0px 6px rgba(0,0,0,0.5);border-radius:32px;}
 .ico-tw-c{background:url(../svg/btn_topbar_tw_on.svg) center center no-repeat;}
 .ico-fb-c{background:url(../svg/btn_topbar_fb_on.svg) center center no-repeat;}
+.ico-inst-c{background:url(../svg/btn_topbar_int_on.svg) center center no-repeat;}
 
 /*****************************
 RECURSOS
@@ -404,7 +411,29 @@ PROPIEDADES COOKIES
 PROPIEDADES FOOTER
 ******************************/
 #footer{background:#2e2e2e;}
-#footer .container{box-sizing:border-box;padding:50px 30px;overflow:hidden;min-width:auto !important;max-width:100% !important;}
+#footer .container{box-sizing:border-box;padding-top:50px;overflow:hidden;min-width:auto !important;max-width:100% !important;}
+.colum_logo_footer{float:left;width:40%;}
+.colum_footer{float:left;width:20%;}
+.colum_footer h3{color: #4A4A4A;font-family:'Montserrat', Helvetica, sans-serif;font-size: 12px;line-height: 26px;margin-bottom:32px;}
+.colum_footer ul a{color: #979797;font-size: 14px;line-height: 31px;}
+.rrss_footer ul li{display:inline-block;}
+.rrss_footer ul li a{display:block;width:26px;height:26px;text-indent:-99999px;margin-right:2px;}
+.rrss_footer ul li a.ico-yt-h{background:url(../svg/btn_topbar_yt.svg) center center no-repeat;background-size:26px;}
+.rrss_footer ul li a.ico-tw-h{background:url(../svg/btn_topbar_tw.svg) center center no-repeat;background-size:26px;}
+.rrss_footer ul li a.ico-fb-h{background:url(../svg/btn_topbar_fb.svg) center center no-repeat;background-size:26px;}
+.rrss_footer ul li a.ico-inst-h{background:url(../svg/btn_topbar_ig.svg) center center no-repeat;background-size:26px;}
+.rrss_footer ul li a.ico-rss-h{background:url(../svg/btn_topbar_rss.svg) center center no-repeat;background-size:26px;}
+.rrss_footer ul li a.ico-lk-h{background:url(../svg/btn_topbar_lk.svg) center center no-repeat;background-size:26px;}
+
+.logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP_footer.svg) top left no-repeat;margin-bottom:36px;}
+.logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;}
+.logo_footer{display:block;width:192px;background-size:192px;height:34px;text-indent:-99999px;background:url(../svg/CE_Master_Logo_White_RGB_Primary.svg) top left no-repeat;margin-left:30px;}
+
+.inf_footer{clear:both;padding-top:85px;}
+.inf_footer p{padding-top:16px;padding-bottom:16px;color:#979797;font-size:12px;line-height:31px;}
+.inf_footer p span{display:block;padding-left:30px;}
+.inf_footer p:before{content:'';display:block;height:2px;background:#4A4A4A;margin-bottom:16px;}
+
 
 /**********************************
 PROPIEDADES DE CUSTOM CHECKBOX BUTTON

@@ -269,29 +269,32 @@ jQuery(document).ready(function(){
 	jQuery(document).on('click','a.box_recurso',function(event){
 		event.preventDefault();
 		if(device!='yes'){
-			var id_recurso=jQuery(this).attr('data-id');
-			var url_recurso=jQuery(this).attr('href');
-			if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-				jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-			}else{
-				var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-				var arr_recursos=list_recusos.split(",");
-				//Eliminamos el primer recursos de la pila
-				//Si es mayor que 15
-				if(arr_recursos.length>15){
-					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.shift();
-						arr_recursos.push(id_recurso);
-					}
+			//Condición para los recursos de la home
+			if(jQuery(this).attr('data-id').length>0){
+				var id_recurso=jQuery(this).attr('data-id');
+				var url_recurso=jQuery(this).attr('href');
+				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
+					jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
 				}else{
-					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.push(id_recurso);
+					var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
+					var arr_recursos=list_recusos.split(",");
+					//Eliminamos el primer recursos de la pila
+					//Si es mayor que 15
+					if(arr_recursos.length>15){
+						if(arr_recursos.indexOf(id_recurso)<0){
+							arr_recursos.shift();
+							arr_recursos.push(id_recurso);
+						}
+					}else{
+						if(arr_recursos.indexOf(id_recurso)<0){
+							arr_recursos.push(id_recurso);
+						}
 					}
+					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
+					//alert(arr_recursos.toString());
 				}
-				jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-				//alert(arr_recursos.toString());
+				window.open(url_recurso,'_blank');
 			}
-			window.open(url_recurso,'_blank');
 		}
 	});
 
@@ -299,29 +302,32 @@ jQuery(document).ready(function(){
 	jQuery(document).on('click','a.btn-playstore,a.btn-applestore',function(event){
 		event.preventDefault();
 		if(device!='yes'){
-			var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
-			var url_recurso=jQuery(this).attr('href');
-			if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-				jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-			}else{
-				var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-				var arr_recursos=list_recusos.split(",");
-				//Eliminamos el primer recursos de la pila
-				//Si es mayor que 15
-				if(arr_recursos.length>15){
-					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.shift();
-						arr_recursos.push(id_recurso);
-					}
+			//Condición para los recursos de la home
+			if(jQuery(this).parents('.box_recurso').attr('data-id').length>0){
+				var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
+				var url_recurso=jQuery(this).attr('href');
+				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
+					jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
 				}else{
-					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.push(id_recurso);
+					var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
+					var arr_recursos=list_recusos.split(",");
+					//Eliminamos el primer recursos de la pila
+					//Si es mayor que 15
+					if(arr_recursos.length>15){
+						if(arr_recursos.indexOf(id_recurso)<0){
+							arr_recursos.shift();
+							arr_recursos.push(id_recurso);
+						}
+					}else{
+						if(arr_recursos.indexOf(id_recurso)<0){
+							arr_recursos.push(id_recurso);
+						}
 					}
+					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
+					//alert(arr_recursos.toString());
 				}
-				jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-				//alert(arr_recursos.toString());
+				window.open(url_recurso,'_blank');
 			}
-			window.open(url_recurso,'_blank');
 		}
 	});
 
@@ -344,29 +350,32 @@ jQuery(document).ready(function(){
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace
 			if(jQuery(this).find('a.btn-playstore').length==0 && jQuery(this).find('a.btn-applestore').length==0 ){
-				var id_recurso=jQuery(this).attr('data-id');
-				var url_recurso=jQuery(this).attr('href');
-				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-					jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-				}else{
-					var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-					var arr_recursos=list_recusos.split(",");
-					//Eliminamos el primer recursos de la pila
-					//Si es mayor que 15
-					if(arr_recursos.length>15){
-						if(arr_recursos.indexOf(id_recurso)<0){
-							arr_recursos.shift();
-							arr_recursos.push(id_recurso);
-						}
+				//Condición para los recursos de la home
+				if(jQuery(this).attr('data-id').length>0){
+					var id_recurso=jQuery(this).attr('data-id');
+					var url_recurso=jQuery(this).attr('href');
+					if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
+						jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
 					}else{
-						if(arr_recursos.indexOf(id_recurso)<0){
-							arr_recursos.push(id_recurso);
+						var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
+						var arr_recursos=list_recusos.split(",");
+						//Eliminamos el primer recursos de la pila
+						//Si es mayor que 15
+						if(arr_recursos.length>15){
+							if(arr_recursos.indexOf(id_recurso)<0){
+								arr_recursos.shift();
+								arr_recursos.push(id_recurso);
+							}
+						}else{
+							if(arr_recursos.indexOf(id_recurso)<0){
+								arr_recursos.push(id_recurso);
+							}
 						}
+						jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
+						//alert('no-app'+arr_recursos.toString());
 					}
-					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-					alert('no-app'+arr_recursos.toString());
+					window.open(url_recurso,'_blank');
 				}
-				window.open(url_recurso,'_blank');
 			 }
 			 jQuery(this).removeClass('over');
 		}else{
@@ -377,29 +386,32 @@ jQuery(document).ready(function(){
 	//Touch sobre enlaces de de app store
 	jQuery(document).on('touchend',"a.btn-playstore,a.btn-applestore", function(e) {
 		e.preventDefault();
-		var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
-		var url_recurso=jQuery(this).attr('href');
-		if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-			jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-		}else{
-			var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-			var arr_recursos=list_recusos.split(",");
-			//Eliminamos el primer recursos de la pila
-			//Si es mayor que 15
-			if(arr_recursos.length>15){
-				if(arr_recursos.indexOf(id_recurso)<0){
-					arr_recursos.shift();
-					arr_recursos.push(id_recurso);
-				}
+		//Condición para los recursos de la home
+		if(jQuery(this).parents('.box_recurso').attr('data-id').length>0){
+			var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
+			var url_recurso=jQuery(this).attr('href');
+			if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
+				jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
 			}else{
-				if(arr_recursos.indexOf(id_recurso)<0){
-					arr_recursos.push(id_recurso);
+				var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
+				var arr_recursos=list_recusos.split(",");
+				//Eliminamos el primer recursos de la pila
+				//Si es mayor que 15
+				if(arr_recursos.length>15){
+					if(arr_recursos.indexOf(id_recurso)<0){
+						arr_recursos.shift();
+						arr_recursos.push(id_recurso);
+					}
+				}else{
+					if(arr_recursos.indexOf(id_recurso)<0){
+						arr_recursos.push(id_recurso);
+					}
 				}
+				jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
+				//alert('app'+arr_recursos.toString());
 			}
-			jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-			alert('app'+arr_recursos.toString());
+			window.open(url_recurso,'_blank');
 		}
-		window.open(url_recurso,'_blank');
 	});
 
 	//Eliminar marco de error cuando se hace click sobre un input con error
