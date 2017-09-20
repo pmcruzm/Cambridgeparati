@@ -132,7 +132,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Menú mobile eventos táctiles
-	jQuery(document).on('touchstart',".enl_language", function(e) {
+	jQuery(document).on('touchend',".enl_language", function(e) {
 		e.preventDefault();
 		if(!jQuery(this).parent().hasClass('active')){
 			jQuery(this).parent().addClass('active')
@@ -339,7 +339,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Over de las fichas mobile
-	jQuery(document).on('touchstart',".box_recurso", function(e) {
+	jQuery(document).on('touchend',".box_recurso", function(e) {
 		e.preventDefault();
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace
@@ -378,7 +378,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Touch sobre enlaces de de app store
-	jQuery(document).on('touchstart',"a.btn-playstore,a.btn-applestore", function(e) {
+	jQuery(document).on('touchend',"a.btn-playstore,a.btn-applestore", function(e) {
 		e.preventDefault();
 		var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
 		var url_recurso=jQuery(this).attr('href');
