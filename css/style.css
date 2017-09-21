@@ -326,9 +326,21 @@ CONTACTO
 ******************************/
 .cont_contacto{min-height:1000px;overflow:hidden;box-sizing:border-box;padding:0px 95px;margin-top:-50px;}
 .contact_filter{overflow:hidden;height:176px;background:#ff5427;margin-top:0 !important;}
-.txt_contacto{float:left;width:30%;height:176px;display:table;}
-.txt_contacto p{color:#4A4A4A;font-size: 16px;line-height: 32px;display:table-cell;vertical-align:middle;box-sizing:border-box;padding-right:40px;}
-.body_contacto{float:left;width:70%;}
+.txt_contacto{float:left;width:30%;text-align:center;}
+.txt_contacto h4{text-align:center;color: #FAB200;font-family:'Montserrat', Helvetica, sans-serif;font-size: 18px;line-height: 24px;}
+.txt_contacto img{max-width:100%;margin-top:40px;margin-bottom:16px;}
+/*.txt_contacto p{color:#4A4A4A;font-size: 16px;line-height: 32px;display:table-cell;vertical-align:middle;box-sizing:border-box;padding-right:40px;}*/
+.body_contacto{float:left;width:70%;box-sizing:border-box;padding-left:20px;}
+
+.titul_c{max-width: 721px;color:#000000;font-size: 32px;line-height: 48px;	text-align: center;margin:0 auto;padding-top:20px;}
+.titul_c + p{color: #FAB200;font-family:'Montserrat', Helvetica, sans-serif;font-size: 18px;line-height: 24px;	text-align: center;margin-top:56px;margin-bottom:56px;}
+.box_enl_contact{max-width:671px;margin:0 auto;text-align:center;}
+.box_enl_contact a{display:inline-block;width:210px;height:160px;border: 2px solid #FAB200;	border-radius: 6px;margin-left:11px;}
+.box_enl_contact a:first-child{margin-left:0;}
+.box_enl_contact a.enl_estu{background:url(../svg/estudiantes_amarillo.svg) bottom center no-repeat;}
+.box_enl_contact a.enl_fami{background:url(../svg/familias_amarillo.svg) bottom center no-repeat;}
+.box_enl_contact a.enl_prof{background:url(../svg/profes_amarillo.svg) bottom center no-repeat;}
+.box_enl_contact a span{color: #E1523D;	font-family:'Montserrat', Helvetica, sans-serif;font-size: 16px;line-height: 21px;	text-align: center;display:inline-block;margin-top:16px;width:100%;}
 
 .contact_filter a.active{background:#e33c10;}
 .contact_filter a:hover{background:#e33c10;}
@@ -370,7 +382,11 @@ CONTACTO
 .form-contact button{display:block;height:48px;width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;}
 .errores{font-size:14px;color:red;padding-top:40px;padding-bottom:40px;}
 
-
+.content-gracias{text-align:center;min-height: 1000px;}
+.content-gracias img{max-width:100%;margin-bottom:48px;}
+.content-gracias h4{max-width: 656px;color: #000000;font-size: 32px;line-height: 48px;margin:0 auto;margin-bottom:32px;}
+.content-gracias p{width: 575px;color: #4A4A4A;font-size: 18px;line-height: 32px;margin:0 auto;margin-bottom:64px;}
+.content-gracias a{	height: 48px;width: 260px;background-color: #FF5427;margin:0 auto;color:#ffffff;line-height:48px;font-family:'Montserrat', Helvetica, sans-serif;font-size: 14px;display:block;}
 
 /*****************************
 PROPIEDADES AVISO LEGAL
