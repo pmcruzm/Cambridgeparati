@@ -63,6 +63,49 @@ jQuery(document).ready(function(){
 			}
 		}
 	});*/
+	
+	//Miramos si la cookie de aceptación está creada
+	if(jQuery.cookie('cambridge-para-ti') == 'acepta'){
+		//Ocultamos info cookies
+		jQuery('.block-cookies').hide();
+		/*var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
+		//Añadimos GA
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-31155962-17' , 'auto');
+		ga('send', 'pageview');*/
+	}else{
+		jQuery('.block-cookies').show();
+	}
+
+	//Cerrar cuadro info cookies
+	jQuery(document).on('click','.close_c',function(event){
+		event.preventDefault();
+		jQuery('.block-cookies').fadeOut(600);
+	});
+
+	//Aceptar cookies en el cuadro
+	jQuery(document).on('click','.btn-accept',function(e){
+		e.preventDefault();
+		jQuery('.block-cookies').fadeOut(600,function(){
+			//Creamos la cookie de aceptación
+			jQuery.cookie('cambridge-para-ti', 'acepta', { expires: 365 * 10 ,path: '/' });
+			/*var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
+			//Añadimos GA
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-31155962-17' , 'auto');
+			ga('send', 'pageview');*/
+		});
+	});
+
+	jQuery(window).scroll(control_scroll);
 
 	//Reseteamos los checkbox si son visibles
 	if (jQuery('.body-filtros').is(":visible") ) {
@@ -299,7 +342,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Cuando pulsamos sobre un enlace de un recurso app
-	jQuery(document).on('click','a.btn-playstore,a.btn-applestore',function(event){
+	jQuery(document).on('click','a.btn-playstore,a.btn-applestore,a.go-recurso',function(event){
 		event.preventDefault();
 		if(device!='yes'){
 			//Condición para los recursos de la home
@@ -384,7 +427,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Touch sobre enlaces de de app store
-	jQuery(document).on('touchend',"a.btn-playstore,a.btn-applestore", function(e) {
+	jQuery(document).on('touchend',"a.btn-playstore,a.btn-applestore,a.go-recurso", function(e) {
 		e.preventDefault();
 		//Condición para los recursos de la home
 		if(jQuery(this).parents('.box_recurso').attr('data-id').length>0){
@@ -444,6 +487,11 @@ jQuery(document).ready(function(){
 		if( ! validateForm.validate(event) ) {
 			event.preventDefault();
 		}
+	});
+	
+	//Evento para capturar el resize de la ventana
+	jQuery( window ).resize(function() {
+	
 	});
 
 	//Redirección a la página mobile
@@ -1234,7 +1282,7 @@ function control_scroll(e){
 			jQuery('.block-cookies').fadeOut(600,function(){
 				//Creamos la cookie de aceptación
 				jQuery.cookie('cambridge-para-ti', 'acepta', { expires: 365 * 10 ,path: '/' });
-				var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
+				/*var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 				//Añadimos GA
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -1242,7 +1290,7 @@ function control_scroll(e){
 				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 				ga('create', 'UA-31155962-17' , 'auto');
-				ga('send', 'pageview');
+				ga('send', 'pageview');*/
 			});
 		}
   }
