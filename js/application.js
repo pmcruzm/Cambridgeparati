@@ -13,6 +13,7 @@ var resources, filterValues;
 var n_load=1;
 var n_elems=12;
 var touch_control=0;
+var acepta_cookies_name = 'cambridge-para-ti-acepta-cookies';
 
 
 //Eventos para dispositivos móviles
@@ -63,20 +64,13 @@ jQuery(document).ready(function(){
 			}
 		}
 	});*/
-	
+
 	//Miramos si la cookie de aceptación está creada
-	if(jQuery.cookie('cambridge-para-ti') == 'acepta'){
+	if(jQuery.cookie(acepta_cookies_name) == 'acepta'){
 		//Ocultamos info cookies
 		jQuery('.block-cookies').hide();
-		/*var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
-		//Añadimos GA
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-31155962-17' , 'auto');
-		ga('send', 'pageview');*/
+		//Inicializamos GoogleAnalytics
+		initGoogleAnalytics();
 	}else{
 		jQuery('.block-cookies').show();
 	}
@@ -90,19 +84,10 @@ jQuery(document).ready(function(){
 	//Aceptar cookies en el cuadro
 	jQuery(document).on('click','.btn-accept',function(e){
 		e.preventDefault();
-		jQuery('.block-cookies').fadeOut(600,function(){
-			//Creamos la cookie de aceptación
-			jQuery.cookie('cambridge-para-ti', 'acepta', { expires: 365 * 10 ,path: '/' });
-			/*var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
-			//Añadimos GA
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-31155962-17' , 'auto');
-			ga('send', 'pageview');*/
-		});
+		jQuery.cookie(acepta_cookies_name, 'acepta', { expires: 365 * 10 ,path: '/' });
+		jQuery('.block-cookies').fadeOut(600);
+		//Inicializamos GoogleAnalytics
+		initGoogleAnalytics();
 	});
 
 	jQuery(window).scroll(control_scroll);
@@ -488,10 +473,10 @@ jQuery(document).ready(function(){
 			event.preventDefault();
 		}
 	});
-	
+
 	//Evento para capturar el resize de la ventana
 	jQuery( window ).resize(function() {
-	
+
 	});
 
 	//Redirección a la página mobile
@@ -1005,7 +990,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Miramos si la cookie de aceptación está creada
-	if(jQuery.cookie('cambridge-para-ti') == 'acepta'){
+	if(jQuery.cookie(acepta_cookies_name) == 'acepta'){
 		//Ocultamos info cookies
 		jQuery('.block-cookies').hide();
 		var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
@@ -1032,7 +1017,7 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('.block-cookies').fadeOut(600,function(){
 			//Creamos la cookie de aceptación
-			jQuery.cookie('cambridge-para-ti', 'acepta', { expires: 365 * 10 ,path: '/' });
+			jQuery.cookie(acepta_cookies_name, 'acepta', { expires: 365 * 10 ,path: '/' });
 			var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 			//Añadimos GA
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -1278,20 +1263,11 @@ function control_scroll(e){
 
   //Añadir Cookie si se hace scroll a +100px
   if(scrollAmount>100){
- 		if(jQuery.cookie('cambridge-para-ti') != 'acepta'){
-			jQuery('.block-cookies').fadeOut(600,function(){
-				//Creamos la cookie de aceptación
-				jQuery.cookie('cambridge-para-ti', 'acepta', { expires: 365 * 10 ,path: '/' });
-				/*var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
-				//Añadimos GA
-				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-				ga('create', 'UA-31155962-17' , 'auto');
-				ga('send', 'pageview');*/
-			});
+ 		if(jQuery.cookie(acepta_cookies_name) != 'acepta'){
+			jQuery.cookie(acepta_cookies_name, 'acepta', { expires: 365 * 10 ,path: '/' });
+			jQuery('.block-cookies').fadeOut(600);
+			//Inicializamos GoogleAnalytics
+			initGoogleAnalytics();
 		}
   }
 
@@ -1471,4 +1447,17 @@ var validateForm = {
 		return (jQuery.inArray(fileExtension, ['jpg','jpeg','png','gif']) !== -1 );
 	}
 
+}
+
+function initGoogleAnalytics() {
+	var cod_GA = jQuery('meta[property="google-analytics-id"]').attr('content');
+	if(cod_GA) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', cod_GA , 'auto');
+		ga('send', 'pageview');
+	}
 }
