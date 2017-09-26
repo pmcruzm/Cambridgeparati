@@ -339,7 +339,7 @@ CONTACTO
 .titul_c{max-width: 721px;color:#000000;font-size: 32px;line-height: 48px;	text-align: center;margin:0 auto;padding-top:20px;}
 .titul_c + p{color: #FAB200;font-family:'Montserrat', Helvetica, sans-serif;font-size: 18px;line-height: 24px;	text-align: center;margin-top:56px;margin-bottom:56px;}
 .box_enl_contact{max-width:671px;margin:0 auto;text-align:center;}
-.box_enl_contact a{display:inline-block;width:210px;height:160px;border: 2px solid #FAB200;	border-radius: 6px;margin-left:11px;}
+.box_enl_contact a{display:inline-block;width:calc(33.3333% - 14px);height:160px;border: 2px solid #FAB200;	border-radius: 6px;margin-left:11px;}
 .box_enl_contact a:first-child{margin-left:0;}
 .box_enl_contact a.enl_estu{background:url(../svg/estudiantes_amarillo.svg) bottom center no-repeat;}
 .box_enl_contact a.enl_fami{background:url(../svg/familias_amarillo.svg) bottom center no-repeat;}
@@ -385,7 +385,7 @@ CONTACTO
 .txt-required{float:right;display:inline-block;font-size: 12px;	line-height: 20px;color:#4A4A4A;}
 .txt-required span{color:#FAB200;}
 
-.form-contact button{display:block;height:48px;width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;}
+.form-contact button{display:block;height:48px;max-width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;width:100%;}
 .errores{font-size:14px;color:red;padding-top:40px;padding-bottom:40px;}
 
 .content-gracias{text-align:center;min-height: 1000px;}
@@ -580,6 +580,7 @@ MEDIA QUERIES
 @media screen and (max-width: 1140px) {
 	/*.cont_gall .container{box-sizing:border-box;padding-left:30px;padding-right:30px;}
 	.how_home h3,{width:95%;}*/
+	.container{width:95%;}
 }
 
 
@@ -588,7 +589,6 @@ MEDIA QUERIES
 
 @media screen and (max-width: 1023px) {
 .inside_s_box > div{padding:30px;}
-.container{width:95%;}
 .left-newsletter > div{padding-right:75px;}
 .row-txt-box{padding-left:100px;padding-right:100px;}
 }
@@ -629,19 +629,30 @@ MEDIA QUERIES
 	.left-txt-box img{margin-top:40px;margin-bottom:56px;}
 	.right-txt-box{padding-left:0px;}
 	.content-gracias{width:95%;margin:0 auto;}
+	.box_enl_contact a{height:140px;}
+	.txt_contacto,.body_contacto{width:100%;float:inherit;}
 }
 
 @media screen and (max-width: 640px) {
 	.box_how{width:100%;float:inherit;margin-bottom:60px;}
 	.opc_recursos a{margin-left:10px;width:142px;}
 	.row-txt-box{padding-left:70px;padding-right:70px;}
-
+	.box_enl_contact a{height:160px;width:100%;margin-left:0;margin-bottom:20px;}
+	.form-group > label{width:100%;}
+	.form-contact input[type="text"], .form-contact input[type="email"]{width:100%;}
+	.form-group > .checkbox{width:100%;}
+	.form-group > .recaptcha{width:100%;}
+	.form-contact .cover-select{width:100%;}
+	.txt-required{float:inherit;display:block;margin-bottom:20px;}
 }
 
 
 @media screen and (max-width: 480px) {
 	.opc_recursos a{margin-left:0px;width:95%;margin-bottom:20px;}
 	.row-txt-box{padding-left:50px;padding-right:50px;}
+	.cont_contacto{padding:0 50px;}
+	.multi-checkbox.multi-checkbox-50 .checkbox{width:100%;}
+	.multi-checkbox.multi-checkbox-25 .checkbox{width:100%;}
 }
 
 
