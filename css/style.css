@@ -397,22 +397,14 @@ CONTACTO
 /*****************************
 PROPIEDADES AVISO LEGAL
 ******************************/
-#box_aviso{width:100%;max-width:660px;margin:0 auto;}
-#block-aviso{background:#f5f0eb;padding-bottom:150px;}
-#box_aviso .top-register{padding-left:84px;padding-top:50px;padding-bottom:100px;}
-
-#box_aviso h3 {font-size:24px; margin-bottom: 20px; margin-top: 25px;}
-
-#box_aviso p{margin-bottom:14px;color:#2e2e2e;}
-#box_aviso p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-#box_aviso p a{color:#30c0d8;text-decoration:underline;}
-
-#box_aviso ul,#box_aviso ol{margin-bottom:14px;padding-left:30px;}
-#box_aviso ul li{list-style:disc;}
-#box_aviso ol li{list-style:decimal;}
-
-#box_aviso b,#box_aviso  strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-#box_aviso em,#box_aviso  i{font-style:italic;}
+.cont_aviso_legal{box-sizing: border-box; margin-top: -50px;min-height: 1000px;overflow: hidden;padding: 0 95px;}
+.cont_aviso_legal h4{font-family:'Montserrat', Helvetica, sans-serif;color:#E1523D;font-size: 18px;line-height: 24px;border-bottom:4px solid #E1523D;padding-bottom:27px;margin-bottom:38px;margin-top:40px;}
+.cont_aviso_legal h4.titul_cup{color:#00A4A1;border-bottom:4px solid #00A4A1;}
+.cont_aviso_legal p{font-size:16px;line-height:24px;color:#4A4A4A;margin-bottom:20px;}
+.cont_aviso_legal p a{color:#4A4A4A;text-decoration:underline;}
+.cont_aviso_legal p strong{font-weight:bold;}
+.cont_aviso_legal ul{display:block;padding-left:40px;margin-bottom:20px;}
+.cont_aviso_legal ul li{font-size:16px;line-height:24px;color:#4A4A4A;margin-bottom:10px;list-style:disc;}
 
 /*****************************
 PROPIEDADES COOKIES
@@ -651,6 +643,7 @@ MEDIA QUERIES
 	.opc_recursos a{margin-left:0px;width:95%;margin-bottom:20px;}
 	.row-txt-box{padding-left:50px;padding-right:50px;}
 	.cont_contacto{padding:0 50px;}
+	.cont_aviso_legal{padding:0 50px;}
 	.multi-checkbox.multi-checkbox-50 .checkbox{width:100%;}
 	.multi-checkbox.multi-checkbox-25 .checkbox{width:100%;}
 }
