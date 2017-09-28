@@ -13,7 +13,8 @@ var resources, filterValues;
 var n_load=1;
 var n_elems=12;
 var touch_control=0;
-var acepta_cookies_name = 'cambridge-para-ti-acepta-cookies';
+var ACEPTA_COOKIES_NAME  = 'cambridge-para-ti-acepta-cookies';
+var RECURSOS_COOKIE_NAME = 'cambridge-para-ti-recursos';
 
 
 //Eventos para dispositivos móviles
@@ -66,7 +67,7 @@ jQuery(document).ready(function(){
 	});*/
 
 	//Miramos si la cookie de aceptación está creada
-	if(jQuery.cookie(acepta_cookies_name) == 'acepta'){
+	if(jQuery.cookie(ACEPTA_COOKIES_NAME) == 'acepta'){
 		//Ocultamos info cookies
 		jQuery('.block-cookies').hide();
 		//Inicializamos GoogleAnalytics
@@ -84,7 +85,7 @@ jQuery(document).ready(function(){
 	//Aceptar cookies en el cuadro
 	jQuery(document).on('click','.btn-accept',function(e){
 		e.preventDefault();
-		jQuery.cookie(acepta_cookies_name, 'acepta', { expires: 365 * 10 ,path: '/' });
+		jQuery.cookie(ACEPTA_COOKIES_NAME, 'acepta', { expires: 365 * 10 ,path: '/' });
 		jQuery('.block-cookies').fadeOut(600);
 		//Inicializamos GoogleAnalytics
 		initGoogleAnalytics();
@@ -297,32 +298,9 @@ jQuery(document).ready(function(){
 	jQuery(document).on('click','a.box_recurso',function(event){
 		event.preventDefault();
 		if(device!='yes'){
-			//Condición para los recursos de la home
-			if(jQuery(this).attr('data-id').length>0){
-				var id_recurso=jQuery(this).attr('data-id');
-				var url_recurso=jQuery(this).attr('href');
-				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-					jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-				}else{
-					var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-					var arr_recursos=list_recusos.split(",");
-					//Eliminamos el primer recursos de la pila
-					//Si es mayor que 15
-					if(arr_recursos.length>15){
-						if(arr_recursos.indexOf(id_recurso)<0){
-							arr_recursos.shift();
-							arr_recursos.push(id_recurso);
-						}
-					}else{
-						if(arr_recursos.indexOf(id_recurso)<0){
-							arr_recursos.push(id_recurso);
-						}
-					}
-					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-					//alert(arr_recursos.toString());
-				}
-				window.open(url_recurso,'_blank');
-			}
+			var url_recurso = jQuery(this).attr('href');
+			var id_recurso  = jQuery(this).attr('data-id');
+			openResource(url_recurso, id_recurso);
 		}
 	});
 
@@ -330,32 +308,9 @@ jQuery(document).ready(function(){
 	jQuery(document).on('click','a.btn-playstore,a.btn-applestore,a.go-recurso',function(event){
 		event.preventDefault();
 		if(device!='yes'){
-			//Condición para los recursos de la home
-			if(jQuery(this).parents('.box_recurso').attr('data-id').length>0){
-				var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
-				var url_recurso=jQuery(this).attr('href');
-				if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-					jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-				}else{
-					var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-					var arr_recursos=list_recusos.split(",");
-					//Eliminamos el primer recursos de la pila
-					//Si es mayor que 15
-					if(arr_recursos.length>15){
-						if(arr_recursos.indexOf(id_recurso)<0){
-							arr_recursos.shift();
-							arr_recursos.push(id_recurso);
-						}
-					}else{
-						if(arr_recursos.indexOf(id_recurso)<0){
-							arr_recursos.push(id_recurso);
-						}
-					}
-					jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-					//alert(arr_recursos.toString());
-				}
-				window.open(url_recurso,'_blank');
-			}
+			var url_recurso = jQuery(this).attr('href');
+			var id_recurso  = jQuery(this).parents('.box_recurso').attr('data-id');
+			openResource(url_recurso, id_recurso);
 		}
 	});
 
@@ -378,32 +333,9 @@ jQuery(document).ready(function(){
 		if(jQuery(this).hasClass('over')){
 			//Miramos si hay enlace de app si no abrimos enlace
 			if(jQuery(this).find('a.btn-playstore').length==0 && jQuery(this).find('a.btn-applestore').length==0 ){
-				//Condición para los recursos de la home
-				if(jQuery(this).attr('data-id').length>0){
-					var id_recurso=jQuery(this).attr('data-id');
-					var url_recurso=jQuery(this).attr('href');
-					if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-						jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-					}else{
-						var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-						var arr_recursos=list_recusos.split(",");
-						//Eliminamos el primer recursos de la pila
-						//Si es mayor que 15
-						if(arr_recursos.length>15){
-							if(arr_recursos.indexOf(id_recurso)<0){
-								arr_recursos.shift();
-								arr_recursos.push(id_recurso);
-							}
-						}else{
-							if(arr_recursos.indexOf(id_recurso)<0){
-								arr_recursos.push(id_recurso);
-							}
-						}
-						jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-						//alert('no-app'+arr_recursos.toString());
-					}
-					window.open(url_recurso,'_blank');
-				}
+				var url_recurso = jQuery(this).attr('href');
+				var id_recurso  = jQuery(this).attr('data-id');
+				openResource(url_recurso, id_recurso);
 			 }
 			 jQuery(this).removeClass('over');
 		}else{
@@ -414,32 +346,9 @@ jQuery(document).ready(function(){
 	//Touch sobre enlaces de de app store
 	jQuery(document).on('touchend',"a.btn-playstore,a.btn-applestore,a.go-recurso", function(e) {
 		e.preventDefault();
-		//Condición para los recursos de la home
-		if(jQuery(this).parents('.box_recurso').attr('data-id').length>0){
-			var id_recurso=jQuery(this).parents('.box_recurso').attr('data-id');
-			var url_recurso=jQuery(this).attr('href');
-			if(typeof jQuery.cookie('cambridge-para-ti-recursos') === "undefined"){
-				jQuery.cookie('cambridge-para-ti-recursos', id_recurso, { expires: 365 * 10 ,path: '/' });
-			}else{
-				var list_recusos=jQuery.cookie('cambridge-para-ti-recursos');
-				var arr_recursos=list_recusos.split(",");
-				//Eliminamos el primer recursos de la pila
-				//Si es mayor que 15
-				if(arr_recursos.length>15){
-					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.shift();
-						arr_recursos.push(id_recurso);
-					}
-				}else{
-					if(arr_recursos.indexOf(id_recurso)<0){
-						arr_recursos.push(id_recurso);
-					}
-				}
-				jQuery.cookie('cambridge-para-ti-recursos', arr_recursos.toString(), { expires: 365 * 10 ,path: '/' });
-				//alert('app'+arr_recursos.toString());
-			}
-			window.open(url_recurso,'_blank');
-		}
+		var url_recurso = jQuery(this).attr('href');
+		var id_recurso  = jQuery(this).parents('.box_recurso').attr('data-id');
+		openResource(url_recurso, id_recurso);
 	});
 
 	//Eliminar marco de error cuando se hace click sobre un input con error
@@ -990,7 +899,7 @@ jQuery(document).ready(function(){
 	});
 
 	//Miramos si la cookie de aceptación está creada
-	if(jQuery.cookie(acepta_cookies_name) == 'acepta'){
+	if(jQuery.cookie(ACEPTA_COOKIES_NAME) == 'acepta'){
 		//Ocultamos info cookies
 		jQuery('.block-cookies').hide();
 		var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
@@ -1017,7 +926,7 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('.block-cookies').fadeOut(600,function(){
 			//Creamos la cookie de aceptación
-			jQuery.cookie(acepta_cookies_name, 'acepta', { expires: 365 * 10 ,path: '/' });
+			jQuery.cookie(ACEPTA_COOKIES_NAME, 'acepta', { expires: 365 * 10 ,path: '/' });
 			var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 			//Añadimos GA
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -1263,8 +1172,8 @@ function control_scroll(e){
 
   //Añadir Cookie si se hace scroll a +100px
   if(scrollAmount>100){
- 		if(jQuery.cookie(acepta_cookies_name) != 'acepta'){
-			jQuery.cookie(acepta_cookies_name, 'acepta', { expires: 365 * 10 ,path: '/' });
+ 		if(jQuery.cookie(ACEPTA_COOKIES_NAME) != 'acepta'){
+			jQuery.cookie(ACEPTA_COOKIES_NAME, 'acepta', { expires: 365 * 10 ,path: '/' });
 			jQuery('.block-cookies').fadeOut(600);
 			//Inicializamos GoogleAnalytics
 			initGoogleAnalytics();
@@ -1450,14 +1359,49 @@ var validateForm = {
 }
 
 function initGoogleAnalytics() {
-	var cod_GA = jQuery('meta[property="google-analytics-id"]').attr('content');
-	if(cod_GA) {
+	var GA_ID = jQuery('meta[property="google-analytics-id"]').attr('content');
+	if(GA_ID && GA_ID != '') {
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', cod_GA , 'auto');
+		ga('create', GA_ID , 'auto');
 		ga('send', 'pageview');
 	}
+}
+
+function openResource(url_recurso, id_recurso) {
+	//Si el GA está cargado, registramos el click en la url externa
+	if( typeof ga === 'function' ) {
+		ga('send', 'event', 'outbound', 'click', url_recurso, {
+			'transport': 'beacon',
+			'hitCallback': function(){ window.open(url_recurso,'_blank'); }
+		});
+	} else {
+		window.open(url_recurso,'_blank');
+	}
+
+
+	//Si no está definido el id (el click viene de la home), terminamos aqui
+	if( typeof id_recurso === 'undefined') {
+		return;
+	}
+
+	var recursos = (typeof jQuery.cookie(RECURSOS_COOKIE_NAME) !== 'undefined')
+					? jQuery.cookie(RECURSOS_COOKIE_NAME).split(',')
+					: [];
+
+	//Si ya existe el id en el array lo eliminamos
+	if( recursos.indexOf(id_recurso) != -1 ) {
+		var index = recursos.indexOf(id_recurso);
+		recursos.splice(index, 1);
+	}
+
+	//Añadimos el id al principio del array
+	recursos.unshift(id_recurso);
+
+	if( recursos.length > 15 ) { recursos.pop(); }
+
+	jQuery.cookie(RECURSOS_COOKIE_NAME, recursos.toString(), {expires: 365 * 10, path: '/'});
 }
