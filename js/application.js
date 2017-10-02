@@ -1055,11 +1055,11 @@ FUNCIONES JAVASCRIPT
 
 			filterValues = {};
 
-			//Get cambridgeexams filter:
-			filterValues.cambridgeexams = [];
+			//Get cambridgequalifications filter:
+			filterValues.cambridgequalifications = [];
 
-			jQuery('input[name="cambridgeexams[]"]:checked').each(function(){
-				filterValues.cambridgeexams.push( jQuery(this).val() )
+			jQuery('input[name="cambridgequalifications[]"]:checked').each(function(){
+				filterValues.cambridgequalifications.push( jQuery(this).val() )
 			});
 
 			//Get mcer filter:
@@ -1120,7 +1120,7 @@ FUNCIONES JAVASCRIPT
 			if ( filterValues.is_beta && ! itemData.isBeta) { return true; }
 
 
-			if( filterValues.cambridgeexams.length && ! findOne(filterValues.cambridgeexams, itemData.cambridgeexams)) {
+			if( filterValues.cambridgequalifications.length && ! findOne(filterValues.cambridgequalifications, itemData.cambridgequalifications)) {
 				return true;
 			}
 
@@ -1136,7 +1136,7 @@ FUNCIONES JAVASCRIPT
 		}
 
 		function findOne(haystack, arr) {
-			//alert(filterValues.cambridgeexams.toString()+'--'+arr.toString());
+			//alert(filterValues.cambridgequalifications.toString()+'--'+arr.toString());
 			return arr.some(function (v) {
 				return haystack.indexOf(v) >= 0;
 			});
