@@ -299,20 +299,18 @@ RECURSOS
 .box-filtros{overflow:hidden; box-sizing:border-box; padding:30px 15px 0 15px;position:relative;}
 
 
-.filter{display:inline-block; float:left; width:130px; margin: 0 15px 25px 15px;}
+.filter{display:inline-block; float:left; margin: 0 15px 25px 15px;}
+.filter:last-child {margin-right:0px;}
 .filter h4{color:#ffffff;font-size:14px;margin-bottom:9px;font-family: 'Montserrat', sans-serif;}
 .filter input{display:none;}
 .filter label{display:inline-block;height:30px;width:130px;background:#E33C10;line-height:30px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
 .filter label:hover{background:#ffffff;color:#E33C10;}
 .filter label.active{background:#ffffff;color:#E33C10;}
 
-.filter:last-child {margin-right:0px;}
-
 .filter.filter-cambridgequalifications{width:430px;}
 .filter.filter-cambridgequalifications label{width:210px;}
-
 .filter.filter-abilities {width:200px;}
-
+.filter.filter-other {width:200px;}
 
 .clear_all_filters{position:absolute;bottom:20px;right:20px;display:block;height:30px;width:130px;background:#E33C10;line-height:30px;color:#ffffff;text-align:center;border-radius:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
 .clear_all_filters:hover{background:#ffffff;color:#E33C10;}
