@@ -222,7 +222,7 @@ PROPIEDADES HOME
 .box_recurso.over{box-shadow: 0 0 30px 0 #9B9B9B;}
 .header_recurso{height:82px;text-align:center;display:table;width:100%;}
 .inside-h-r{display:table-cell;vertical-align:middle;height:82px;width:100%;}
-.header_recurso img{max-width:100%;max-height:56px;margin:0 auto;margin-top:-15px;}
+.header_recurso img{max-width:80%;max-height:70px;margin:0 auto;margin-top:-15px;}
 .header_recurso p{font-size:18px;line-height:24px;text-align:center;margin-top:-15px;}
 .header_recurso p strong{font-weight:bold;}
 .body_recurso{background-position:center center;background-repeat:no-repeat;background-size:cover;height:368px;position:relative;border-radius:4px;}
