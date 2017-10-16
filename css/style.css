@@ -87,12 +87,21 @@ PROPIEDADES HEADER
 .rrss_header ul li a.ico-rss-h{background:url(../svg/btn_topbar_rss.svg) center center no-repeat;background-size:26px;}
 .rrss_header ul li a.ico-lk-h{background:url(../svg/btn_topbar_lk.svg) center center no-repeat;background-size:26px;}
 
-.language_header{position:absolute;right:30px;;top:0;}
+.language_header{position:absolute;right:30px;top:0;}
 .language_header>a{color:#9B9B9B;font-size:13px;}
 .language_header>a:before{display:inline-block;content:'';width:7px;height:26px;background:url(../svg/icon_topbar_arrow.svg) center center no-repeat;background-size:7px;vertical-align:middle;margin-right:11px;}
-.language_header>a span:after{display:inline-block;content:'';width:26px;height:26px;vertical-align:middle;margin-left:18px;background:url(../img/ico_flag.png) center center no-repeat;background-size:26px;}
-.language_header .cover-desplegable{position:absolute;background:red;top:38px;display:none;}
+.language_header>a span:after{display:inline-block;content:'';width:26px;height:26px;vertical-align:middle;margin-left:18px;background:url(../svg/ico_flag.svg) center center no-repeat;background-size:26px;}
+
+.language_header>a:hover,.language_header.active>a{color:#D8D8D8;}
+.language_header>a:hover:before,.language_header.active>a:before{background:url(../svg/icon_topbar_arrow_on.svg) center center no-repeat;}
+.language_header>a:hover span:after,.language_header.active>a span:after{background:url(../svg/ico_flag_on.svg) center center no-repeat;}
+
+.language_header .cover-desplegable{position:absolute;background:#1D1E1C;top:38px;display:none;z-index:100;width:140px;padding-bottom:20px;box-sizing:border-box;text-align:center;right:-6px;padding-top:10px;}
 .language_header.active .cover-desplegable{display:block;}
+
+.language_header .cover-desplegable a{color:#9B9B9B;font-size: 13px;line-height: 17px;}
+.language_header .cover-desplegable a:hover{color:#D8D8D8;}
+.language_header .cover-desplegable a.active{color:#D8D8D8;}
 
 
 /*****************************
