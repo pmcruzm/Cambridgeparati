@@ -39,6 +39,9 @@ jQuery(document).ready(function(){
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
 
+	n_elems = jQuery('.contenedor-recursos').data('num-elems') ?
+			  jQuery('.contenedor-recursos').data('num-elems') :
+			  12;
 
 	//Volver el scroll a top
 	/*jQuery('body').scrollTo( "0px", 0,function(){
