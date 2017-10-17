@@ -242,19 +242,22 @@ PROPIEDADES HOME
 .over_recurso_all>div{display:table-cell;width:100%;height:368px;vertical-align:middle;}
 .over_recurso_all p{color:#ffffff;font-size:16px;text-align:center !important;vertical-align:middle;text-align:center;}
 .over_recurso_all p:before{content:'';display:block;height:70px;background:url(../img/icon_recurso.png) center center no-repeat;}
-.new_tag{display:block;width:50px;height:50px;color: #171614;font-size:11px;line-height:50px;background-color: #FFD101;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;}
+.new_tag{display:block;width:50px;height:50px;color:#171614;font-size:8px;line-height:50px;background-color: #FFD101;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;}
 .over_recurso_all a{display:block;margin:0 auto;width:142px;height:48px;background-size:142px;text-indent:-99999px;position:relative;}
 .over_recurso_all a.btn-applestore{background:url(../svg/btn_apple_appstore.svg) center center no-repeat;}
 .over_recurso_all a.btn-playstore{background:url(../svg/btn_google_playstore.svg) center center no-repeat;margin-bottom:20px;}
 .over_recurso_all a.go-recurso{height:auto !important;text-indent:inherit !important;color:#ffffff;font-size: 16px;line-height: 24px;text-align:center;margin-bottom:20px;}
 .over_recurso_all a.go-recurso:before{content:'';display:block;height:70px;background:url(../img/icon_recurso.png) center center no-repeat;}
-.mobile_tag{display:block;width:50px;height:50px;color: #171614;text-indent:-99999px;background:#FFD101 url(../img/ico_mobile.png) center center no-repeat;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;}
+.mobile_tag{display:block;width:50px;height:50px;color: #171614;text-indent:-99999px;background:#FFD101 url(../svg/icon_cards_app.svg) center center no-repeat;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;text-indent:-99999px;}
 .text_recurso{height:330px;overflow:hidden;padding:30px;box-sizing:border-box;}
 .body_recurso p{font-size: 16px;line-height: 24px;color:#ffffff;z-index:10;position:relative;text-align:left;}
 .cat_recurso{border-top:1px solid #ffffff;z-index:10;position:relative;height:38px;overflow:hidden;}
 .cat_recurso p{height:38px;line-height:38px;}
 .cat_recurso p:first-child{float:left;margin-left:20px;display:inline-block;}
 .cat_recurso p:last-child{float:right;margin-right:20px;display:inline-block;}
+
+.mobile_new_tag{display:block;width:50px;height:50px;color:#171614;background:#FFD101 url(../svg/icon_cards_newapp.svg) center center no-repeat;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;font-size:7px;box-sizing:border-box;padding-top:27px;}
+
 
 .carrusel-recientes .slick-list,.carrusel-app .slick-list,.carrusel-visitados .slick-list{padding-top:30px;padding-bottom:30px;padding-left:30px;}
 

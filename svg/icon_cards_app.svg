@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_cards_app</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_cards_app">
+            <circle id="Oval" fill="#FFD101" cx="24" cy="24" r="24"></circle>
+            <path d="M30,29 L18,29 L18,13 L30,13 L30,29 Z M25,33 C25,33.5525424 24.5499154,34 24,34 C23.4500846,34 23,33.5525424 23,33 C23,32.4474576 23.4500846,32 24,32 C24.5499154,32 25,32.4474576 25,33 Z M30,35 L18,35 L18,31 L30,31 L30,35 Z M18,11 C16.9532143,11 16,11.9366682 16,13 L16,35 C16,36.0633318 16.9532143,37 18,37 L30,37 C31.0467857,37 32,36.0633318 32,35 L32,13 C32,11.9366682 31.0467857,11 30,11 L18,11 Z" id="9H" fill="#1A1919"></path>
+        </g>
+    </g>
+</svg>
