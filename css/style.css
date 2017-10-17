@@ -133,7 +133,7 @@ PROPIEDADES HOME
 .slider_home .bx-pager{display:inline-block;right:20px;bottom:0;top:50%;width:auto;margin-top:-50px;}
 .slider_home .bx-pager .bx-pager-item{display:block;margin-bottom:7px;}
 
-.slider_home .bx-wrapper .bx-pager.bx-default-pager a{background-color:transparent;background-size:10px;background:url(../img/sprite_bullets.png) 0px -10px no-repeat;background-size:10px;}
+.slider_home .bx-wrapper .bx-pager.bx-default-pager a{background-color:transparent;background-size:10px;background:url(../svg/sprite_bulletslider.svg) -10px 0px no-repeat;}
 .slider_home .bx-wrapper .bx-pager.bx-default-pager a.active{background-position:0px 0px;}
 .slider_home .bx-wrapper .bx-pager.bx-default-pager a:hover{background-position:0px 0px;}
 
