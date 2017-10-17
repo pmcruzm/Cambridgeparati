@@ -1375,14 +1375,17 @@ function initGoogleAnalytics() {
 }
 
 function openResource(url_recurso, id_recurso) {
+
+	var windowReference = window.open();
+
 	//Si el GA está cargado, registramos el click en la url externa
 	if( typeof ga === 'function' ) {
 		ga('send', 'event', 'outbound', 'click', url_recurso, {
 			'transport': 'beacon',
-			'hitCallback': function(){ window.open(url_recurso,'_blank'); }
+			'hitCallback': function(){ windowReference.location = url_recurso }
 		});
 	} else {
-		window.open(url_recurso,'_blank');
+		windowReference.location = url_recurso;
 	}
 
 
