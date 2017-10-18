@@ -306,35 +306,42 @@ RECURSOS
 
 .box-body-recursos{box-sizing:border-box;margin-top:-300px;}
 .header-filtros{overflow:hidden;}
-.header-filtros{height:176px;}
+.header-filtros{height:80px;}
 .header-filtros .container{overflow:hidden;background:#E33C10;}
-.header-filtros a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;/*line-height:176px;*/text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;margin-right:6px; background:#E33C10;}
+.header-filtros a{display:block;width:calc(33.3333% - 4px);float:left;height:80px;line-height:80px;text-align:center;font-size:18px;color:#FF5427;font-size:18px;position:relative;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;margin-right:6px; background:#E33C10;}
 .header-filtros a:last-child{margin-right:0;}
 
-.header-filtros a span{z-index:10;position:relative;}
-.header-filtros a:hover{background:#FF5427;}
-.header-filtros a.active{background:#FF5427;}
+.header-filtros a span{z-index:10;position:relative;font-family:'Montserrat', Helvetica, sans-serif;font-size:18px;}
+.header-filtros a span:before{content:'';display:inline-block !important;width:49px !important;height:49px !important;margin-top:0;margin-bottom:0;background-size:49px !important;vertical-align:middle;margin-right:18px;}
+.header-filtros a:hover{background:#FF5427;color:#ffffff !important;}
+.header-filtros a.active{background:#FF5427;color:#ffffff !important;}
 .body-filtros{background:#FF5427;}
 
 
-/*.header-filtros .enl_estudiante:before{background-position:0px -94px;}
-.header-filtros .enl_estudiante:hover:before{background-position:0px 0px;}
-.header-filtros .enl_estudiante.active:before{background-position:0px 0px;}
-.header-filtros .enl_padre:before{background-position:0px -116px;}
-.header-filtros .enl_padre:hover:before{background-position:0px 0px;}
-.header-filtros .enl_padre.active:before{background-position:0px 0px;}
-.header-filtros .enl_profesor:before{background-position:0px -116px;}
-.header-filtros .enl_profesor:hover:before{background-position:0px 0px;}
-.header-filtros .enl_profesor.active:before{background-position:0px 0px;}*/
-.box-filtros{overflow:hidden; box-sizing:border-box; padding:30px 15px 0 15px;position:relative;}
-.colum-box{}
+.header-filtros a.enl_estudiante span:before{background:url(../svg/icon_estudiantes_filter_off.svg) center center no-repeat;}
+.header-filtros a.enl_estudiante:hover span:before{background:url(../svg/icon_estudiantes_filter_on.svg) center center no-repeat;}
+.header-filtros a.enl_estudiante.active span:before{background:url(../svg/icon_estudiantes_filter_on.svg) center center no-repeat;}
+
+.header-filtros a.enl_familias span:before{background:url(../svg/icon_familias_filter_off.png) center center no-repeat;}
+.header-filtros a.enl_familias:hover span:before{background:url(../svg/icon_familias_filter_off.png) center center no-repeat;}
+.header-filtros a.enl_familias.active span:before{background:url(../svg/icon_familias_filter_off.png) center center no-repeat;}
+
+.header-filtros a.enl_profesores span:before{background:url(../svg/icon_profesores_filter_off.svg) center center no-repeat;}
+.header-filtros a.enl_profesores:hover span:before{background:url(../svg/icon_profesores_filter_on.svg) center center no-repeat;}
+.header-filtros a.enl_profesores.active span:before{background:url(../svg/icon_profesores_filter_on.svg) center center no-repeat;}
+
+.box-filtros{overflow:hidden; box-sizing:border-box; padding:30px 15px 49px 15px;position:relative;}
+.colum-box-2{-webkit-column-count: 2;-moz-column-count: 2;column-count: 2;}
+.colum-box-1{-webkit-column-count: 1;-moz-column-count: 1;column-count: 1;}
+
+.logo_ceq{width:230px;height:20px;position:absolute;bottom:30px;left:55px;background:url(../svg/CEQ_logo_Ranged_White.svg) top left no-repeat;display:block;}
 
 
-.filter{display:inline-block; float:left; margin: 0 15px 25px 15px;}
+.filter{display:inline-block; /*float:left;*/ margin: 0 15px 25px 35px;}
 .filter:last-child {margin-right:0px;}
 .filter h4{color:#ffffff;font-size:14px;margin-bottom:9px;font-family: 'Montserrat', sans-serif;}
 .filter input{display:none;}
-.filter label{display:inline-block;height:32px;width:130px;background:#E33C10;line-height:32px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
+.filter label{display:inline-block;height:32px;width:210px;background:#E33C10;line-height:32px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
 .filter label:hover{background:#ffffff;color:#E33C10;}
 .filter label.active{background:#ffffff;color:#E33C10;}
 
@@ -343,8 +350,9 @@ RECURSOS
 .filter.filter-abilities {width:200px;}
 .filter.filter-other {width:200px;}
 
-.clear_all_filters{position:absolute;bottom:20px;right:20px;display:block;height:30px;width:130px;background:#E33C10;line-height:30px;color:#ffffff;text-align:center;border-radius:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
-.clear_all_filters:hover{background:#ffffff;color:#E33C10;}
+.clear_all_filters{position:absolute;bottom:20px;right:20px;display:block;height:32px;width:164px;line-height:29px;color:#ffffff;text-align:center;font-size:12px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;box-sizing:border-box;border: 2px solid #FFFFFE;}
+.clear_all_filters span:before{content:'';display:inline-block;width:16px;height:16px;background:url(../svg/cancel_filters.svg) center center no-repeat;vertical-align:middle;margin-right:8px;}
+/*.clear_all_filters:hover{background:#ffffff;color:#E33C10;}*/
 
 .contenedor-recursos{padding-top:50px;/*overflow:hidden;*/}
 .contenedor-recursos .item{width:33.3333%;float:left;margin-bottom:30px;text-align:center;}
@@ -371,22 +379,24 @@ CONTACTO
 .cont_contacto{min-height:1000px;overflow:hidden;box-sizing:border-box;padding:0px 95px;margin-top:-50px;}
 .contact_filter{overflow:hidden;height:176px;background:#ff5427;margin-top:0 !important;}
 .txt_contacto{float:left;width:30%;text-align:center;}
-.txt_contacto h4{text-align:center;color: #FAB200;font-family:'Montserrat', Helvetica, sans-serif;font-size: 18px;line-height: 24px;}
+.txt_contacto h4{text-align:center;color: #FAB200;font-family:'Montserrat', Helvetica, sans-serif;font-size: 18px;line-height:24px;max-width:190px;margin:0 auto;}
 .txt_contacto img{max-width:100%;margin-top:40px;margin-bottom:16px;}
 /*.txt_contacto p{color:#4A4A4A;font-size: 16px;line-height: 32px;display:table-cell;vertical-align:middle;box-sizing:border-box;padding-right:40px;}*/
 .body_contacto{float:left;width:70%;box-sizing:border-box;padding-left:20px;}
 
 .titul_c{max-width: 721px;color:#000000;font-size: 32px;line-height: 48px;	text-align: center;margin:0 auto;padding-top:20px;}
-.titul_c + p{color: #FAB200;font-family:'Montserrat', Helvetica, sans-serif;font-size: 18px;line-height: 24px;	text-align: center;margin-top:56px;margin-bottom:56px;}
+.titul_c + p{text-align: center;margin-top:56px;margin-bottom:56px;color:#4A4A4A;font-size: 18px;line-height: 32px;}
 .box_enl_contact{max-width:671px;margin:0 auto;text-align:center;}
-.box_enl_contact a{display:inline-block;width:calc(33.3333% - 14px);height:160px;border: 2px solid #FAB200;	border-radius: 6px;margin-left:11px;}
+.box_enl_contact a{display:inline-block;margin-left:89px;}
 .box_enl_contact a:first-child{margin-left:0;}
-.box_enl_contact a.enl_estu{background:url(../svg/estudiantes_amarillo.svg) bottom center no-repeat;}
-.box_enl_contact a.enl_fami{background:url(../svg/familias_amarillo.svg) bottom center no-repeat;}
-.box_enl_contact a.enl_prof{background:url(../svg/profes_amarillo.svg) bottom center no-repeat;}
-.box_enl_contact a span{color: #E1523D;	font-family:'Montserrat', Helvetica, sans-serif;font-size: 16px;line-height: 21px;	text-align: center;display:inline-block;margin-top:16px;width:100%;}
+.box_enl_contact a span{color: #FAB200;font-family:'Montserrat', Helvetica, sans-serif;font-size: 16px;text-align: center;display:inline-block;margin-top:16px;width:100%;}
+.box_enl_contact a span:before{content:'';width:90px;height:90px;margin:0 auto;display:block;margin-bottom:12px;}
+.box_enl_contact a.enl_estu span:before{background:url(../svg/icon_estudiantes_a.svg) center center no-repeat;background-size:90px;}
+.box_enl_contact a.enl_fami span:before{background:url(../svg/icon_familias_a.svg) center center no-repeat;background-size:90px;}
+.box_enl_contact a.enl_prof span:before{background:url(../svg/icon_profesores_a.svg) center center no-repeat;background-size:90px;}
 
-.contact_filter a.active{background:#e33c10;}
+
+/*.contact_filter a.active{background:#e33c10;}
 .contact_filter a:hover{background:#e33c10;}
 .contact_filter .enl_estudiante:before{background-position:0px 0px;}
 .contact_filter .enl_estudiante:hover:before{background-position:0px -94px;}
@@ -396,7 +406,7 @@ CONTACTO
 .contact_filter .enl_padre.active:before{background-position:0px -116px;}
 .contact_filter .enl_profesor:before{background-position:0px 0px;}
 .contact_filter .enl_profesor:hover:before{background-position:0px -116px;}
-.contact_filter .enl_profesor.active:before{background-position:0px -116px;}
+.contact_filter .enl_profesor.active:before{background-position:0px -116px;}*/
 
 .form-contact{}
 .form-contact .form-heading {color:#FAB200;font-family:'Montserrat', Helvetica, sans-serif;line-height: 24px;border-bottom:4px solid #FAB200;padding-bottom:22px;margin-bottom:32px;margin-top:52px; text-transform: uppercase;}
@@ -432,7 +442,8 @@ CONTACTO
 .content-gracias img{max-width:100%;margin-bottom:48px;}
 .content-gracias h4{max-width: 656px;color: #000000;font-size: 32px;line-height: 48px;margin:0 auto;margin-bottom:32px;}
 .content-gracias p{max-width: 575px;color: #4A4A4A;font-size: 18px;line-height: 32px;margin:0 auto;margin-bottom:64px;}
-.content-gracias a{	height: 48px;width: 260px;background-color: #FF5427;margin:0 auto;color:#ffffff;line-height:48px;font-family:'Montserrat', Helvetica, sans-serif;font-size: 14px;display:block;}
+.content-gracias a{	height: 48px;width: 260px;background-color: #FF5427;margin:0 auto;color:#ffffff;line-height:48px;font-family:'Montserrat', Helvetica, sans-serif;font-size: 14px;display:block;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
+.content-gracias a:hover{opacity:0.9;}
 
 /*****************************
 PROPIEDADES AVISO LEGAL
