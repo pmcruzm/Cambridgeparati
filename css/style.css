@@ -103,6 +103,7 @@ PROPIEDADES HEADER
 .language_header .cover-desplegable a:hover{color:#D8D8D8;}
 .language_header .cover-desplegable a.active{color:#D8D8D8;}
 
+#header.no-multilanguage .rrss_header {right: 30px;}
 
 /*****************************
 PROPIEDADES HOME
