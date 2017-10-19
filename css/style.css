@@ -215,8 +215,8 @@ PROPIEDADES HOME
 .list_rrss_home ul li a.ico-inst-h{background:url(../img/ico_inst_s.png) center center no-repeat;background-size:46px;}
 .list_rrss_home ul li a.ico-rss-h{background:url(../img/ico_rss_s.png) center center no-repeat;background-size:46px;}
 .box_share{overflow:hidden;}
-.box_share_fb{width:50%;float:left;height:350px;text-align:right;background:url(../img/img_fb.png) center center no-repeat;background-size:cover;}
-.box_share_tw{width:50%;float:left;height:350px;background:url(../img/img_tw.png) center center no-repeat;background-size:cover;}
+.box_share_fb{width:50%;float:left;height:350px;text-align:right;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1146220@2x.jpg) center center no-repeat;background-size:cover;}
+.box_share_tw{width:50%;float:left;height:350px;background:url(../img/Stocksy_txp5dc35cccpQh100_Medium_670241@2x.jpg) center center no-repeat;background-size:cover;}
 .inside_s_box{max-width:565px;height:330px;background:green;margin-top:10px;margin-left:10px;margin-right:10px;box-sizing:border-box;display:inline-block;position:relative;width:95%;}
 .inside_s_box a{color:#ffffff;font-size:20px;}
 .inside_s_box p{color:#ffffff;font-size:16px;margin-top:20px;line-height:24px;}
@@ -275,7 +275,10 @@ PROPIEDADES HOME
 /*****************************
 CONOCENOS
 ******************************/
-.bg_cab_conocenos{height:610px;padding-top:112px;background:url(../img/cab_conocenos.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;}
+.bg_cab_conocenos{height:610px;padding-top:112px;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1055889@2x.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;position:relative;}
+.bg_cab_conocenos:before{display: block;width: 100%;height: 610px;background: rgba(0,0,0,0.5);position: absolute;content: '';top: 0;}
+.bg_cab_conocenos.page_recursos{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;}
+.bg_cab_conocenos.page_contact{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1501636@2x.jpg) center center no-repeat;}
 .bg_cab_conocenos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
 .body_generico{background:#F2F1F0;}
 .box-body-generico{background:#ffffff;box-sizing:border-box;margin-top:-300px;padding-top:100px;padding-bottom:100px;border-bottom:80px solid #f2f1f0;}
@@ -299,7 +302,8 @@ CONOCENOS
 /*****************************
 RECURSOS
 ******************************/
-.bg_cab_recursos{height:440px;padding-top:112px;background:url(../img/cab_conocenos.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;}
+.bg_cab_recursos{height:440px;padding-top:112px;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;}
+.bg_cab_recursos:before{display: block;width: 100%;height: 440px;background: rgba(0,0,0,0.5);position: absolute;content: '';top: 0;}
 .bg_cab_recursos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
 .body_recursos{background:#ffffff;min-height:700px;}
 .body_recursos .box-body-recursos{margin-top:-88px !important;}
