@@ -95,11 +95,11 @@ PROPIEDADES HEADER
 
 .language_header{position:absolute;right:30px;top:0;}
 .language_header>a{color:#9B9B9B;font-size:13px;}
-.language_header>a:before{display:inline-block;content:'';width:7px;height:26px;background:url(../svg/icon_topbar_arrow.svg) center center no-repeat;background-size:7px;vertical-align:middle;margin-right:11px;}
+.language_header>a:before{display:inline-block;content:'';width:6px;height:6px;background:url(../svg/sprite_icon_topbar_arrow.svg) -2px 0px no-repeat;vertical-align:middle;margin-right:11px;}
 .language_header>a span:after{display:inline-block;content:'';width:26px;height:26px;vertical-align:middle;margin-left:18px;background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -163px no-repeat;}
 
 .language_header>a:hover,.language_header.active>a{color:#D8D8D8;}
-.language_header>a:hover:before,.language_header.active>a:before{background:url(../svg/icon_topbar_arrow_on.svg) center center no-repeat;}
+.language_header>a:hover:before,.language_header.active>a:before{background-position:-2px -6px;}
 .language_header>a:hover span:after,.language_header.active>a span:after{background-position:-35px -163px;}
 
 .language_header .cover-desplegable{position:absolute;background:#1D1E1C;top:38px;display:none;z-index:100;width:140px;padding-bottom:20px;box-sizing:border-box;text-align:center;right:-6px;padding-top:10px;}
@@ -231,6 +231,8 @@ PROPIEDADES HOME
 .list_rrss_home ul li a.ico-inst-h:hover{background-position:-144px -48px;}
 .list_rrss_home ul li a.ico-rss-h{background:url(../svg/sprite_rrss_icons.svg) -192px 0px no-repeat;}
 .list_rrss_home ul li a.ico-rss-h:hover{background-position:-192px -48px;}
+.list_rrss_home ul li a.ico-lk-h{background:url(../svg/sprite_rrss_icons.svg) -240px 0px no-repeat;}
+.list_rrss_home ul li a.ico-lk-h:hover{background-position:-240px -48px;}
 
 .box_share{overflow:hidden;}
 .box_share_fb{width:50%;float:left;height:350px;text-align:right;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1146220@2x.jpg) center center no-repeat;background-size:cover;}
