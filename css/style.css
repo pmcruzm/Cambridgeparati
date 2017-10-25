@@ -197,7 +197,7 @@ PROPIEDADES HOME
 .cont_opinion h4:after{content:'”';display:inline-block;font-size:90px;color:#C81F66;position:absolute;top:50%;right:0px;}
 .cont_opinion p{font-size:14px;line-height:20px;text-align:center;padding-bottom:20px;line-height:17px;color:#9B9B9B;}
 
-.carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a{background-color:transparent;background-size:10px;background:url(../img/sprite_bullets.png) 0px -10px no-repeat;background-size:10px;}
+.carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a{background-color:transparent;background-size:10px;background:url(../svg/sprite_bulletslider.svg) -10px 0px no-repeat;}
 .carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a.active{background-position:0px 0px;}
 .carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a:hover{background-position:0px 0px;}
 
