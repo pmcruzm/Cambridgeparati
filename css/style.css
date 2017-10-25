@@ -80,21 +80,27 @@ PROPIEDADES HEADER
 .rrss_header ul{position:relative;float:right;}
 .rrss_header ul li{display:inline-block;}
 .rrss_header ul li a{display:block;width:26px;height:26px;text-indent:-99999px;margin-right:2px;}
-.rrss_header ul li a.ico-yt-h{background:url(../svg/btn_topbar_yt.svg) center center no-repeat;background-size:26px;}
-.rrss_header ul li a.ico-tw-h{background:url(../svg/btn_topbar_tw.svg) center center no-repeat;background-size:26px;}
-.rrss_header ul li a.ico-fb-h{background:url(../svg/btn_topbar_fb.svg) center center no-repeat;background-size:26px;}
-.rrss_header ul li a.ico-inst-h{background:url(../svg/btn_topbar_ig.svg) center center no-repeat;background-size:26px;}
-.rrss_header ul li a.ico-rss-h{background:url(../svg/btn_topbar_rss.svg) center center no-repeat;background-size:26px;}
-.rrss_header ul li a.ico-lk-h{background:url(../svg/btn_topbar_lk.svg) center center no-repeat;background-size:26px;}
+.rrss_header ul li a.ico-yt-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -3px no-repeat;}
+.rrss_header ul li a.ico-yt-h:hover{background-position:-35px -3px;}
+.rrss_header ul li a.ico-tw-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -35px no-repeat;}
+.rrss_header ul li a.ico-tw-h:hover{background-position:-35px -35px;}
+.rrss_header ul li a.ico-fb-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -67px no-repeat;}
+.rrss_header ul li a.ico-fb-h:hover{background-position:-35px -67px;}
+.rrss_header ul li a.ico-inst-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -99px no-repeat;}
+.rrss_header ul li a.ico-inst-h:hover{background-position:-35px -99px;}
+.rrss_header ul li a.ico-rss-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -131px no-repeat;}
+.rrss_header ul li a.ico-rss-h:hover{background-position:-35px -131px;}
+.rrss_header ul li a.ico-lk-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -195px no-repeat;}
+.rrss_header ul li a.ico-lk-h:hover{background-position:-35px -195px;}
 
 .language_header{position:absolute;right:30px;top:0;}
 .language_header>a{color:#9B9B9B;font-size:13px;}
 .language_header>a:before{display:inline-block;content:'';width:7px;height:26px;background:url(../svg/icon_topbar_arrow.svg) center center no-repeat;background-size:7px;vertical-align:middle;margin-right:11px;}
-.language_header>a span:after{display:inline-block;content:'';width:26px;height:26px;vertical-align:middle;margin-left:18px;background:url(../svg/ico_flag.svg) center center no-repeat;background-size:26px;}
+.language_header>a span:after{display:inline-block;content:'';width:26px;height:26px;vertical-align:middle;margin-left:18px;background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -163px no-repeat;}
 
 .language_header>a:hover,.language_header.active>a{color:#D8D8D8;}
 .language_header>a:hover:before,.language_header.active>a:before{background:url(../svg/icon_topbar_arrow_on.svg) center center no-repeat;}
-.language_header>a:hover span:after,.language_header.active>a span:after{background:url(../svg/ico_flag_on.svg) center center no-repeat;}
+.language_header>a:hover span:after,.language_header.active>a span:after{background-position:-35px -163px;}
 
 .language_header .cover-desplegable{position:absolute;background:#1D1E1C;top:38px;display:none;z-index:100;width:140px;padding-bottom:20px;box-sizing:border-box;text-align:center;right:-6px;padding-top:10px;}
 .language_header.active .cover-desplegable{display:block;}
@@ -213,13 +219,19 @@ PROPIEDADES HOME
 .list_rrss_home{text-align:center;margin-bottom:60px;}
 .list_rrss_home ul{position:relative;}
 .list_rrss_home ul li{display:inline-block;}
-.list_rrss_home ul li a{display:block;width:46px;height:46px;text-indent:-99999px;margin-right:16px;}
-.list_rrss_home ul li a:hover{opacity:0.9;}
-.list_rrss_home ul li a.ico-yt-h{background:url(../img/ico_yt_s.png) center center no-repeat;background-size:46px;}
-.list_rrss_home ul li a.ico-tw-h{background:url(../img/ico_tw_s.png) center center no-repeat;background-size:46px;}
-.list_rrss_home ul li a.ico-fb-h{background:url(../img/ico_fb_s.png) center center no-repeat;background-size:46px;}
-.list_rrss_home ul li a.ico-inst-h{background:url(../img/ico_inst_s.png) center center no-repeat;background-size:46px;}
-.list_rrss_home ul li a.ico-rss-h{background:url(../img/ico_rss_s.png) center center no-repeat;background-size:46px;}
+.list_rrss_home ul li a{display:block;width:48px;height:48px;text-indent:-99999px;margin-right:16px;}
+
+.list_rrss_home ul li a.ico-yt-h{background:url(../svg/sprite_rrss_icons.svg) 0px 0px no-repeat;}
+.list_rrss_home ul li a.ico-yt-h:hover{background-position:0px -48px;}
+.list_rrss_home ul li a.ico-tw-h{background:url(../svg/sprite_rrss_icons.svg) -48px 0px no-repeat;}
+.list_rrss_home ul li a.ico-tw-h:hover{background-position:-48px -48px;}
+.list_rrss_home ul li a.ico-fb-h{background:url(../svg/sprite_rrss_icons.svg) -96px 0px no-repeat;}
+.list_rrss_home ul li a.ico-fb-h:hover{background-position:-96px -48px;}
+.list_rrss_home ul li a.ico-inst-h{background:url(../svg/sprite_rrss_icons.svg) -144px 0px no-repeat;}
+.list_rrss_home ul li a.ico-inst-h:hover{background-position:-144px -48px;}
+.list_rrss_home ul li a.ico-rss-h{background:url(../svg/sprite_rrss_icons.svg) -192px 0px no-repeat;}
+.list_rrss_home ul li a.ico-rss-h:hover{background-position:-192px -48px;}
+
 .box_share{overflow:hidden;}
 .box_share_fb{width:50%;float:left;height:350px;text-align:right;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1146220@2x.jpg) center center no-repeat;background-size:cover;}
 .box_share_tw{width:50%;float:left;height:350px;background:url(../img/Stocksy_txp5dc35cccpQh100_Medium_670241@2x.jpg) center center no-repeat;background-size:cover;}
@@ -495,12 +507,19 @@ PROPIEDADES FOOTER
 .colum_footer ul a:hover{opacity:0.9;}
 .rrss_footer ul li{display:inline-block;}
 .rrss_footer ul li a{display:block;width:26px;height:26px;text-indent:-99999px;margin-right:2px;}
-.rrss_footer ul li a.ico-yt-h{background:url(../svg/btn_topbar_yt.svg) center center no-repeat;background-size:26px;}
-.rrss_footer ul li a.ico-tw-h{background:url(../svg/btn_topbar_tw.svg) center center no-repeat;background-size:26px;}
-.rrss_footer ul li a.ico-fb-h{background:url(../svg/btn_topbar_fb.svg) center center no-repeat;background-size:26px;}
-.rrss_footer ul li a.ico-inst-h{background:url(../svg/btn_topbar_ig.svg) center center no-repeat;background-size:26px;}
-.rrss_footer ul li a.ico-rss-h{background:url(../svg/btn_topbar_rss.svg) center center no-repeat;background-size:26px;}
-.rrss_footer ul li a.ico-lk-h{background:url(../svg/btn_topbar_lk.svg) center center no-repeat;background-size:26px;}
+.rrss_footer ul li a.ico-yt-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -3px no-repeat;}
+.rrss_footer ul li a.ico-yt-h:hover{background-position:-35px -3px;}
+.rrss_footer ul li a.ico-tw-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -35px no-repeat;}
+.rrss_footer ul li a.ico-tw-h:hover{background-position:-35px -35px;}
+.rrss_footer ul li a.ico-fb-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -67px no-repeat;}
+.rrss_footer ul li a.ico-fb-h:hover{background-position:-35px -67px;}
+.rrss_footer ul li a.ico-inst-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -99px no-repeat;}
+.rrss_footer ul li a.ico-inst-h:hover{background-position:-35px -99px;}
+.rrss_footer ul li a.ico-rss-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -131px no-repeat;}
+.rrss_footer ul li a.ico-rss-h:hover{background-position:-35px -131px;}
+.rrss_footer ul li a.ico-lk-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -195px no-repeat;}
+.rrss_footer ul li a.ico-lk-h:hover{background-position:-35px -195px;}
+
 
 .logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP_footer.svg) top left no-repeat;margin-bottom:36px;}
 .logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;}
