@@ -119,7 +119,8 @@ PROPIEDADES HOME
 .cabecera_home{position:relative;}
 .cab_top_home{position:absolute;top:0;height:112px;border-bottom:1px solid rgba(255,255,255,0.2);width:100%;z-index:10;}
 .cab_top_home .container{height:112px;}
-.cab_top_home .logo-para-ti{display:block;background:url(../svg/logo_final.svg) center left no-repeat;background-size:316px;width:316px;height:111px;text-indent:-99999px;position:relative;top:0px;}
+.cab_top_home .logo-para-ti{display:block;position:relative;top:30px;font-size: 26px;color: #FAB200;}/*Fuente pendiente*/
+.cab_top_home .logo-para-ti:before{content:'';display:inline-block;width:58px;height:55px;background:url(../img/cpt_brand_color.png) top left no-repeat;background-size:58px;vertical-align:middle;margin-right:16px;}
 .enl_top_home{display:inline-block;position:absolute;right:0;top:41px;}
 .enl_top_home a{color:#ffffff;font-size:18px;margin-right:70px;}
 .enl_top_home a:last-child{margin-right:0;}
@@ -152,12 +153,12 @@ PROPIEDADES HOME
 .enl_filters_home a:last-child{margin-right:0;}
 .enl_filters_home a span{z-index:10;position:relative;}
 .enl_filters_home a:hover{background:#E33C10;color:rgba(255,255,255,0.7);}
-.enl_estudiante:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/icon_estudiantes.svg) 0px 0px no-repeat;background-size:98px;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
-.enl_estudiante:hover:before{background-position:0px 0px;opacity:0.7;}
-.enl_padre:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/icon_familias.svg) 0px 0px no-repeat;background-size:98px;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
-.enl_padre:hover:before{background-position:0px 0px;opacity:0.7;}
-.enl_profesor:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/icon_profes.svg) 0px 0px no-repeat;background-size:98px;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
-.enl_profesor:hover:before{background-position:0px 0px;opacity:0.7;}
+.enl_estudiante:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/sprite_icon_filtro.svg) 0px 0px no-repeat;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
+.enl_estudiante:hover:before{background-position:0px -98px;}
+.enl_padre:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/sprite_icon_filtro.svg) -98px 0px no-repeat;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
+.enl_padre:hover:before{background-position:-98px -98px;}
+.enl_profesor:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/sprite_icon_filtro.svg) -196px 0px no-repeat;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
+.enl_profesor:hover:before{background-position:-196px -98px;}
 
 .how_home{padding-top:75px;padding-bottom:150px;}
 .how_home h2{color:#FAB200;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;}
