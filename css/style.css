@@ -152,7 +152,7 @@ PROPIEDADES HOME
 .enl_filters_home a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;font-family: 'Montserrat', sans-serif;margin-top:10px;background:#FF5427;margin-right:6px;}
 .enl_filters_home a:last-child{margin-right:0;}
 .enl_filters_home a span{z-index:10;position:relative;}
-.enl_filters_home a:hover{background:#E33C10;color:rgba(255,255,255,0.7);}
+.enl_filters_home a:hover{background:#E33C10;color:#FF5427;}
 .enl_estudiante:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/sprite_icon_filtro.svg) 0px 0px no-repeat;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
 .enl_estudiante:hover:before{background-position:0px -98px;}
 .enl_padre:before{content:'';width:98px;height:98px;z-index:5;background:url(../svg/sprite_icon_filtro.svg) -98px 0px no-repeat;display:block;margin:0 auto;margin-bottom:6px;margin-top:22px;}
@@ -336,27 +336,27 @@ RECURSOS
 .header-filtros{overflow:hidden;}
 .header-filtros{height:80px;}
 .header-filtros .container{overflow:hidden;background:#E33C10;}
-.header-filtros a{display:block;width:calc(33.3333% - 4px);float:left;height:80px;line-height:80px;text-align:center;font-size:18px;color:rgba(255,255,255,0.7);font-size:18px;position:relative;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;margin-right:6px; background:#E33C10;}
+.header-filtros a{display:block;width:calc(33.3333% - 4px);float:left;height:80px;line-height:80px;text-align:center;font-size:18px;color:#FF5427;font-size:18px;position:relative;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;margin-right:6px; background:#E33C10;}
 .header-filtros a:last-child{margin-right:0;}
 
 .header-filtros a span{z-index:10;position:relative;font-family:'Montserrat', Helvetica, sans-serif;font-size:18px;}
-.header-filtros a span:before{content:'';display:inline-block !important;width:49px !important;height:49px !important;margin-top:0;margin-bottom:0;background-size:49px !important;vertical-align:middle;margin-right:18px;}
+.header-filtros a span:before{content:'';display:inline-block !important;width:49px !important;height:49px !important;margin-top:0;margin-bottom:0;background-size:147px !important;vertical-align:middle;margin-right:18px;}
 .header-filtros a:hover{background:#FF5427;color:#ffffff !important;}
 .header-filtros a.active{background:#FF5427;color:#ffffff !important;}
 .body-filtros{background:#FF5427;}
 
 
-.header-filtros a.enl_estu span:before{background:url(../svg/icon_estudiantes_filter_on.svg) center center no-repeat;opacity:0.7;}
-.header-filtros a.enl_estu:hover span:before{opacity:1;}
-.header-filtros a.enl_estu.active span:before{opacity:1;}
+.header-filtros a.enl_estu span:before{background:url(../svg/sprite_icon_filtro.svg) 0px -49px no-repeat;}
+.header-filtros a.enl_estu:hover span:before{background-position:0px 0px;}
+.header-filtros a.enl_estu.active span:before{background-position:0px 0px;}
 
-.header-filtros a.enl_familias span:before{background:url(../svg/icon_familias_filter_off.png) center center no-repeat;opacity:0.7;}
-.header-filtros a.enl_familias:hover span:before{opacity:1;}
-.header-filtros a.enl_familias.active span:before{opacity:1;}
+.header-filtros a.enl_familias span:before{background:url(../svg/sprite_icon_filtro.svg) -49px -49px no-repeat;}
+.header-filtros a.enl_familias:hover span:before{background-position:-49px 0px;}
+.header-filtros a.enl_familias.active span:before{background-position:-49px 0px;}
 
-.header-filtros a.enl_profesores span:before{background:url(../svg/icon_profesores_filter_on.svg) center center no-repeat;opacity:0.7;}
-.header-filtros a.enl_profesores:hover span:before{opacity:1;}
-.header-filtros a.enl_profesores.active span:before{opacity:1;}
+.header-filtros a.enl_profesores span:before{background:url(../svg/sprite_icon_filtro.svg) -98px -49px no-repeat;}
+.header-filtros a.enl_profesores:hover span:before{background-position:-98px 0px;}
+.header-filtros a.enl_profesores.active span:before{background-position:-98px 0px;}
 
 .box-filtros{overflow:hidden; box-sizing:border-box; padding:30px 15px 49px 15px;position:relative;}
 .colum-box-2{-webkit-column-count: 2;-moz-column-count: 2;column-count: 2;}
