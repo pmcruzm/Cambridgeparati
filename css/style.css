@@ -133,10 +133,10 @@ PROPIEDADES HOME
 .slider_home{height:640px;}
 .cont_gall{height:640px;width:100%;box-sizing:border-box;background-size:cover;background-position:center top;background-repeat:no-repeat;position:relative;padding-top:189px;}
 .cont_gall:before{display:block;width:100%;height:640px;background:rgba(0,0,0,0.6);position:absolute;content:'';top:0;}
-.cont_gall h3{color:#ffffff;font-size:12px;line-height:25px;margin-bottom:34px;}
+.cont_gall h3{color:#ffffff;font-size:12px;line-height:25px;margin-bottom:34px;font-family: 'Montserrat', sans-serif;}
 .cont_gall h3:after{content:'';display:block;height:1px;background:#00A4A1;width:66px;position:relative;top:18px;}
 .cont_gall h2{color:#ffffff;font-size:44px;line-height:48px;max-width:636px;margin-bottom:34px;}
-.enl_video{color:#ffffff;font-size:16px;line-height:20px;}
+.enl_video{color:#ffffff;font-size:16px;line-height:20px;font-family: 'Montserrat', sans-serif;}
 .enl_video:before{content:'';display:inline-block;vertical-align:middle;width:40px;height:40px;background-size:40px;background:url(../svg/icon_playvideo.svg) top left no-repeat;margin-right:15px;}
 
 .slider_home .bx-wrapper{margin-bottom:0;}
@@ -161,7 +161,7 @@ PROPIEDADES HOME
 .enl_profesor:hover:before{background-position:-196px -98px;}
 
 .how_home{padding-top:75px;padding-bottom:150px;}
-.how_home h2{color:#FAB200;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;}
+.how_home h2{color:#FAB200;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .how_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;margin:0 auto;}
 .how_home p.txt_how_home{max-width: 712px;	color: #4A4A4A;	font-family: "Source Sans Pro";	font-size: 18px;line-height: 32px;text-align: center;margin:0 auto;margin-top:32px;}
 .how_home p.txt_how_home a{color: #4A4A4A;text-decoration:underline;}
@@ -177,7 +177,7 @@ PROPIEDADES HOME
 .box_how p strong{font-weight:bold;}
 
 .recursos_home{background:#F2F1F0;padding-top:83px;padding-bottom:51px;}
-.recursos_home h2{color:#009FDA;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;}
+.recursos_home h2{color:#009FDA;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:1024px;margin:0 auto;margin-bottom:40px;}
 .recursos_home h3 a{color:#000000;text-decoration:underline;}
 .opc_recursos{text-align:center;}
@@ -191,7 +191,7 @@ PROPIEDADES HOME
 .all_recursos:hover{opacity:0.9;}
 
 .opinion_home{padding-top:63px;padding-bottom:43px;}
-.opinion_home h2{color:#C81F66;text-align:center;font-size:14px;margin-bottom:30px;font-family: 'Montserrat', sans-serif;}
+.opinion_home h2{color:#C81F66;text-align:center;font-size:14px;margin-bottom:30px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .cont_opinion{}
 .cont_opinion h4{text-align:center;font-size:30px;line-height:40px;color:#4A4A4A;;max-width:712px;margin:0 auto;margin-bottom:30px;font-style:italic;box-sizing:border-box;padding-left:20px;padding-right:20px;position:relative;}
 .cont_opinion h4:before{content:'“';display:inline-block;font-size:90px;color:#C81F66;position:absolute;top:50%;left:0px;}
@@ -214,7 +214,7 @@ PROPIEDADES HOME
 .right-newsletter a:hover{color:#FFFFFF;background:#FF5427;}
 
 .compartir_home{padding-top:61px;}
-.compartir_home h2{color:#004C76;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;}
+.compartir_home h2{color:#004C76;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .compartir_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:813px;margin:0 auto;margin-bottom:40px;}
 .compartir_home h3 + p{max-width: 813px;color: #4A4A4A;font-size: 18px;line-height: 32px;margin:0 auto;margin-bottom:30px;text-align:center;}
 .list_rrss_home{text-align:center;margin-bottom:60px;}
