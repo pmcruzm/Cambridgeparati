@@ -161,7 +161,7 @@ PROPIEDADES HOME
 .enl_profesor:hover:before{background-position:-196px -98px;}
 
 .how_home{padding-top:75px;padding-bottom:150px;}
-.how_home h2{color:#FAB200;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
+.how_home h2{color:#004C76;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .how_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;margin:0 auto;}
 .how_home p.txt_how_home{max-width: 712px;	color: #4A4A4A;	font-family: "Source Sans Pro";	font-size: 18px;line-height: 32px;text-align: center;margin:0 auto;margin-top:32px;}
 .how_home p.txt_how_home a{color: #4A4A4A;text-decoration:underline;}
@@ -193,10 +193,10 @@ PROPIEDADES HOME
 .opinion_home{padding-top:63px;padding-bottom:43px;}
 .opinion_home h2{color:#C81F66;text-align:center;font-size:14px;margin-bottom:30px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .cont_opinion{}
-.cont_opinion h4{text-align:center;font-size:30px;line-height:40px;color:#4A4A4A;;max-width:712px;margin:0 auto;margin-bottom:30px;font-style:italic;box-sizing:border-box;padding-left:20px;padding-right:20px;position:relative;}
-.cont_opinion h4:before{content:'“';display:inline-block;font-size:90px;color:#C81F66;position:absolute;top:50%;left:0px;}
-.cont_opinion h4:after{content:'”';display:inline-block;font-size:90px;color:#C81F66;position:absolute;top:50%;right:0px;}
-.cont_opinion p{font-size:14px;line-height:20px;text-align:center;padding-bottom:20px;line-height:17px;color:#9B9B9B;}
+.cont_opinion h4{text-align:center;font-size:30px;line-height:40px;color:#4A4A4A;max-width:712px;margin:0 auto;margin-bottom:30px;font-style:italic;box-sizing:border-box;padding-left:20px;padding-right:20px;position:relative;}
+.cont_opinion h4:before{content:'“';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-right:10px;vertical-align:middle;}
+.cont_opinion h4:after{content:'”';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-left:0px;vertical-align:middle;}
+.cont_opinion p{font-size:14px;line-height:20px;text-align:center;padding-bottom:20px;line-height:17px;color:#777777;}
 
 .carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a{background-color:transparent;background-size:10px;background:url(../svg/sprite_bulletslider.svg) -10px 0px no-repeat;}
 .carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a.active{background-position:0px 0px;}
@@ -258,15 +258,15 @@ PROPIEDADES HOME
 .header_recurso{height:82px;text-align:center;display:table;width:100%;}
 .inside-h-r{display:table-cell;vertical-align:middle;height:82px;width:100%;}
 .header_recurso img{max-width:80%;max-height:70px;margin:0 auto;margin-top:-15px;}
-.header_recurso p{font-size:18px;line-height:24px;text-align:center;margin-top:-15px;}
-.header_recurso p strong{font-weight:bold;}
+.header_recurso p{font-size:22px;line-height:30px;text-align:center;margin-top:-15px;}
+.header_recurso p strong{font-weight:600;}
 .body_recurso{background-position:center center;background-repeat:no-repeat;background-size:cover;height:368px;position:relative;border-radius:4px;}
 .over_recurso_img{height:368px;width:100%;height:368px;position:absolute;border-radius:4px;top:0px;left:0px;z-index:5;}
 .content_recurso{height:368px;width:100%;height:368px;position:absolute;border-radius:4px;top:0px;left:0px;z-index:10;}
 .box_recurso.over .over_recurso_all{opacity:1;}
 .over_recurso_all{height:368px;width:100%;height:368px;position:absolute;border-radius:4px;top:0px;left:0px;z-index:15;opacity:0;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;display:table;}
 .over_recurso_all>div{display:table-cell;width:100%;height:368px;vertical-align:middle;position:relative;}
-.color_over{position:absolute;width:100%;height:368px;top:0;left:0;opacity:0.8;}
+.color_over{position:absolute;width:100%;height:368px;top:0;left:0;opacity:0.8;border-radius:4px;}
 .over_recurso_all p{color:#ffffff;font-size:16px;text-align:center !important;vertical-align:middle;text-align:center;}
 .over_recurso_all p:before{content:'';display:block;height:70px;background:url(../svg/icon_cards_browser.svg) center center no-repeat;}
 .new_tag{display:block;width:50px;height:50px;color:#171614;font-size:8px;line-height:50px;background-color: #FFD101;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;}
@@ -328,7 +328,7 @@ RECURSOS
 .bg_cab_recursos{height:440px;padding-top:112px;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;}
 .bg_cab_recursos:before{display: block;width: 100%;height: 440px;background: rgba(0,0,0,0.5);position: absolute;content: '';top: 0;}
 .bg_cab_recursos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
-.body_recursos{background:#ffffff;min-height:700px;}
+.body_recursos{background:#F2F1F0;min-height:700px;}
 .body_recursos .box-body-recursos{margin-top:-88px !important;}
 .generico-recursos h2{max-width: 691px;	color: #393939;font-size:32px;line-height: 48px;text-align: center;margin:0 auto;margin-top:58px;}
 
@@ -384,7 +384,7 @@ RECURSOS
 
 .contenedor-recursos{padding-top:50px;/*overflow:hidden;*/}
 .contenedor-recursos .item{width:33.3333%;float:left;margin-bottom:30px;text-align:center;}
-.contenedor-recursos .item .box_recurso{width:100%;max-width:360px;display:inline-block;margin-right:0;}
+.contenedor-recursos .item .box_recurso{width:95%;max-width:360px;display:inline-block;margin-right:0;}
 /*.contenedor-recursos .item:nth-child(3n+0) {text-align:right;}
 .contenedor-recursos .item:nth-child(3n+1) {text-align:left;}*/
 
@@ -527,7 +527,7 @@ PROPIEDADES FOOTER
 
 
 .logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP_footer.svg) top left no-repeat;margin-bottom:36px;}
-.logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;}
+.logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;}
 .logo_footer{display:block;width:192px;background-size:192px;height:34px;text-indent:-99999px;background:url(../svg/CE_Master_Logo_White_RGB_Primary.svg) top left no-repeat;margin-left:30px;}
 
 .inf_footer{clear:both;padding-top:85px;}
@@ -667,13 +667,15 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 1023px) {
-.inside_s_box > div{padding:30px;}
-.left-newsletter > div{padding-right:75px;}
-.row-txt-box{padding-left:100px;padding-right:100px;}
+	.inside_s_box > div{padding:30px;}
+	.left-newsletter > div{padding-right:75px;}
+	.row-txt-box{padding-left:100px;padding-right:100px;}
+
 }
 
 @media screen and (max-width: 900px) {
 	.left-newsletter h2{padding-top:74px;}
+	.contenedor-recursos .item{width:50%;}
 }
 
 
@@ -688,6 +690,7 @@ MEDIA QUERIES
 	.colum_logo_footer{width:100%;float:inherit;text-align:center;margin-bottom:30px;}
 	.colum_footer{width:100%;float:inherit;text-align:center;margin-bottom:30px;}
 	.logo_footer,.logo_cup,.logo_oficial{margin:0 auto;}
+	.logo_oficial{margin-top:30px;}
 	.inf_footer p{text-align:center;}
 	/*.compartir_home h3{width:95%;}
 	.compartir_home h3 + p{width:95%;}*/
@@ -710,6 +713,7 @@ MEDIA QUERIES
 	.content-gracias{width:95%;margin:0 auto;}
 	.box_enl_contact a{height:140px;}
 	.txt_contacto,.body_contacto{width:100%;float:inherit;}
+	.body_contacto{padding-left:0;}
 }
 
 @media screen and (max-width: 640px) {
@@ -723,6 +727,7 @@ MEDIA QUERIES
 	.form-group > .recaptcha{width:100%;}
 	.form-contact .cover-select{width:100%;}
 	.txt-required{float:inherit;display:block;margin-bottom:20px;}
+	.contenedor-recursos .item{width:100%;}
 }
 
 
