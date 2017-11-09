@@ -601,7 +601,6 @@ input[type="checkbox"] {
 /*****************************
 PROPIEDADES ESPECIALES
 ******************************/
-html, body {text-rendering: optimizeLegibility;}
 a img{border:0;}
 .clear{clear:both;}
 .hide,.hide-page{display:none !important;}
