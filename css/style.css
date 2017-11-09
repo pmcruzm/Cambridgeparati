@@ -239,14 +239,15 @@ PROPIEDADES HOME
 .box_share_fb{width:50%;float:left;height:350px;text-align:right;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1146220@2x.jpg) center center no-repeat;background-size:cover;}
 .box_share_tw{width:50%;float:left;height:350px;background:url(../img/Stocksy_txp5dc35cccpQh100_Medium_670241@2x.jpg) center center no-repeat;background-size:cover;}
 .inside_s_box{max-width:565px;height:330px;background:green;margin-top:10px;margin-left:10px;margin-right:10px;box-sizing:border-box;display:inline-block;position:relative;width:95%;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
-.inside_s_box:hover{opacity:0.9;}
 .inside_s_box p{color:#ffffff;font-size:16px;margin-top:20px;line-height:24px;}
 .inside_s_box p strong{color:#ffffff;font-weight:600;}
 .inside_s_box > div{position:absolute;padding:40px;bottom:0;box-sizing:border-box;}
 .box_share_fb .inside_s_box span.data-fb{display:block;text-align:center;color: #FFFFFF;font-family: 'Montserrat', sans-serif;font-size:32px;line-height:42px;margin-bottom:26px;font-weight:600;}
 .box_share_fb .inside_s_box{text-align:center;background-color:rgba(66,103,178,0.9);}
+.box_share_fb .inside_s_box:hover{background-color:rgba(66,103,178,1);}
 .box_share_fb .inside_s_box span.data-fb:before{content:'';display:block;margin:0 auto;width:69px;height:66px;background:url(../svg/icon_like_big.svg) top left no-repeat;background-size:69px;margin-bottom:24px;}
 .box_share_tw .inside_s_box{text-align:center;background-color:rgba(57,149,255,0.9);}
+.box_share_fb .inside_s_box:hover{background-color:rgba(57,149,255,1);}
 .box_share_tw .inside_s_box span.data-tw{display:block;text-align:center;color: #FFFFFF;font-family: 'Montserrat', sans-serif;font-size: 32px;line-height:42px;margin-bottom:26px;font-weight:600;}
 .box_share_tw .inside_s_box span.data-tw:before{content:'';display:block;margin:0 auto;width:54px;height:44px;background:url(../svg/icon_twitter_big.svg) top left no-repeat;background-size:54px;margin-bottom:24px;}
 
