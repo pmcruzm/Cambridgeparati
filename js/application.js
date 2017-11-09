@@ -113,7 +113,8 @@ jQuery(document).ready(function(){
 					  	  autoHover: true,
 						  controls: false,
 						  pause: 5000,
-						  speed:800,
+						  speed:2000,
+						  easing:'easeInOutCubic',
 						  adaptiveHeight:true,
 						  onSlideBefore: function(slideElement, oldIndex, newIndex){
 						  },

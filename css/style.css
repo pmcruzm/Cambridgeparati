@@ -208,7 +208,7 @@ PROPIEDADES HOME
 .right-newsletter{height:402px;width:50%;float:left;box-sizing:border-box;background:#3bb6b3 url(../svg/icon_newsletter.svg) 211px bottom no-repeat;position:relative;}
 
 .left-newsletter>div{float:right;padding-right:113px;}
-.left-newsletter h2{color:rgba(255,255,255,0.6);text-align:left;font-size:14px;margin-bottom:20px;padding-top:94px;max-width:460px;font-family: 'Montserrat', sans-serif;font-weight:600;}
+.left-newsletter h2{color:rgba(255,255,255,0.6);text-align:left;font-size:18px;margin-bottom:20px;padding-top:94px;max-width:460px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .left-newsletter h3{text-align:left;font-size:32px;line-height:44px;color:#ffffff;margin-bottom:40px;max-width:460px;}
 .right-newsletter a{height: 48px;width:502px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:50%;margin-top:-24px;left:100px;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;font-weight:600;}
 .right-newsletter a:hover{color:#FFFFFF;background:#FF5427;}
@@ -271,10 +271,11 @@ PROPIEDADES HOME
 .over_recurso_all p{color:#ffffff;font-size:16px;text-align:center !important;vertical-align:middle;text-align:center;}
 .over_recurso_all p:before{content:'';display:block;height:70px;background:url(../svg/icon_cards_browser.svg) center center no-repeat;}
 .new_tag{display:block;width:50px;height:50px;color:#171614;font-size:8px;line-height:50px;background-color: #FFD101;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;}
+.over_recurso_all p{font-family: 'Montserrat', sans-serif;font-weight:600;}
 .over_recurso_all a{display:block;margin:0 auto;width:142px;height:48px;background-size:142px;text-indent:-99999px;position:relative;}
 .over_recurso_all a.btn-applestore{background:url(../svg/btn_apple_appstore.svg) center center no-repeat;}
 .over_recurso_all a.btn-playstore{background:url(../svg/btn_google_playstore.svg) center center no-repeat;margin-bottom:20px;}
-.over_recurso_all a.go-recurso{height:auto !important;text-indent:inherit !important;color:#ffffff;font-size: 16px;line-height: 24px;text-align:center;margin-bottom:20px;}
+.over_recurso_all a.go-recurso{height:auto !important;text-indent:inherit !important;color:#ffffff;font-size: 16px;line-height: 24px;text-align:center;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .over_recurso_all a.go-recurso:before{content:'';display:block;height:70px;background:url(../svg/icon_cards_browser.svg) center center no-repeat;}
 .mobile_tag{display:block;width:50px;height:50px;color: #171614;text-indent:-99999px;background:#FFD101 url(../svg/icon_cards_app.svg) center center no-repeat;border-radius:40px;text-align:center;font-family: 'Montserrat', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;text-indent:-99999px;}
 .text_recurso{height:330px;overflow:hidden;padding:30px;box-sizing:border-box;}
@@ -528,7 +529,7 @@ PROPIEDADES FOOTER
 
 
 .logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP_footer.svg) top left no-repeat;margin-bottom:36px;}
-.logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;position:absolute;bottom:80px;}
+.logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;position:absolute;bottom:90px;}
 .logo_footer{display:block;width:192px;background-size:192px;height:34px;text-indent:-99999px;background:url(../svg/CE_Master_Logo_White_RGB_Primary.svg) top left no-repeat;margin-left:30px;}
 
 .inf_footer{clear:both;padding-top:85px;}
