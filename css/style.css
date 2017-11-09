@@ -149,7 +149,7 @@ PROPIEDADES HOME
 
 .enl_filters_home{height:176px;margin-top:-90px;}
 .enl_filters_home .container{overflow:hidden;/*background:#FF5427;*/height:176px;box-sizing:border-box;padding-left:10px;padding-right:10px;}
-.enl_filters_home a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;font-family: 'Montserrat', sans-serif;margin-top:10px;background:#FF5427;margin-right:6px;font-weight:600;}
+.enl_filters_home a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;font-family: 'Montserrat', sans-serif;margin-top:10px;background:#FF5427;margin-right:6px;}
 .enl_filters_home a:last-child{margin-right:0;}
 .enl_filters_home a span{z-index:10;position:relative;}
 .enl_filters_home a:hover{background:#E33C10;color:#FF5427;}
@@ -161,7 +161,7 @@ PROPIEDADES HOME
 .enl_profesor:hover:before{background-position:-196px -98px;}
 
 .how_home{padding-top:75px;padding-bottom:150px;}
-.how_home h2{color:#004C76;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
+.how_home h2{color:#E1523D;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .how_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;margin:0 auto;}
 .how_home p.txt_how_home{max-width: 712px;	color: #4A4A4A;	font-family: "Source Sans Pro";	font-size: 18px;line-height: 32px;text-align: center;margin:0 auto;margin-top:32px;}
 .how_home p.txt_how_home a{color: #4A4A4A;text-decoration:underline;}
@@ -177,7 +177,7 @@ PROPIEDADES HOME
 .box_how p strong{font-weight:bold;}
 
 .recursos_home{background:#F2F1F0;padding-top:83px;padding-bottom:51px;}
-.recursos_home h2{color:#009FDA;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
+.recursos_home h2{color:#009FDA;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:1024px;margin:0 auto;margin-bottom:40px;}
 .recursos_home h3 a{color:#000000;text-decoration:underline;}
 .opc_recursos{text-align:center;}
@@ -191,11 +191,11 @@ PROPIEDADES HOME
 .all_recursos:hover{opacity:0.9;}
 
 .opinion_home{padding-top:63px;padding-bottom:43px;}
-.opinion_home h2{color:#C81F66;text-align:center;font-size:14px;margin-bottom:30px;font-family: 'Montserrat', sans-serif;font-weight:600;}
+.opinion_home h2{color:#C81F66;text-align:center;font-size:18px;margin-bottom:30px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .cont_opinion{}
 .cont_opinion h4{text-align:center;font-size:30px;line-height:40px;color:#4A4A4A;max-width:712px;margin:0 auto;margin-bottom:30px;font-style:italic;box-sizing:border-box;padding-left:20px;padding-right:20px;position:relative;}
 .cont_opinion h4:before{content:'“';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-right:10px;vertical-align:middle;}
-.cont_opinion h4:after{content:'”';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-left:0px;vertical-align:middle;}
+.cont_opinion h4:after{content:'”';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-left:10px;vertical-align:middle;}
 .cont_opinion p{font-size:14px;line-height:20px;text-align:center;padding-bottom:20px;line-height:17px;color:#777777;}
 
 .carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a{background-color:transparent;background-size:10px;background:url(../svg/sprite_bulletslider.svg) -10px 0px no-repeat;}
@@ -214,7 +214,7 @@ PROPIEDADES HOME
 .right-newsletter a:hover{color:#FFFFFF;background:#FF5427;}
 
 .compartir_home{padding-top:61px;}
-.compartir_home h2{color:#004C76;text-align:center;font-size:14px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
+.compartir_home h2{color:#004C76;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'Montserrat', sans-serif;font-weight:600;}
 .compartir_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:813px;margin:0 auto;margin-bottom:40px;}
 .compartir_home h3 + p{max-width: 813px;color: #4A4A4A;font-size: 18px;line-height: 32px;margin:0 auto;margin-bottom:30px;text-align:center;}
 .list_rrss_home{text-align:center;margin-bottom:60px;}
@@ -238,8 +238,8 @@ PROPIEDADES HOME
 .box_share{overflow:hidden;}
 .box_share_fb{width:50%;float:left;height:350px;text-align:right;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1146220@2x.jpg) center center no-repeat;background-size:cover;}
 .box_share_tw{width:50%;float:left;height:350px;background:url(../img/Stocksy_txp5dc35cccpQh100_Medium_670241@2x.jpg) center center no-repeat;background-size:cover;}
-.inside_s_box{max-width:565px;height:330px;background:green;margin-top:10px;margin-left:10px;margin-right:10px;box-sizing:border-box;display:inline-block;position:relative;width:95%;}
-.inside_s_box a{color:#ffffff;font-size:20px;}
+.inside_s_box{max-width:565px;height:330px;background:green;margin-top:10px;margin-left:10px;margin-right:10px;box-sizing:border-box;display:inline-block;position:relative;width:95%;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
+.inside_s_box:hover{opacity:0.9;}
 .inside_s_box p{color:#ffffff;font-size:16px;margin-top:20px;line-height:24px;}
 .inside_s_box p strong{color:#ffffff;font-weight:600;}
 .inside_s_box > div{position:absolute;padding:40px;bottom:0;box-sizing:border-box;}
@@ -527,7 +527,7 @@ PROPIEDADES FOOTER
 
 
 .logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP_footer.svg) top left no-repeat;margin-bottom:36px;}
-.logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;}
+.logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;position:absolute;bottom:80px;}
 .logo_footer{display:block;width:192px;background-size:192px;height:34px;text-indent:-99999px;background:url(../svg/CE_Master_Logo_White_RGB_Primary.svg) top left no-repeat;margin-left:30px;}
 
 .inf_footer{clear:both;padding-top:85px;}
@@ -597,6 +597,7 @@ input[type="checkbox"] {
 /*****************************
 PROPIEDADES ESPECIALES
 ******************************/
+html, body {text-rendering: optimizeLegibility;}
 a img{border:0;}
 .clear{clear:both;}
 .hide,.hide-page{display:none !important;}
@@ -688,10 +689,9 @@ MEDIA QUERIES
 	.recursos_home h3{width:95%}*/
 	.opc_recursos a{margin-left:10px;}
 	.colum_logo_footer{width:100%;float:inherit;text-align:center;margin-bottom:30px;}
-	.colum_footer{width:100%;float:inherit;text-align:center;margin-bottom:30px;}
-	.logo_footer,.logo_cup,.logo_oficial{margin:0 auto;}
+	.colum_footer{width:100%;float:inherit;text-align:left;margin-bottom:30px;}
+	/*.logo_footer,.logo_cup,.logo_oficial{margin:0 auto;}*/
 	.logo_oficial{margin-top:30px;}
-	.inf_footer p{text-align:center;}
 	/*.compartir_home h3{width:95%;}
 	.compartir_home h3 + p{width:95%;}*/
 	.box_share_fb,.box_share_tw{float:inherit;width:100%;}
@@ -714,6 +714,9 @@ MEDIA QUERIES
 	.box_enl_contact a{height:140px;}
 	.txt_contacto,.body_contacto{width:100%;float:inherit;}
 	.body_contacto{padding-left:0;}
+	.colum_footer{margin-left:30px;}
+	.inf_footer p{text-align:left;}
+	.rrss_header{display:none;}
 }
 
 @media screen and (max-width: 640px) {
