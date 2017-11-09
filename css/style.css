@@ -149,7 +149,7 @@ PROPIEDADES HOME
 
 .enl_filters_home{height:176px;margin-top:-90px;}
 .enl_filters_home .container{overflow:hidden;/*background:#FF5427;*/height:176px;box-sizing:border-box;padding-left:10px;padding-right:10px;}
-.enl_filters_home a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;font-family: 'Montserrat', sans-serif;margin-top:10px;background:#FF5427;margin-right:6px;}
+.enl_filters_home a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;font-family: 'Montserrat', sans-serif;margin-top:10px;background:#FF5427;margin-right:6px;font-weight:600;}
 .enl_filters_home a:last-child{margin-right:0;}
 .enl_filters_home a span{z-index:10;position:relative;}
 .enl_filters_home a:hover{background:#E33C10;color:#FF5427;}
@@ -181,7 +181,7 @@ PROPIEDADES HOME
 .recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:1024px;margin:0 auto;margin-bottom:40px;}
 .recursos_home h3 a{color:#000000;text-decoration:underline;}
 .opc_recursos{text-align:center;}
-.opc_recursos a{height: 36px;width:192px;border-radius: 24px;line-height:36px;display:inline-block;background:rgba(255,255,255,0.5);font-size:14px;color:#9B9B9B;margin-left:30px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+.opc_recursos a{height: 36px;width:192px;border-radius: 24px;line-height:36px;display:inline-block;background:rgba(255,255,255,0.5);font-size:14px;color:#9B9B9B;margin-left:30px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;font-family: 'Montserrat', sans-serif;}
 .opc_recursos a:hover{background:#009FDA;color:#ffffff;}
 .opc_recursos a.active{background:#009FDA;color:#ffffff;}
 .opc_recursos a:first-child{margin-left:0px;}
