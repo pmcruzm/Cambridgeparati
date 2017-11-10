@@ -769,6 +769,7 @@ MEDIA QUERIES
 	.list_rrss_home ul li a{margin-right:8px;}
 	.box_share_fb .inside_s_box span.data-fb{font-size:26px;margin-bottom:0;}
 	.box_share_tw .inside_s_box span.data-tw{font-size:26px;margin-bottom:0;}
+	.cab_top_home .logo-para-ti{top:14px;width:130px;height:86px;background:url(../img/logo_mobile.png) top left no-repeat;background-size:130px;}
 	
 }
 
