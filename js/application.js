@@ -112,7 +112,7 @@ jQuery(document).ready(function(){
 						  auto: true,
 					  	  autoHover: true,
 						  controls: false,
-						  pause: 5000,
+						  pause: 7000,
 						  speed:2000,
 						  easing:'easeInOutCubic',
 						  adaptiveHeight:true,

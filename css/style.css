@@ -133,10 +133,10 @@ PROPIEDADES HOME
 .slider_home{height:640px;}
 .cont_gall{height:640px;width:100%;box-sizing:border-box;background-size:cover;background-position:center top;background-repeat:no-repeat;position:relative;padding-top:189px;}
 .cont_gall:before{display:block;width:100%;height:640px;background:rgba(0,0,0,0.6);position:absolute;content:'';top:0;}
-.cont_gall h3{color:#ffffff;font-size:12px;line-height:25px;margin-bottom:34px;font-family: 'montserratsemibold', sans-serif;}
+.cont_gall h3{color:#ffffff;font-size:12px;line-height:25px;margin-bottom:34px;font-family: 'montserratbold', sans-serif;}
 .cont_gall h3:after{content:'';display:block;height:1px;background:#00A4A1;width:66px;position:relative;top:18px;}
 .cont_gall h2{color:#ffffff;font-size:44px;line-height:48px;max-width:636px;margin-bottom:34px;}
-.enl_video{color:#ffffff;font-size:16px;line-height:20px;font-family: 'montserratregular', sans-serif;}
+.enl_video{color:#ffffff;font-size:16px;line-height:20px;font-family: 'montserratbold', sans-serif;}
 .enl_video:before{content:'';display:inline-block;vertical-align:middle;width:40px;height:40px;background-size:40px;background:url(../svg/icon_playvideo.svg) top left no-repeat;margin-right:15px;}
 
 .slider_home .bx-wrapper{margin-bottom:0;}
@@ -149,7 +149,7 @@ PROPIEDADES HOME
 
 .enl_filters_home{height:176px;margin-top:-90px;}
 .enl_filters_home .container{overflow:hidden;/*background:#FF5427;*/height:176px;box-sizing:border-box;padding-left:10px;padding-right:10px;}
-.enl_filters_home a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;font-family: 'montserratsemibold', sans-serif;margin-top:10px;background:#FF5427;margin-right:6px;}
+.enl_filters_home a{display:block;width:calc(33.3333% - 4px);float:left;height:176px;text-align:center;font-size:18px;color:#ffffff;font-size:18px;position:relative;-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;font-family: 'montserratbold', sans-serif;margin-top:10px;background:#FF5427;margin-right:6px;}
 .enl_filters_home a:last-child{margin-right:0;}
 .enl_filters_home a span{z-index:10;position:relative;}
 .enl_filters_home a:hover{background:#E33C10;color:#FF5427;}
@@ -161,14 +161,14 @@ PROPIEDADES HOME
 .enl_profesor:hover:before{background-position:-196px -98px;}
 
 .how_home{padding-top:75px;padding-bottom:150px;}
-.how_home h2{color:#E1523D;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'montserratsemibold', sans-serif;}
+.how_home h2{color:#E1523D;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'montserratbold', sans-serif;}
 .how_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;margin:0 auto;}
 .how_home p.txt_how_home{max-width: 712px;	color: #4A4A4A;	font-family: "source_sans_proregular";	font-size: 18px;line-height: 32px;text-align: center;margin:0 auto;margin-top:32px;}
 .how_home p.txt_how_home a{color: #4A4A4A;text-decoration:underline;}
 
 .boxes_how{overflow:hidden;margin-top:47px;}
 .box_how{width:33.3333%;display:block;float:left;text-align:center;}
-.box_how h4{font-size: 18px;line-height: 24px;font-family: 'montserratsemibold', sans-serif;max-width:230px;margin:0 auto;text-align:center;margin-top:38px;}
+.box_how h4{font-size: 18px;line-height: 24px;font-family: 'montserratbold', sans-serif;max-width:230px;margin:0 auto;text-align:center;margin-top:38px;}
 .box_how h4.titul-1{color:#00A4A1;}
 .box_how h4.titul-2{color:#004C76;}
 .box_how h4.titul-3{color:#009FDA;}
@@ -177,7 +177,7 @@ PROPIEDADES HOME
 .box_how p strong{font-weight:bold;}
 
 .recursos_home{background:#F2F1F0;padding-top:83px;padding-bottom:51px;}
-.recursos_home h2{color:#009FDA;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'montserratsemibold', sans-serif;}
+.recursos_home h2{color:#009FDA;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'montserratbold', sans-serif;}
 .recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:1024px;margin:0 auto;margin-bottom:40px;}
 .recursos_home h3 a{color:#000000;text-decoration:underline;}
 .opc_recursos{text-align:center;}
@@ -186,12 +186,12 @@ PROPIEDADES HOME
 .opc_recursos a.active{background:#009FDA;color:#ffffff;}
 .opc_recursos a:first-child{margin-left:0px;}
 .carrusel_recursos{padding-bottom:15px;padding-top:15px;}
-.all_recursos{height: 48px;	width:260px;background: #FF5427;display:block;margin:0 auto;line-height:48px;color:#ffffff;font-size:14px;text-align:center;font-family: 'montserratsemibold', sans-serif;}
+.all_recursos{height: 48px;	width:260px;background: #FF5427;display:block;margin:0 auto;line-height:48px;color:#ffffff;font-size:14px;text-align:center;font-family: 'montserratbold', sans-serif;}
 .recursos_home .all_recursos{background: #FF5427;color:#ffffff;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
 .all_recursos:hover{opacity:0.9;}
 
 .opinion_home{padding-top:63px;padding-bottom:43px;}
-.opinion_home h2{color:#C81F66;text-align:center;font-size:18px;margin-bottom:30px;font-family: 'montserratsemibold', sans-serif;}
+.opinion_home h2{color:#C81F66;text-align:center;font-size:18px;margin-bottom:30px;font-family: 'montserratbold', sans-serif;}
 .cont_opinion{}
 .cont_opinion h4{text-align:center;font-size:30px;line-height:40px;color:#4A4A4A;max-width:712px;margin:0 auto;margin-bottom:30px;font-style:italic;box-sizing:border-box;padding-left:20px;padding-right:20px;position:relative;}
 .cont_opinion h4:before{content:'“';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-right:10px;vertical-align:middle;}
@@ -208,13 +208,13 @@ PROPIEDADES HOME
 .right-newsletter{height:402px;width:50%;float:left;box-sizing:border-box;background:#3bb6b3 url(../svg/icon_newsletter.svg) 211px bottom no-repeat;position:relative;}
 
 .left-newsletter>div{float:right;padding-right:113px;}
-.left-newsletter h2{color:rgba(255,255,255,0.6);text-align:left;font-size:18px;margin-bottom:20px;padding-top:94px;max-width:460px;font-family: 'montserratsemibold', sans-serif;}
+.left-newsletter h2{color:rgba(255,255,255,0.6);text-align:left;font-size:18px;margin-bottom:20px;padding-top:94px;max-width:460px;font-family: 'montserratbold', sans-serif;}
 .left-newsletter h3{text-align:left;font-size:32px;line-height:44px;color:#ffffff;margin-bottom:40px;max-width:460px;}
-.right-newsletter a{height: 48px;width:502px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;font-family: 'montserratsemibold', sans-serif;position:absolute;top:50%;margin-top:-24px;left:100px;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
+.right-newsletter a{height: 48px;width:502px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;font-family: 'montserratbold', sans-serif;position:absolute;top:50%;margin-top:-24px;left:100px;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
 .right-newsletter a:hover{color:#FFFFFF;background:#FF5427;}
 
 .compartir_home{padding-top:61px;}
-.compartir_home h2{color:#004C76;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'montserratsemibold', sans-serif;}
+.compartir_home h2{color:#004C76;text-align:center;font-size:18px;margin-bottom:20px;font-family: 'montserratbold', sans-serif;}
 .compartir_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:813px;margin:0 auto;margin-bottom:40px;}
 .compartir_home h3 + p{max-width: 813px;color: #4A4A4A;font-size: 18px;line-height: 32px;margin:0 auto;margin-bottom:30px;text-align:center;}
 .list_rrss_home{text-align:center;margin-bottom:60px;}
@@ -242,13 +242,13 @@ PROPIEDADES HOME
 .inside_s_box p{color:#ffffff;font-size:16px;margin-top:20px;line-height:24px;}
 .inside_s_box p strong{color:#ffffff;font-weight:600;}
 .inside_s_box > div{position:absolute;padding:40px;bottom:0;box-sizing:border-box;}
-.box_share_fb .inside_s_box span.data-fb{display:block;text-align:center;color: #FFFFFF;font-family: 'montserratsemibold', sans-serif;font-size:32px;line-height:42px;margin-bottom:26px;}
+.box_share_fb .inside_s_box span.data-fb{display:block;text-align:center;color: #FFFFFF;font-family: 'montserratbold', sans-serif;font-size:32px;line-height:42px;margin-bottom:26px;}
 .box_share_fb .inside_s_box{text-align:center;background-color:rgba(66,103,178,0.9);}
 .box_share_fb .inside_s_box:hover{background-color:rgba(66,103,178,1);}
 .box_share_fb .inside_s_box span.data-fb:before{content:'';display:block;margin:0 auto;width:69px;height:66px;background:url(../svg/icon_like_big.svg) top left no-repeat;background-size:69px;margin-bottom:24px;}
 .box_share_tw .inside_s_box{text-align:center;background-color:rgba(57,149,255,0.9);}
 .box_share_tw .inside_s_box:hover{background-color:rgba(57,149,255,1);}
-.box_share_tw .inside_s_box span.data-tw{display:block;text-align:center;color: #FFFFFF;font-family: 'montserratsemibold', sans-serif;font-size: 32px;line-height:42px;margin-bottom:26px;}
+.box_share_tw .inside_s_box span.data-tw{display:block;text-align:center;color: #FFFFFF;font-family: 'montserratbold', sans-serif;font-size: 32px;line-height:42px;margin-bottom:26px;}
 .box_share_tw .inside_s_box span.data-tw:before{content:'';display:block;margin:0 auto;width:54px;height:44px;background:url(../svg/icon_twitter_big.svg) top left no-repeat;background-size:54px;margin-bottom:24px;}
 
 .fullview iframe {border: medium none;bottom: 0;height: 100%;left: 0;margin: 0;overflow: hidden;padding: 0;position: fixed;right: 0;top: 0;width: 100%;z-index: 98;}
@@ -271,13 +271,13 @@ PROPIEDADES HOME
 .over_recurso_all p{color:#ffffff;font-size:16px;text-align:center !important;vertical-align:middle;text-align:center;}
 .over_recurso_all p:before{content:'';display:block;height:70px;background:url(../svg/icon_cards_browser.svg) center center no-repeat;}
 .new_tag{display:block;width:50px;height:50px;color:#171614;font-size:8px;line-height:50px;background-color: #FFD101;border-radius:40px;text-align:center;font-family: 'montserratregular', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;}
-.over_recurso_all p{font-family: 'montserratsemibold', sans-serif;}
+.over_recurso_all p{font-family: 'montserratbold', sans-serif;}
 .over_recurso_all a{display:block;margin:0 auto;width:142px;height:48px;background-size:142px;text-indent:-99999px;position:relative;}
 .over_recurso_all a.btn-applestore{background:url(../svg/btn_apple_appstore.svg) center center no-repeat;}
 .over_recurso_all a.btn-playstore{background:url(../svg/btn_google_playstore.svg) center center no-repeat;margin-bottom:20px;}
-.over_recurso_all a.go-recurso{height:auto !important;text-indent:inherit !important;color:#ffffff;font-size: 16px;line-height: 24px;text-align:center;margin-bottom:20px;font-family: 'montserratsemibold', sans-serif;}
+.over_recurso_all a.go-recurso{height:auto !important;text-indent:inherit !important;color:#ffffff;font-size: 16px;line-height: 24px;text-align:center;margin-bottom:20px;font-family: 'montserratbold', sans-serif;}
 .over_recurso_all a.go-recurso:before{content:'';display:block;height:70px;background:url(../svg/icon_cards_browser.svg) center center no-repeat;}
-.mobile_tag{display:block;width:50px;height:50px;color: #171614;text-indent:-99999px;background:#FFD101 url(../svg/icon_cards_app.svg) center center no-repeat;border-radius:40px;text-align:center;font-family: 'montserratsemibold', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;text-indent:-99999px;}
+.mobile_tag{display:block;width:50px;height:50px;color: #171614;text-indent:-99999px;background:#FFD101 url(../svg/icon_cards_app.svg) center center no-repeat;border-radius:40px;text-align:center;font-family: 'montserratbold', sans-serif;position:absolute;top:-25px;right:20px;z-index:20;text-indent:-99999px;}
 .text_recurso{height:330px;overflow:hidden;padding:30px;box-sizing:border-box;}
 .body_recurso p{font-size: 16px;line-height: 24px;color:#ffffff;z-index:10;position:relative;text-align:left;}
 .text_recurso em,.text_recurso i{font-style:italic;}
@@ -312,7 +312,7 @@ CONOCENOS
 .left-txt-box{float:left;width:30%;box-sizing:border-box;}
 .right-txt-box{float:right;width:70%;box-sizing:border-box;padding-left:32px;}
 .left-txt-box img{max-width:100%;margin-top:51px;}
-.right-txt-box h4{font-family:'montserratregular', Helvetica, sans-serif;color:#E1523D;font-size: 18px;line-height: 24px;border-bottom:4px solid #E1523D;padding-bottom:27px;margin-bottom:38px;}
+.right-txt-box h4{font-family:'montserratbold', Helvetica, sans-serif;color:#E1523D;font-size: 18px;line-height: 24px;border-bottom:4px solid #E1523D;padding-bottom:27px;margin-bottom:38px;}
 .right-txt-box h4.titul_cup{color:#00A4A1;border-bottom:4px solid #00A4A1;}
 .right-txt-box p{font-size:16px;line-height:32px;color:#4A4A4A;margin-bottom:40px;}
 .right-txt-box p a{color:#4A4A4A;text-decoration:underline;}
@@ -380,8 +380,8 @@ RECURSOS
 .filter.filter-abilities {width:200px;}
 .filter.filter-other {width:200px;}
 
-.clear_all_filters{position:absolute;bottom:20px;right:20px;display:block;height:32px;width:164px;line-height:29px;color:#ffffff;text-align:center;font-size:12px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;box-sizing:border-box;border: 2px solid #FFFFFE;}
-.clear_all_filters span:before{content:'';display:inline-block;width:16px;height:16px;background:url(../svg/cancel_filters.svg) center center no-repeat;vertical-align:middle;margin-right:8px;}
+.clear_all_filters{position:absolute;bottom:20px;right:20px;display:block;height:32px;width:164px;line-height:29px;color:#ffffff;text-align:center;font-size:12px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;box-sizing:border-box;border: 2px solid #FFFFFE;font-family: 'montserratbold', sans-serif;}
+.clear_all_filters span:before{content:'';display:inline-block;width:16px;height:16px;background:url(../svg/cancel_filters.svg) center center no-repeat;vertical-align:middle;margin-right:8px;position:relative;top:-2px;}
 /*.clear_all_filters:hover{background:#ffffff;color:#E33C10;}*/
 
 .contenedor-recursos{padding-top:50px;/*overflow:hidden;*/}
@@ -396,7 +396,7 @@ RECURSOS
 
 .subfilter-teacher{border-bottom:2px solid #E33C10;padding-bottom:7px;padding-top:24px;text-align:center;}
 .subfilter-teacher.sin-filtros{border-bottom:none;}
-.subfilter-teacher p{color:#ffffff;font-size:14px;display:inline-block;line-height:40px;margin-right:31px;position:relative;top:-13px;}
+.subfilter-teacher p{color:#ffffff;font-size:14px;display:inline-block;line-height:40px;margin-right:31px;position:relative;top:-13px;font-family:'montserratregular', Helvetica, sans-serif;}
 .opc-f-teacher{display:inline-block;height: 40px;width:812px;border-radius:20px;background-color:#E33C10;position:relative;overflow:hidden;}
 .opc-f-teacher a{color: #FFFFFF;font-family:'montserratregular', Helvetica, sans-serif;font-size: 14px;line-height: 40px;display:inline-block;padding-left:32px;padding-right:32px;border-radius:20px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
 .opc-f-teacher a:hover,.opc-f-teacher a.active{background:#ffffff;color:#E33C10;}
@@ -409,7 +409,7 @@ CONTACTO
 .cont_contacto{min-height:1000px;overflow:hidden;box-sizing:border-box;padding:0px 95px;margin-top:-50px;}
 .contact_filter{overflow:hidden;height:176px;background:#ff5427;margin-top:0 !important;}
 .txt_contacto{float:left;width:30%;text-align:center;}
-.txt_contacto h4{text-align:center;color: #FAB200;font-family:'montserratregular', Helvetica, sans-serif;font-size: 18px;line-height:24px;max-width:190px;margin:0 auto;}
+.txt_contacto h4{text-align:center;color: #FAB200;font-family:'montserratbold', Helvetica, sans-serif;font-size: 18px;line-height:24px;max-width:190px;margin:0 auto;}
 .txt_contacto img{max-width:100%;margin-top:40px;margin-bottom:16px;}
 /*.txt_contacto p{color:#4A4A4A;font-size: 16px;line-height: 32px;display:table-cell;vertical-align:middle;box-sizing:border-box;padding-right:40px;}*/
 .body_contacto{float:left;width:70%;box-sizing:border-box;padding-left:20px;}
@@ -419,7 +419,7 @@ CONTACTO
 .box_enl_contact{max-width:671px;margin:0 auto;text-align:center;}
 .box_enl_contact a{display:inline-block;margin-left:89px;}
 .box_enl_contact a:first-child{margin-left:0;}
-.box_enl_contact a span{color: #FAB200;font-family:'montserratregular', Helvetica, sans-serif;font-size: 16px;text-align: center;display:inline-block;margin-top:16px;width:100%;}
+.box_enl_contact a span{color: #FAB200;font-family:'montserratbold', Helvetica, sans-serif;font-size: 16px;text-align: center;display:inline-block;margin-top:16px;width:100%;}
 .box_enl_contact a span:before{content:'';width:90px;height:90px;margin:0 auto;display:block;margin-bottom:12px;}
 .box_enl_contact a.enl_estu span:before{background:url(../svg/icon_estudiantes_a.svg) center center no-repeat;background-size:90px;}
 .box_enl_contact a.enl_fami span:before{background:url(../svg/icon_familias_a.svg) center center no-repeat;background-size:90px;}
@@ -439,7 +439,7 @@ CONTACTO
 .contact_filter .enl_profesor.active:before{background-position:0px -116px;}*/
 
 .form-contact{}
-.form-contact .form-heading {color:#FAB200;font-family:'montserratregular', Helvetica, sans-serif;line-height: 24px;border-bottom:4px solid #FAB200;padding-bottom:22px;margin-bottom:32px;margin-top:52px; text-transform: uppercase;}
+.form-contact .form-heading {color:#FAB200;font-family:'montserratbold', Helvetica, sans-serif;line-height: 24px;border-bottom:4px solid #FAB200;padding-bottom:22px;margin-bottom:32px;margin-top:52px; text-transform: uppercase;}
 .form-contact input[type=text],.form-contact input[type=email]{height:48px;max-width: 458px;border: 1px solid #D8D8D8;line-height:48px;float:right;box-sizing:border-box;padding-left:48px;padding-right:48px;color:#4A4A4A;font-size:16px;margin-bottom:16px;-webkit-appearance:none;width:calc( 100% - 230px);float:right;}
 .form-contact input[type=text].error,.form-contact input[type=email].error{border: 1px solid #ff0000;}
 .form-contact .cover-select{height:48px;max-width:458px;line-height:48px;float:right;margin-bottom:16px;overflow:hidden;border-radius:4px;background:#F2F1F0 url(../svg/symbol_select.svg) 95% 50% no-repeat;box-sizing:border-box;width:calc( 100% - 230px);float:right;}
@@ -465,7 +465,7 @@ CONTACTO
 .txt-required{float:right;display:inline-block;font-size: 12px;	line-height: 20px;color:#4A4A4A;}
 .txt-required span{color:#FAB200;}
 
-.form-contact button{display:block;height:48px;max-width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;width:100%;}
+.form-contact button{display:block;height:48px;max-width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;width:100%;font-family:'montserratregular', Helvetica, sans-serif;}
 .errores{font-size:14px;color:red;padding-top:40px;padding-bottom:40px;}
 
 .content-gracias{text-align:center;min-height: 1000px;}
@@ -509,7 +509,7 @@ PROPIEDADES FOOTER
 #footer .container{box-sizing:border-box;padding-top:50px;overflow:hidden;min-width:auto !important;max-width:100% !important;}
 .colum_logo_footer{float:left;width:40%;}
 .colum_footer{float:left;width:20%;}
-.colum_footer h3{color: #4A4A4A;font-family:'montserratsemibold', Helvetica, sans-serif;font-size: 12px;line-height: 26px;margin-bottom:32px;}
+.colum_footer h3{color: #4A4A4A;font-family:'montserratbold', Helvetica, sans-serif;font-size: 12px;line-height: 26px;margin-bottom:32px;}
 .colum_footer ul a{color: #979797;font-size: 14px;line-height: 31px;}
 .colum_footer ul a:hover{opacity:0.9;}
 .rrss_footer ul li{display:inline-block;}
