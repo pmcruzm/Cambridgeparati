@@ -181,7 +181,7 @@ PROPIEDADES HOME
 .recursos_home h3{text-align:center;font-size:32px;line-height:44px;color:#000000;max-width:1024px;margin:0 auto;margin-bottom:40px;}
 .recursos_home h3 a{color:#000000;text-decoration:underline;}
 .opc_recursos{text-align:center;}
-.opc_recursos a{height: 36px;width:192px;border-radius: 24px;line-height:36px;display:inline-block;background:rgba(255,255,255,0.5);font-size:14px;color:#9B9B9B;margin-left:30px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;font-family: 'montserratregular', sans-serif;}
+.opc_recursos a{height: 36px;width:192px;border-radius: 24px;line-height:36px;display:inline-block;background:rgba(255,255,255,0.5);font-size:14px;color:#9B9B9B;margin-left:30px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;font-family: 'montserratbold', sans-serif;}
 .opc_recursos a:hover{background:#009FDA;color:#ffffff;}
 .opc_recursos a.active{background:#009FDA;color:#ffffff;}
 .opc_recursos a:first-child{margin-left:0px;}
