@@ -66,14 +66,14 @@ PROPIEDADES GENERALES
 ******************************/
 body{margin:0;padding:0;font-family:'source_sans_proregular', Helvetica, sans-serif;font-size: 1em;line-height: 1.5em;}
 .container{display:block;width:100%;margin:0 auto;position:relative;max-width:1140px;margin:0 auto;position:relative;}
-#wrapper{}
+#wrapper{overflow:hidden;}
 
 /*****************************
 PROPIEDADES HEADER
 ******************************/
 #header{width:100%;top:0;left:0;z-index:90;background-color:#ffffff;height:90px;box-sizing:border-box;}
 #header .container{min-width:auto !important;max-width:100%;box-sizing:border-box;padding-left:30px;padding-right:30px;position:relative;height:90px;}
-.logo_h{display:block;background:url(../svg/CE_Master_Logo_RGB_b.svg) center center no-repeat;height:59px;width:342px;background-size:342px;text-indent:-99999px;position:absolute;top:50%;margin-top:-29px;}
+.logo_h{display:block;background:url(../svg/CE_Master_Logo_RGB_b.svg) center center no-repeat;height:59px;width:232px;background-size:232px;text-indent:-99999px;position:absolute;top:50%;margin-top:-29px;}
 
 .rrss_header{overflow:hidden;display:inline-block;position:absolute;right:180px;top:50%;margin-top:-13px;}
 .rrss_header p{color:#393939;font-size:13px;float:left;margin-right:20px;}
@@ -118,8 +118,8 @@ PROPIEDADES HOME
 
 .cabecera_home{position:relative;}
 .cab_top_home{position:absolute;top:0;height:112px;border-bottom:2px solid #F2F1F0;width:100%;z-index:10;background:#ffffff;border-top:2px solid #F2F1F0;}
-.cab_top_home .container{height:112px;}
-.cab_top_home .logo-para-ti{display:block;position:relative;top:27px;width:282px;height:58px;color: #D73B2F;font-family: "Bliss Pro";font-size: 30px;font-weight: 500;}
+.cab_top_home .container{height:112px;position:relative;}
+.cab_top_home .logo-para-ti{display:block;position:absolute;width:214px;height:36px;text-indent:-99999px;background:url(../svg/logo_CambridgeParaTi.svg) top left no-repeat;background-size:214px;top:50%;margin-top:-18px;}
 /*.cab_top_home .logo-para-ti:before{content:'';display:inline-block;width:58px;height:55px;background:url(../img/cpt_brand_color.png) top left no-repeat;background-size:58px;vertical-align:middle;margin-right:16px;}*/
 .enl_top_home{display:inline-block;position:absolute;right:0;top:41px;}
 .enl_top_home a{color:#4A4A4A;font-size:18px;margin-right:70px;}
@@ -213,7 +213,7 @@ PROPIEDADES HOME
 .left-newsletter>div{float:right;padding-right:113px;}
 .left-newsletter h2{color:rgba(255,255,255,0.6);text-align:left;font-size:14px;margin-bottom:20px;padding-top:94px;max-width:460px;font-family: 'montserratbold', sans-serif;}
 .left-newsletter h3{text-align:left;font-size:32px;line-height:44px;color:#ffffff;margin-bottom:40px;max-width:460px;}
-.right-newsletter a{height: 48px;width:502px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;font-family: 'montserratbold', sans-serif;position:absolute;top:50%;margin-top:-24px;left:100px;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
+.right-newsletter a{height: 48px;width:502px;background: #FFFFFF;display:block;margin:0 auto;line-height:48px;color:#FF5427;font-size:14px;text-align:center;font-family: 'montserratbold', sans-serif;position:absolute;top:50%;margin-top:-24px;left:100px;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;box-sizing:border-box;padding-left:5px;padding-right:5px;}
 .right-newsletter a:hover{color:#FFFFFF;background:#FF5427;}
 
 .compartir_home{padding-top:61px;}
@@ -335,7 +335,7 @@ RECURSOS
 .bg_cab_recursos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
 .body_recursos{background:#F2F1F0;min-height:700px;}
 .body_recursos .box-body-recursos{margin-top:-88px !important;}
-.generico-recursos h2{max-width: 691px;	color: #393939;font-size:32px;line-height: 48px;text-align: center;margin:0 auto;margin-top:58px;}
+.generico-recursos h2{max-width: 691px;	color: #393939;font-size:32px;line-height: 48px;text-align: center;margin:0 auto;margin-top:62px;}
 
 .box-body-recursos{box-sizing:border-box;margin-top:-300px;}
 .header-filtros{overflow:hidden;}
@@ -344,7 +344,7 @@ RECURSOS
 .header-filtros a{display:block;width:calc(33.3333% - 4px);float:left;height:80px;line-height:80px;text-align:center;font-size:18px;color:#FF5427;font-size:18px;position:relative;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;margin-right:6px; background:#E33C10;}
 .header-filtros a:last-child{margin-right:0;}
 
-.header-filtros a span{z-index:10;position:relative;font-family:'montserratregular', Helvetica, sans-serif;font-size:18px;}
+.header-filtros a span{z-index:10;position:relative;font-family:'montserratbold', Helvetica, sans-serif;font-size:18px;}
 .header-filtros a span:before{content:'';display:inline-block !important;width:49px !important;height:49px !important;margin-top:0;margin-bottom:0;background-size:147px !important;vertical-align:middle;margin-right:18px;}
 .header-filtros a:hover{background:#FF5427;color:#ffffff !important;}
 .header-filtros a.active{background:#FF5427;color:#ffffff !important;}
@@ -387,7 +387,7 @@ RECURSOS
 .clear_all_filters span:before{content:'';display:inline-block;width:16px;height:16px;background:url(../svg/cancel_filters.svg) center center no-repeat;vertical-align:middle;margin-right:8px;position:relative;top:-2px;}
 /*.clear_all_filters:hover{background:#ffffff;color:#E33C10;}*/
 
-.contenedor-recursos{padding-top:50px;/*overflow:hidden;*/}
+.contenedor-recursos{padding-top:54px;/*overflow:hidden;*/}
 .contenedor-recursos .item{width:33.3333%;float:left;margin-bottom:30px;text-align:center;}
 .contenedor-recursos .item .box_recurso{width:95%;max-width:360px;display:inline-block;margin-right:0;}
 /*.contenedor-recursos .item:nth-child(3n+0) {text-align:right;}
@@ -533,7 +533,7 @@ PROPIEDADES FOOTER
 
 .logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP.svg) top left no-repeat;margin-bottom:36px;}
 .logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;position:absolute;bottom:90px;}
-.logo_footer{display:block;text-indent:-99999px;background:url(../svg/CE_Master_Logo_RGB_b.svg) center center no-repeat;height:59px;width:342px;background-size:342px;margin-left:30px;}
+.logo_footer{display:block;text-indent:-99999px;background:url(../svg/CE_Master_Logo_RGB_b.svg) center center no-repeat;height:59px;width:232px;background-size:232px;margin-left:30px;}
 
 .inf_footer{clear:both;padding-top:85px;}
 .inf_footer p{padding-top:16px;padding-bottom:16px;color:#393939;font-size:12px;line-height:31px;}
@@ -749,7 +749,7 @@ MEDIA QUERIES
 	.enl_profesor:before{width:49px;height:49px;background-size:147px;background-position:-98px 0px;margin-bottom:0;margin-top:11px;}
 	.enl_profesor:hover:before{background-position:-98px -49px;}
 	.enl_filters_home a{font-size:12px;height:88px;}
-	.enl_filters_home .container{height:100px;padding-left:0;padding-right:10px;}
+	.enl_filters_home .container{height:100px;padding-left:0;padding-right:0px;}
 	.enl_filters_home{height:88px;}
 	.cont_gall h2{font-size:28px;line-height:32px;max-width:335px;}
 	.enl_video{font-size:12px;}
@@ -778,7 +778,7 @@ MEDIA QUERIES
 
 
 @media screen and (max-width: 480px) {
-	.opc_recursos a{margin-left:0px;width:95%;margin-bottom:20px;}
+	.opc_recursos a{width:96px;font-size:12px;margin-left:4px;}
 	.row-txt-box{padding-left:50px;padding-right:50px;}
 	.cont_contacto{padding:0 50px;}
 	.cont_aviso_legal{padding:0 50px;}
@@ -787,6 +787,19 @@ MEDIA QUERIES
 	.enl_top_home a{width:70px;}
 	.inside_s_box > div{padding:20px;}
 	.list_rrss_home ul li a{margin-right:0px;}
+	.box_recurso{max-width:304px;display:inline-block;margin-right:0;}
+	.body_recurso p{font-size:14px;}
+	.text_recurso{font-size:25px;}
+	.carrusel-recientes .slick-list, .carrusel-app .slick-list, .carrusel-visitados .slick-list{padding-left:8px;}
+	/*.box_recurso{width:304px;height:420px;}
+	.color_over{height:256px;}
+	.body_recurso{height:256px;position:relative;}
+	.over_recurso_img{height:256px;}
+	.content_recurso{height:256px;}
+	.over_recurso_all{height:256px;}
+	.over_recurso_all>div{height:256px;}
+	.color_over{height:256px;}
+	.text_recurso{height:330px;}*/
 }
 
 
