@@ -367,7 +367,7 @@ RECURSOS
 .colum-box-2{-webkit-column-count: 2;-moz-column-count: 2;column-count: 2;}
 .colum-box-1{-webkit-column-count: 1;-moz-column-count: 1;column-count: 1;}
 
-.logo_ceq{width:230px;height:20px;position:absolute;bottom:-30px;left:55px;background:url(../svg/CEQ_logo_Ranged_White.svg) top left no-repeat;display:block;}
+.logo_ceq{width:230px;height:20px;position:absolute;bottom:-30px;left:0px;background:url(../svg/CEQ_logo_Ranged_White.svg) top left no-repeat;display:block;}
 
 
 .filter{display:inline-block; float:left; margin: 0 15px 25px 35px;position:relative;}
@@ -378,7 +378,7 @@ RECURSOS
 .filter label:hover{background:#ffffff;color:#E33C10;}
 .filter label.active{background:#ffffff;color:#E33C10;}
 
-.filter.filter-cambridgequalifications{width:430px;padding-bottom:30px;}
+.filter.filter-cambridgequalifications{width:430px;padding-bottom:10px;}
 .filter.filter-cambridgequalifications label{width:210px;}
 .filter.filter-abilities {width:200px;}
 .filter.filter-other {width:200px;}
