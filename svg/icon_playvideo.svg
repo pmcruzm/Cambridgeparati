@@ -4,11 +4,21 @@
     <title>icon_playvideo</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon_playvideo">
-            <g>
-                <circle id="Oval-6" fill="#FFFFFF" cx="20" cy="20" r="20"></circle>
-                <path d="M16,26.8103924 L16,14 C20.0260385,16.1418132 24.0270706,18.2681314 28.0800769,20.4239402 C24.0388383,22.5597553 20.0373159,24.6760767 16,26.8103924 Z" id="Path-Copy" fill="#00A4A1"></path>
+    <g id="DESIGN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOMEPAGE" transform="translate(-179.000000, -510.000000)">
+            <g id="HERO-IMAGE">
+                <g id="SLIDE1">
+                    <g id="TXT" transform="translate(176.000000, 278.000000)">
+                        <g id="btn_video" transform="translate(3.000000, 232.000000)">
+                            <g id="icon_playvideo">
+                                <g>
+                                    <circle id="Oval-6" fill="#FFFFFF" cx="20" cy="20" r="20"></circle>
+                                    <path d="M16,26.8103924 L16,14 C20.0260385,16.1418132 24.0270706,18.2681314 28.0800769,20.4239402 C24.0388383,22.5597553 20.0373159,24.6760767 16,26.8103924 Z" id="Path-Copy" fill="#E1523D"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
             </g>
         </g>
     </g>
