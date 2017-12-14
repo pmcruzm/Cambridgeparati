@@ -158,9 +158,9 @@ jQuery(document).ready(function(){
 	jQuery(document).on('click',".enl_language", function(e) {
 		e.preventDefault();
 		if(!jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().addClass('active')
+			jQuery(this).parent().addClass('active');
 		}else{
-			jQuery(this).parent().removeClass('active')
+			jQuery(this).parent().removeClass('active');
 		}
 	});
 
@@ -168,11 +168,28 @@ jQuery(document).ready(function(){
 	jQuery(document).on('touchend',".enl_language", function(e) {
 		e.preventDefault();
 		if(!jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().addClass('active')
+			jQuery(this).parent().addClass('active');
 		}else{
-			jQuery(this).parent().removeClass('active')
+			jQuery(this).parent().removeClass('active');
 		}
 	});
+	
+	//Desplegable de recursos
+	jQuery(document).on('click',".act_filtros", function(e) {
+		e.preventDefault();
+		if(!jQuery(this).hasClass('active')){
+			var txt_btn=jQuery(this).attr('data-close');
+			jQuery(this).addClass('active');
+			jQuery(this).html(txt_btn);
+			jQuery('.body-filtros').slideToggle(600);
+		}else{
+			var txt_btn=jQuery(this).attr('data-open');	
+			jQuery(this).removeClass('active');
+			jQuery(this).html(txt_btn);
+			jQuery('.body-filtros').slideToggle(600);
+		}
+	});
+	
 
 	//Mostrar Video a pantalla completa
 	jQuery(document).on('click',".enl_video", function(e) {
