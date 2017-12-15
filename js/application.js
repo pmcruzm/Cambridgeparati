@@ -29,11 +29,11 @@ if(ua.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
 
 jQuery.noConflict();
 
-jQuery(window).load(function(){
+jQuery(window).on('load',function(){
 
 });
 
-jQuery(document).ready(function(){
+jQuery(document).on('ready',function(){
 
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
@@ -186,7 +186,51 @@ jQuery(document).ready(function(){
 			var txt_btn=jQuery(this).attr('data-open');	
 			jQuery(this).removeClass('active');
 			jQuery(this).html(txt_btn);
-			jQuery('.body-filtros').slideToggle(600);
+			jQuery('.body-filtros').slideToggle(600,function(){
+				if(w_win<768){
+					jQuery('.body_f_mobile').stop().clearQueue().hide();	
+					jQuery('.header_f_mobile a').removeClass('active');	
+				}
+			});
+		}
+	});
+	
+	//Desplegable de recursos
+	jQuery(document).on('click',".header_f_mobile a", function(e) {
+		e.preventDefault();
+		if(!jQuery(this).hasClass('active')){
+			jQuery('.header_f_mobile a').removeClass('active');
+			jQuery(this).addClass('active');
+			/*var opc_despl=jQuery(this);*/
+			if(jQuery('.body_f_mobile.active').length>0){
+				jQuery('.body_f_mobile.active').stop().clearQueue().slideUp(400,function(){
+					jQuery(this).removeClass('active');	
+					jQuery('.header_f_mobile a.active').parents('.filter').find('.body_f_mobile').stop().clearQueue().slideDown(400,function(){
+						jQuery(this).addClass('active');		
+					});
+				});
+			}else{
+				jQuery('.header_f_mobile a.active').parents('.filter').find('.body_f_mobile').stop().clearQueue().slideDown(400,function(){
+					jQuery(this).addClass('active');		
+				});	
+			}
+		}else{
+			jQuery('.header_f_mobile a').removeClass('active');
+			jQuery(this).removeClass('active');
+			//jQuery(this).parents('.filter').find('.body_f_mobile').slideToggle(600);
+			/*var opc_despl=jQuery(this);*/
+			if(jQuery('.body_f_mobile.active').length>0){
+				jQuery('.body_f_mobile.active').stop().clearQueue().slideUp(400,function(){
+					jQuery(this).removeClass('active');	
+					jQuery('.header_f_mobile a.active').parents('.filter').find('.body_f_mobile').stop().clearQueue().slideDown(400,function(){
+						jQuery(this).addClass('active');		
+					});
+				});
+			}else{
+				jQuery('.header_f_mobile a.active').parents('.filter').find('.body_f_mobile').stop().clearQueue().slideDown(400,function(){
+					jQuery(this).addClass('active');		
+				});	
+			}
 		}
 	});
 	

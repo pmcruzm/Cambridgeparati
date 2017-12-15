@@ -118,10 +118,10 @@ PROPIEDADES HOME
 
 .cabecera_home{position:relative;}
 .cab_top_home{position:absolute;top:0;height:112px;border-bottom:2px solid #F2F1F0;width:100%;z-index:10;background:#ffffff;border-top:2px solid #F2F1F0;}
-.cab_top_home .container{height:112px;position:relative;}
+.cab_top_home .container{height:112px;position:relative;min-width:auto !important;max-width:100%;box-sizing:border-box;padding-left:30px;padding-right:30px;position:relative;}
 .cab_top_home .logo-para-ti{display:block;position:absolute;width:214px;height:36px;text-indent:-99999px;background:url(../svg/logo_CambridgeParaTi.svg) top left no-repeat;background-size:214px;top:50%;margin-top:-18px;}
 /*.cab_top_home .logo-para-ti:before{content:'';display:inline-block;width:58px;height:55px;background:url(../img/cpt_brand_color.png) top left no-repeat;background-size:58px;vertical-align:middle;margin-right:16px;}*/
-.enl_top_home{display:inline-block;position:absolute;right:0;top:41px;}
+.enl_top_home{display:inline-block;position:absolute;right:30px;top:41px;}
 .enl_top_home a{color:#4A4A4A;font-size:18px;margin-right:70px;}
 .enl_top_home a:last-child{margin-right:0;}
 .enl_top_home a:before{display:inline-block;content:'';width:32px;height:32px;vertical-align:middle;margin-right:13px;position:relative;top:-3px;}
@@ -303,9 +303,10 @@ PROPIEDADES HOME
 /*****************************
 CONOCENOS
 ******************************/
-.bg_cab_conocenos{height:400px;padding-top:112px;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1055889@2x.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;position:relative;}
-.bg_cab_conocenos:before{display: block;width: 100%;height:400px;background: rgba(0,0,0,0.5);position: absolute;content: '';top: 0;}
-.bg_cab_conocenos.page_recursos{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;}
+.bg_cab_conocenos{height:610px;padding-top:112px;background:url(../img/DSC_3975@2x.png) center center no-repeat;background-size:cover;box-sizing:border-box;position:relative;}
+.bg_cab_conocenos:before{display: block;width: 100%;height:610px;background: rgba(0,0,0,0.5);position: absolute;content: '';top: 0;}
+.bg_cab_conocenos.page_recursos:before{height:400px !important;}
+.bg_cab_conocenos.page_recursos{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;height:400px !important;}
 .bg_cab_conocenos.page_contact{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1501636@2x.jpg) center center no-repeat;}
 .bg_cab_conocenos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
 .body_generico{background:#F2F1F0;}
@@ -367,7 +368,7 @@ RECURSOS
 .colum-box-2{-webkit-column-count: 2;-moz-column-count: 2;column-count: 2;}
 .colum-box-1{-webkit-column-count: 1;-moz-column-count: 1;column-count: 1;}
 
-.logo_ceq{width:230px;height:20px;position:absolute;bottom:-30px;left:0px;background:url(../svg/CEQ_logo_Ranged_White.svg) top left no-repeat;display:block;}
+.logo_ceq{width:230px;height:20px;left:0px;background:url(../svg/CEQ_logo_Ranged_White.svg) top left no-repeat;display:block;margin-top:30px;}
 
 
 .filter{display:inline-block; float:left; margin: 0 15px 25px 35px;position:relative;}
@@ -406,10 +407,11 @@ RECURSOS
 .opc-f-teacher a:first-child{float:left;}
 .opc-f-teacher a:last-child{float:right;}
 
-.header_f_mobile{display:none;}
+.header_f_mobile{display:none;background:#E33C10;}
 .select_filter{height:64px;background:#FF5427;text-align:center;}
 .select_filter a{color:#ffffff;font-size:14px;font-family:'montserratbold', Helvetica, sans-serif;margin-top:17px;display:inline-block;}
 .select_filter a:after{content:'';height:10px;display:block;width:10px;margin:0 auto;background:url(../svg/icon_topbar_arrow_w.svg) bottom center no-repeat;}
+.select_filter a.active:after{background:url(../svg/icon_topbar_arrow_w_c.svg) bottom center no-repeat;}
 
 	
 /*****************************
@@ -474,7 +476,8 @@ CONTACTO
 .txt-required{float:right;display:inline-block;font-size: 12px;	line-height: 20px;color:#4A4A4A;}
 .txt-required span{color:#FAB200;}
 
-.form-contact button{display:block;height:48px;max-width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;width:100%;font-family:'montserratregular', Helvetica, sans-serif;}
+.form-contact button{display:block;height:48px;max-width:260px;background-color: #FF5427;line-height:48px;text-align:center;color:#ffffff;border:none;-webkit-appearance:none;font-size:14px;width:100%;font-family:'montserratregular', Helvetica, sans-serif;cursor:pointer;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
+.form-contact button:hover{opacity:0.9;}
 .errores{font-size:14px;color:red;padding-top:40px;padding-bottom:40px;}
 
 .content-gracias{text-align:center;min-height: 1000px;}
@@ -671,6 +674,7 @@ MEDIA QUERIES
 	/*.cont_gall .container{box-sizing:border-box;padding-left:30px;padding-right:30px;}
 	.how_home h3,{width:95%;}*/
 	.container{width:95%;}
+	.enl_filters_home .container{width:100%;}
 }
 
 
@@ -733,6 +737,44 @@ MEDIA QUERIES
 	.enl_top_home{top:20px;}
 	#header .container{padding-left:0;padding-right:0;}
 	.language_header{right:0;}
+	#header .container{height:47px;}
+	#header{height:47px;}
+	.logo_h{height:24px;width:127px;background-size:127px;margin-top:-12px}
+	.language_header > a span:after{display:none;}
+	.language_header .cover-desplegable{top:38px;}
+	.cab_top_home .container{height:99px;}
+	.cab_top_home{height:99px;}
+	.enl_top_home{top:14px;}
+	.body_f_mobile h4{display:none;}
+	.header_f_mobile{display:block;}
+	.header_f_mobile a{color: #ffffff;font-size: 14px;font-family: 'montserratbold', Helvetica, sans-serif;display:block;padding-left:20px;position:relative;line-height:21px;padding-top:5px;padding-bottom:5px;}
+	.header_f_mobile a:before{content:'';display:inline-block;width:10px;height:6px;vertical-align:middle;background:url(../svg/icon_topbar_arrow_w.svg) top left no-repeat;position:absolute;left:5px;top:12px;}
+	.header_f_mobile a.active:before{background:url(../svg/icon_topbar_arrow_w_c.svg) top left no-repeat;}
+	.body_f_mobile{padding-top:20px;}
+	.filter{display:block;width:100%  !important;margin-top:30px;margin-bottom:0px;margin:0;}
+	.box-filtros{padding-bottom:80px;padding-top:0;}
+	.filter.filter-cambridgequalifications .body_f_mobile{}
+	.logo_ceq{left:0;right:0;margin:0 auto;margin-top:30px;}
+	.body_f_mobile{display:none;padding-bottom:20px;box-sizing:border-box;padding-left:10px;padding-right:10px;}
+	.filter.filter-cambridgequalifications{padding-bottom:0px;}
+	.filter label{display:block;width:100%;}
+	.filter.filter-cambridgequalifications label{width:100%;}
+	.header-filtros a span:before{display:block !important;margin:0 auto !important;margin-top:8px !important;margin-bottom:-4px !important;}
+	.header-filtros a{line-height:inherit !important;}
+	.header-filtros a span{font-size:12px;}
+	.bg_cab_conocenos{padding-top:99px;}
+	.body_f_mobile{background:#E33C10;}
+	.subfilter-teacher p{display:none;}
+	.subfilter-teacher{padding-top:0;padding-bottom:0;}
+	.opc-f-teacher{display:block;width:100%;border-radius:0;box-sizing:border-box;padding-left:15px;padding-right:15px;background:none;}
+	.opc-f-teacher a{width:50%;float:left;border-radius:0;line-height:auto;display:table;box-sizing:border-box;padding-left:10px;padding-right:10px;line-height:21px;height:85px;color:#ffffff;}
+	.opc-f-teacher a.active{background:#E33C10;color:#ffffff;}
+	.opc-f-teacher a:hover{background:#E33C10;color:#ffffff;}
+	.opc-f-teacher a span{vertical-align:middle;display:table-cell;height:100%;width:100%;}
+	.subfilter-teacher{border-bottom:0;}
+	.opc-f-teacher{height:auto;}
+	.cab_top_home .container{padding-left:0;padding-right:0;}
+	.enl_top_home{right:0;}
 }
 
 @media screen and (max-width: 640px) {
@@ -779,6 +821,9 @@ MEDIA QUERIES
 	.box_share_fb .inside_s_box span.data-fb{font-size:26px;margin-bottom:0;}
 	.box_share_tw .inside_s_box span.data-tw{font-size:26px;margin-bottom:0;}
 	.cab_top_home .logo-para-ti{}
+	.textarea-group textarea{padding:20px;}
+	.form-contact input[type="text"], .form-contact input[type="email"],.form-contact select{padding-left:28px;padding-right:28px;}
+	.bg_cab_recursos h1{font-size:24px;}
 	
 }
 
@@ -797,6 +842,9 @@ MEDIA QUERIES
 	.body_recurso p{font-size:14px;}
 	.text_recurso{font-size:25px;}
 	.carrusel-recientes .slick-list, .carrusel-app .slick-list, .carrusel-visitados .slick-list{padding-left:8px;}
+	.cab_top_home .logo-para-ti{width:144px;background-size:144px;height:21px;margin-top:-10px;}
+	.colum-box-2{-webkit-column-count: 1;-moz-column-count: 1;column-count:1;}
+	.opc-f-teacher a{font-size:12px;}
 	/*.box_recurso{width:304px;height:420px;}
 	.color_over{height:256px;}
 	.body_recurso{height:256px;position:relative;}
