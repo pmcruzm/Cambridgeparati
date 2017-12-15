@@ -799,6 +799,7 @@ MEDIA QUERIES
 	.opc-f-teacher a:first-child{float:left !important;margin-bottom:0px;}
 	.opc-f-teacher a:last-child{float:right !important;margin-bottom:0px;}
 	.subfilter-teacher{padding-left:0;padding-right:0px;}
+	.rrss_footer ul{max-width:100%;}
 }
 
 @media screen and (max-width: 640px) {
