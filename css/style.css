@@ -117,7 +117,7 @@ PROPIEDADES HOME
 #content{/*padding-top:48px;*/}
 
 .cabecera_home{position:relative;}
-.cab_top_home{position:absolute;top:0;height:112px;border-bottom:2px solid #F2F1F0;width:100%;z-index:10;background:#ffffff;border-top:2px solid #F2F1F0;}
+.cab_top_home{position:relative;top:0;height:112px;border-bottom:2px solid #F2F1F0;width:100%;z-index:10;background:#ffffff;border-top:2px solid #F2F1F0;}
 .cab_top_home .container{height:112px;position:relative;min-width:auto !important;max-width:100%;box-sizing:border-box;padding-left:30px;padding-right:30px;position:relative;}
 .cab_top_home .logo-para-ti{display:block;position:absolute;width:214px;height:36px;text-indent:-99999px;background:url(../svg/logo_CambridgeParaTi.svg) top left no-repeat;background-size:214px;top:50%;margin-top:-18px;}
 /*.cab_top_home .logo-para-ti:before{content:'';display:inline-block;width:58px;height:55px;background:url(../img/cpt_brand_color.png) top left no-repeat;background-size:58px;vertical-align:middle;margin-right:16px;}*/
@@ -130,8 +130,8 @@ PROPIEDADES HOME
 .enl_top_home a:last-child:before{background:url(../svg/sprite_icon_main_menu.svg) -32px 0px no-repeat;vertical-align:middle;}
 .enl_top_home a:hover:last-child:before,.enl_top_home a.active:last-child:before{background-position:-32px -32px;}
 
-.slider_home{height:640px;}
-.cont_gall{height:640px;width:100%;box-sizing:border-box;background-size:cover;background-position:center top;background-repeat:no-repeat;position:relative;padding-top:189px;}
+.slider_home{height:528px;}
+.cont_gall{height:528px;width:100%;box-sizing:border-box;background-size:cover;background-position:top center;background-repeat:no-repeat;position:relative;padding-top:64px;}
 .cont_gall:before{display:block;width:100%;height:640px;position:absolute;content:'';top:0;background: linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);}
 .cont_gall h3{color:#ffffff;font-size:12px;line-height:25px;margin-bottom:34px;font-family: 'montserratbold', sans-serif;}
 .cont_gall h3:after{content:'';display:block;height:1px;background:#E1523D;width:66px;position:relative;top:18px;}
