@@ -303,12 +303,12 @@ PROPIEDADES HOME
 /*****************************
 CONOCENOS
 ******************************/
-.bg_cab_conocenos{height:610px;padding-top:112px;background:url(../img/DSC_3975@2x.png) center center no-repeat;background-size:cover;box-sizing:border-box;position:relative;}
-.bg_cab_conocenos:before{display: block;width: 100%;height:610px;background: linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);position: absolute;content: '';top: 0;}
-.bg_cab_conocenos.page_recursos:before{height:400px !important;}
-.bg_cab_conocenos.page_recursos{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;height:400px !important;}
+.bg_cab_conocenos{height:486px;background:url(../img/DSC_3975@2x.png) center center no-repeat;background-size:cover;box-sizing:border-box;position:relative;}
+.bg_cab_conocenos:before{display: block;width: 100%;height:486px;background: linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);position: absolute;content: '';top: 0;}
+.bg_cab_conocenos.page_recursos:before{height:324px !important;}
+.bg_cab_conocenos.page_recursos{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;height:324px !important;}
 .bg_cab_conocenos.page_contact{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1501636@2x.jpg) center center no-repeat;}
-.bg_cab_conocenos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
+.bg_cab_conocenos h1{color:#ffffff;font-size:44px;line-height:48px;padding-top:80px;}
 .body_generico{background:#F2F1F0;}
 .box-body-generico{background:#ffffff;box-sizing:border-box;margin-top:-300px;padding-top:100px;padding-bottom:100px;border-bottom:80px solid #f2f1f0;}
 .row-txt-box{overflow:hidden;padding-bottom:40px;padding-left:140px;padding-right:140px;}
@@ -331,9 +331,9 @@ CONOCENOS
 /*****************************
 RECURSOS
 ******************************/
-.bg_cab_recursos{height:440px;padding-top:112px;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;}
+.bg_cab_recursos{height:324px;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;}
 .bg_cab_recursos:before{display: block;width: 100%;height: 440px;background: linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);position: absolute;content: '';top: 0;}
-.bg_cab_recursos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
+.bg_cab_recursos h1{color:#ffffff;font-size:44px;line-height:48px;padding-top:80px;}
 .body_recursos{background:#F2F1F0;min-height:700px;}
 .body_recursos .box-body-recursos{margin-top:-88px !important;}
 .generico-recursos h2{max-width: 691px;	color: #393939;font-size:32px;line-height: 48px;text-align: center;margin:0 auto;margin-top:62px;}
