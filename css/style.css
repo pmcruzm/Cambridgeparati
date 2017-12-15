@@ -837,6 +837,7 @@ MEDIA QUERIES
 	.textarea-group textarea{padding:20px;}
 	.form-contact input[type="text"], .form-contact input[type="email"],.form-contact select{padding-left:28px;padding-right:28px;}
 	.contenedor-recursos .item .box_recurso{width:100%;}
+	.right-newsletter a{max-width:273px;}
 	
 }
 
