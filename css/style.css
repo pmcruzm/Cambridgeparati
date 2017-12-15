@@ -323,7 +323,7 @@ CONOCENOS
 .right-txt-box p strong{font-weight:bold;}
 .img-logo-conocenos{margin-bottom:40px;}
 .separador-c{height:15px;background:#f2f1f0;margin-bottom:100px;margin-top:60px;}
-.ico-tw-c,.ico-fb-c,.ico-yt-c{display:inline-block;width:32px;height:32px;background:red;text-indent:-99999px;margin-right:10px;margin-top:10px;background-size:32px;/*box-shadow: 0px 0px 6px rgba(0,0,0,0.5);*/border-radius:32px;}
+.ico-tw-c,.ico-fb-c,.ico-yt-c{display:inline-block;width:32px;height:32px;background:red;text-indent:-99999px;margin-right:10px;margin-top:10px;background-size:32px;box-shadow: 0 0 6px 0 rgba(0,0,0,0.50);border-radius:32px;}
 .ico-tw-c{background:url(../svg/btn_topbar_tw_on.svg) center center no-repeat;}
 .ico-fb-c{background:url(../svg/btn_topbar_fb_on.svg) center center no-repeat;}
 .ico-inst-c{background:url(../svg/btn_topbar_int_on.svg) center center no-repeat;}
