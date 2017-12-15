@@ -98,7 +98,7 @@ PROPIEDADES HEADER
 .language_header>a:before{display:inline-block;content:'';width:6px;height:6px;background:url(../svg/sprite_icon_topbar_arrow.svg) -2px 0px no-repeat;vertical-align:middle;margin-right:11px;}
 .language_header>a span:after{display:inline-block;content:'';width:26px;height:26px;vertical-align:middle;margin-left:18px;background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -163px no-repeat;}
 
-.language_header>a:hover,.language_header.active>a{color:#D8D8D8;}
+.language_header>a:hover,.language_header.active>a{color:#E1523D;}
 .language_header>a:hover:before,.language_header.active>a:before{background-position:-2px -6px;}
 .language_header>a:hover span:after,.language_header.active>a span:after{background-position:-35px -163px;}
 
@@ -134,7 +134,7 @@ PROPIEDADES HOME
 .cont_gall{height:640px;width:100%;box-sizing:border-box;background-size:cover;background-position:center top;background-repeat:no-repeat;position:relative;padding-top:189px;}
 .cont_gall:before{display:block;width:100%;height:640px;position:absolute;content:'';top:0;background: linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);}
 .cont_gall h3{color:#ffffff;font-size:12px;line-height:25px;margin-bottom:34px;font-family: 'montserratbold', sans-serif;}
-.cont_gall h3:after{content:'';display:block;height:1px;background:#00A4A1;width:66px;position:relative;top:18px;}
+.cont_gall h3:after{content:'';display:block;height:1px;background:#E1523D;width:66px;position:relative;top:18px;}
 .cont_gall h2{color:#ffffff;font-size:44px;line-height:48px;max-width:636px;margin-bottom:34px;}
 .enl_video{color:#ffffff;font-size:16px;line-height:20px;font-family: 'montserratbold', sans-serif;}
 .enl_video:before{content:'';display:inline-block;vertical-align:middle;width:40px;height:40px;background-size:40px;background:url(../svg/icon_playvideo.svg) top left no-repeat;margin-right:15px;}
@@ -167,7 +167,7 @@ PROPIEDADES HOME
 .how_home p.txt_how_home a{color: #4A4A4A;text-decoration:underline;}
 .how_home p.txt_how_home strong{font-family:'source_sans_prosemibold', Helvetica, sans-serif;}
 
-.boxes_how{overflow:hidden;margin-top:47px;}
+.boxes_how{overflow:hidden;}
 .box_how{width:33.3333%;display:block;float:left;text-align:center;}
 .box_how h4{font-size: 18px;line-height: 24px;font-family: 'montserratbold', sans-serif;max-width:267px;margin:0 auto;text-align:center;margin-top:-24px;}
 .box_how h4.titul-1{color:#063A63;}
@@ -257,7 +257,7 @@ PROPIEDADES HOME
 .fullview iframe {border: medium none;bottom: 0;height: 100%;left: 0;margin: 0;overflow: hidden;padding: 0;position: fixed;right: 0;top: 0;width: 100%;z-index: 98;}
 .fullview .btn-close-player{background: rgba(0, 0, 0, 0) url("../img/close-player.png") no-repeat scroll center center;cursor: pointer;height: 22px;position: fixed;right: 25px;text-indent: -9999px;top: 25px;width: 22px;z-index: 99;}
 
-.box_recurso{display:block;height:480px;width:360px;box-sizing:border-box;padding:15px;background:#ffffff;border-radius:6px;margin-right:30px;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
+.box_recurso{display:block;height:480px;width:360px;box-sizing:border-box;padding:15px;background:#ffffff;margin-right:30px;-webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear;-o-transition: all 0.15s linear;transition: all 0.15s linear;}
 .box_recurso.over{box-shadow: 0 0 30px 0 #9B9B9B;}
 .header_recurso{height:82px;text-align:center;display:table;width:100%;}
 .inside-h-r{display:table-cell;vertical-align:middle;height:82px;width:100%;}
@@ -304,7 +304,7 @@ PROPIEDADES HOME
 CONOCENOS
 ******************************/
 .bg_cab_conocenos{height:610px;padding-top:112px;background:url(../img/DSC_3975@2x.png) center center no-repeat;background-size:cover;box-sizing:border-box;position:relative;}
-.bg_cab_conocenos:before{display: block;width: 100%;height:610px;background: rgba(0,0,0,0.5);position: absolute;content: '';top: 0;}
+.bg_cab_conocenos:before{display: block;width: 100%;height:610px;background: linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);position: absolute;content: '';top: 0;}
 .bg_cab_conocenos.page_recursos:before{height:400px !important;}
 .bg_cab_conocenos.page_recursos{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;height:400px !important;}
 .bg_cab_conocenos.page_contact{background:url(../img/Stocksy_txp5dc35cccpQh100_Large_1501636@2x.jpg) center center no-repeat;}
@@ -332,7 +332,7 @@ CONOCENOS
 RECURSOS
 ******************************/
 .bg_cab_recursos{height:440px;padding-top:112px;background:url(../img/Stocksy_txp5dc35cccpQh100_Large_985495@2x.jpg) center center no-repeat;background-size:cover;box-sizing:border-box;}
-.bg_cab_recursos:before{display: block;width: 100%;height: 440px;background: rgba(0,0,0,0.5);position: absolute;content: '';top: 0;}
+.bg_cab_recursos:before{display: block;width: 100%;height: 440px;background: linear-gradient(270deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);position: absolute;content: '';top: 0;}
 .bg_cab_recursos h1{color:#ffffff;font-size:44px;line-height:48px;margin-top:80px;}
 .body_recursos{background:#F2F1F0;min-height:700px;}
 .body_recursos .box-body-recursos{margin-top:-88px !important;}
@@ -365,24 +365,24 @@ RECURSOS
 .header-filtros a.enl_profesores.active span:before{background-position:-98px 0px;}
 
 .box-filtros{overflow:hidden; box-sizing:border-box; padding:30px 15px 49px 15px;position:relative;}
-.colum-box-2{-webkit-column-count: 2;-moz-column-count: 2;column-count: 2;}
-.colum-box-1{-webkit-column-count: 1;-moz-column-count: 1;column-count: 1;}
+.colum-box-2{-webkit-column-count: 2;-moz-column-count: 2;column-count: 2;text-align:center;}
+.colum-box-1{-webkit-column-count: 1;-moz-column-count: 1;column-count: 1;text-align:center;}
 
 .logo_ceq{width:230px;height:20px;left:0px;background:url(../svg/CEQ_logo_Ranged_White.svg) top left no-repeat;display:block;margin-top:30px;}
 
 
-.filter{display:inline-block; float:left; margin: 0 15px 25px 25px;position:relative;}
+.filter{display:block; float:left; margin: 0 15px 25px 25px;position:relative;}
 .filter:last-child {margin-right:0px;}
-.filter h4{color:#ffffff;font-size:14px;margin-bottom:9px;font-family: 'montserratregular', sans-serif;}
+.filter h4{color:#ffffff;font-size:14px;margin-bottom:9px;font-family: 'montserratregular', sans-serif;text-align:center;}
 .filter input{display:none;}
 .filter label{display:inline-block;height:32px;width:210px;background:#E33C10;line-height:32px;color:#ffffff;text-align:center;border-radius:4px;margin-bottom:4px;font-size:14px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
 .filter label:hover{background:#ffffff;color:#E33C10;}
 .filter label.active{background:#ffffff;color:#E33C10;}
 
-.filter.filter-cambridgequalifications{width:430px;padding-bottom:10px;}
+.filter.filter-cambridgequalifications{width:calc(45% - 40px);padding-bottom:10px;}
 .filter.filter-cambridgequalifications label{width:210px;}
-.filter.filter-abilities {width:200px;}
-.filter.filter-other {width:190px;}
+.filter.filter-abilities {width:calc(27% - 40px);}
+.filter.filter-other {width:calc(27% - 40px);}
 
 .clear_all_filters{position:absolute;bottom:20px;display:block;height:32px;width:164px;line-height:29px;color:#ffffff;text-align:center;font-size:12px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;box-sizing:border-box;border: 2px solid #FFFFFE;font-family: 'montserratbold', sans-serif;right:0;left:0;margin:0 auto;}
 .clear_all_filters span:before{content:'';display:inline-block;width:16px;height:16px;background:url(../svg/cancel_filters.svg) center center no-repeat;vertical-align:middle;margin-right:8px;position:relative;top:-2px;}
@@ -398,7 +398,7 @@ RECURSOS
 .more-box-recursos h4{display:none;text-align:center;font-size:20px;}
 
 
-.subfilter-teacher{border-bottom:2px solid #E33C10;padding-bottom:7px;padding-top:24px;text-align:center;}
+.subfilter-teacher{border-bottom:2px solid #E33C10;padding-bottom:7px;padding-top:24px;text-align:center;box-sizing:border-box;padding-left:10px;padding-right:10px;}
 .subfilter-teacher.sin-filtros{border-bottom:none;}
 .subfilter-teacher p{color:#ffffff;font-size:14px;display:inline-block;line-height:40px;margin-right:31px;position:relative;top:-13px;font-family:'montserratregular', Helvetica, sans-serif;}
 .opc-f-teacher{display:inline-block;height: 40px;width:812px;border-radius:20px;background-color:#E33C10;position:relative;overflow:hidden;}
@@ -675,6 +675,8 @@ MEDIA QUERIES
 	.how_home h3,{width:95%;}*/
 	.container{width:95%;}
 	.enl_filters_home .container{width:100%;}
+	.filter label{width:180px;}
+	.filter.filter-cambridgequalifications label{width:180px;}
 }
 
 
@@ -686,20 +688,25 @@ MEDIA QUERIES
 	.left-newsletter > div{padding-right:75px;}
 	.row-txt-box{padding-left:100px;padding-right:100px;}
 	.enl_top_home a{margin-right:50px;}
-	.filter.filter-cambridgequalifications label{width:150px;}
-	.filter.filter-cambridgequalifications{width:310px;}
 	.filter label{width:150px;}
-	.filter.filter-abilities{width:190px;}
-	.filter{margin:0 15px 25px 10px;}
-	.filter.filter-abilities{width:172px;}
-	.filter h4{font-size:13px;}
-	.filter.filter-other{width:140px;}
+	.filter.filter-cambridgequalifications label{width:150px;}
+	.rrss_footer ul{max-width:100px;}
+	.rrss_footer ul li{margin-bottom:10px;}
+	.logo_cup{width:124px;background-size:124px;}
+	
 
 }
 
 @media screen and (max-width: 900px) {
 	.left-newsletter h2{padding-top:74px;}
 	.contenedor-recursos .item{width:50%;}
+	.filter.filter-cambridgequalifications{width:calc(50% - 40px);}
+	.filter.filter-abilities {width:calc(25% - 40px);}
+	.filter.filter-other {width:calc(25% - 40px);}
+	.opc-f-teacher{width:95%;margin:0 auto;height:auto;text-align:center;background:none;}
+	.opc-f-teacher a{background:#E33C10;}
+	.opc-f-teacher a:first-child{float:inherit !important;margin-bottom:10px;}
+	.opc-f-teacher a:last-child{float:inherit !important;margin-bottom:10px;}
 }
 
 
@@ -788,6 +795,9 @@ MEDIA QUERIES
 	.colum_logo_footer{margin-bottom:42px;}
 	.colum_footer h3{margin-bottom:19px;}
 	.colum_footer{margin-bottom:52px;}
+	.opc-f-teacher a:first-child{float:left !important;margin-bottom:0px;}
+	.opc-f-teacher a:last-child{float:right !important;margin-bottom:0px;}
+	.subfilter-teacher{padding-left:0;padding-right:0px;}
 }
 
 @media screen and (max-width: 640px) {
