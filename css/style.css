@@ -371,7 +371,7 @@ RECURSOS
 .logo_ceq{width:230px;height:20px;left:0px;background:url(../svg/CEQ_logo_Ranged_White.svg) top left no-repeat;display:block;margin-top:30px;}
 
 
-.filter{display:inline-block; float:left; margin: 0 15px 25px 35px;position:relative;}
+.filter{display:inline-block; float:left; margin: 0 15px 25px 25px;position:relative;}
 .filter:last-child {margin-right:0px;}
 .filter h4{color:#ffffff;font-size:14px;margin-bottom:9px;font-family: 'montserratregular', sans-serif;}
 .filter input{display:none;}
@@ -382,7 +382,7 @@ RECURSOS
 .filter.filter-cambridgequalifications{width:430px;padding-bottom:10px;}
 .filter.filter-cambridgequalifications label{width:210px;}
 .filter.filter-abilities {width:200px;}
-.filter.filter-other {width:200px;}
+.filter.filter-other {width:190px;}
 
 .clear_all_filters{position:absolute;bottom:20px;display:block;height:32px;width:164px;line-height:29px;color:#ffffff;text-align:center;font-size:12px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;box-sizing:border-box;border: 2px solid #FFFFFE;font-family: 'montserratbold', sans-serif;right:0;left:0;margin:0 auto;}
 .clear_all_filters span:before{content:'';display:inline-block;width:16px;height:16px;background:url(../svg/cancel_filters.svg) center center no-repeat;vertical-align:middle;margin-right:8px;position:relative;top:-2px;}
@@ -686,6 +686,14 @@ MEDIA QUERIES
 	.left-newsletter > div{padding-right:75px;}
 	.row-txt-box{padding-left:100px;padding-right:100px;}
 	.enl_top_home a{margin-right:50px;}
+	.filter.filter-cambridgequalifications label{width:150px;}
+	.filter.filter-cambridgequalifications{width:310px;}
+	.filter label{width:150px;}
+	.filter.filter-abilities{width:190px;}
+	.filter{margin:0 15px 25px 10px;}
+	.filter.filter-abilities{width:172px;}
+	.filter h4{font-size:13px;}
+	.filter.filter-other{width:140px;}
 
 }
 
@@ -775,6 +783,11 @@ MEDIA QUERIES
 	.opc-f-teacher{height:auto;}
 	.cab_top_home .container{padding-left:0;padding-right:0;}
 	.enl_top_home{right:0;}
+	.logo_footer{width:193px;height:34px;background-size:193px;}
+	#footer .container{padding-top:51px;}
+	.colum_logo_footer{margin-bottom:42px;}
+	.colum_footer h3{margin-bottom:19px;}
+	.colum_footer{margin-bottom:52px;}
 }
 
 @media screen and (max-width: 640px) {
@@ -823,6 +836,7 @@ MEDIA QUERIES
 	.cab_top_home .logo-para-ti{}
 	.textarea-group textarea{padding:20px;}
 	.form-contact input[type="text"], .form-contact input[type="email"],.form-contact select{padding-left:28px;padding-right:28px;}
+	.contenedor-recursos .item .box_recurso{width:100%;}
 	
 }
 

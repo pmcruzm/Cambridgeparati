@@ -188,7 +188,7 @@ jQuery(document).on('ready',function(){
 			jQuery(this).html(txt_btn);
 			jQuery('.body-filtros').slideToggle(600,function(){
 				if(w_win<768){
-					jQuery('.body_f_mobile').stop().clearQueue().hide();	
+					jQuery('.body_f_mobile').stop().clearQueue().slideUp(0).removeClass('active');
 					jQuery('.header_f_mobile a').removeClass('active');	
 				}
 			});
