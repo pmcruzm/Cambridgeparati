@@ -197,8 +197,8 @@ PROPIEDADES HOME
 .opinion_home h2{color:#C81F66;text-align:center;font-size:15px;margin-bottom:30px;font-family: 'montserratbold', sans-serif;}
 .cont_opinion{}
 .cont_opinion h4{text-align:center;font-size:30px;line-height:48px;color:#4A4A4A;max-width:712px;margin:0 auto;margin-bottom:30px;font-style:italic;box-sizing:border-box;padding-left:20px;padding-right:20px;position:relative;}
-.cont_opinion h4:before{content:'“';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-right:10px;vertical-align:middle;}
-.cont_opinion h4:after{content:'”';display:inline-block;font-size:90px;color:#C81F66;position:relative;top:15px;margin-left:10px;vertical-align:middle;}
+.cont_opinion h4:before{content:'';display:inline-block;position:relative;top:-7px;vertical-align:middle;width:40px;height:24px;background:url(../img/comilla_open.png) top left no-repeat;background-size:30px;}
+.cont_opinion h4:after{content:'';display:inline-block;position:relative;top:-7px;vertical-align:middle;width:45px;height:24px;background:url(../img/comilla_close.png) top right no-repeat;background-size:30px;}
 .cont_opinion p{font-size:14px;line-height:20px;text-align:center;padding-bottom:20px;line-height:17px;color:#777777;}
 
 .carrusel_opiniones .bx-wrapper .bx-pager.bx-default-pager a{background-color:transparent;background-size:10px;background:url(../svg/sprite_bulletslider.svg) -10px 0px no-repeat;}
@@ -542,6 +542,7 @@ PROPIEDADES FOOTER
 
 
 .logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP.svg) top left no-repeat;margin-bottom:36px;}
+.logo_cae{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/CE_Master_Logo_RGB_b.svg) top left no-repeat;margin-bottom:36px;background-size:144px;}
 .logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;position:absolute;bottom:90px;}
 .logo_footer{display:block;text-indent:-99999px;background:url(../svg/CE_Master_Logo_RGB_b.svg) center center no-repeat;height:59px;width:232px;background-size:232px;margin-left:30px;}
 
