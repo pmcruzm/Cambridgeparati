@@ -784,10 +784,12 @@ function openResource(url_recurso, id_recurso) {
 	var windowReference = window.open();
 
 	//Si el GA está cargado, registramos el click en la url externa
-	if( typeof ga === 'function' ) {
-		ga('send', 'event', 'outbound', 'click', url_recurso, {
-			'transport': 'beacon',
-			'hitCallback': function(){ windowReference.location = url_recurso }
+	if( typeof gtag === 'function' ) {
+		gtag('event', 'click', {
+			'event_category': 'outbound',
+			'event_label': url_recurso,
+			'transport_type': 'beacon',
+			'event_callback': function(){ windowReference.location = url_recurso; }
 		});
 	} else {
 		windowReference.location = url_recurso;
