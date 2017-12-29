@@ -522,9 +522,10 @@ PROPIEDADES FOOTER
 #footer .container{box-sizing:border-box;padding-top:63px;overflow:hidden;min-width:auto !important;max-width:100% !important;}
 .colum_logo_footer{float:left;width:40%;}
 .colum_footer{float:left;width:20%;}
-.colum_footer h3{color: ##4A4A4A;font-family:'montserratbold', Helvetica, sans-serif;font-size: 12px;line-height: 26px;margin-bottom:32px;}
+.colum_footer h3,.colum_logo_footer h3{color:#4A4A4A;font-family:'montserratbold', Helvetica, sans-serif;font-size: 12px;line-height: 26px;margin-bottom:32px;}
 .colum_footer ul a{color: #393939;font-size: 14px;line-height: 31px;}
 .colum_footer ul a:hover{opacity:0.9;}
+.rrss_footer{display:inline-block;}
 .rrss_footer ul li{display:inline-block;}
 .rrss_footer ul li a{display:block;width:26px;height:26px;text-indent:-99999px;margin-right:2px;}
 .rrss_footer ul li a.ico-yt-h{background:url(../svg/sprite_topbar_rrss_and_flag.svg) -3px -3px no-repeat;}
@@ -541,8 +542,9 @@ PROPIEDADES FOOTER
 .rrss_footer ul li a.ico-lk-h:hover{background-position:-35px -195px;}
 
 
-.logo_cup{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/Logo_CUP.svg) top left no-repeat;margin-bottom:36px;}
-.logo_cae{display:block;width:144px;background-size:144px;height:30px;text-indent:-99999px;background:url(../svg/CE_Master_Logo_RGB_b.svg) top left no-repeat;margin-bottom:36px;background-size:144px;}
+.row_logos{}
+.logo_cup{display:inline-block;width:116px;background-size:116px;height:25px;text-indent:-99999px;background:url(../svg/Logo_CUP_small.svg) top left no-repeat;margin-bottom:36px;margin-right:85px;vertical-align:top;}
+.logo_cae{display:inline-block;width:161px;background-size:161px;height:27px;text-indent:-99999px;background:url(../svg/CE_Master_Logo_RGB_small.svg) top left no-repeat;margin-bottom:36px;background-size:161px;margin-right:40px;vertical-align:top;}
 .logo_oficial{display:block;width:50px;background-size:50px;height:41px;text-indent:-99999px;background:url(../svg/logo_oficialpreparationmaterial.svg) top left no-repeat;opacity:0.7;margin-left:30px;margin-top:30px;position:absolute;bottom:90px;}
 .logo_footer{display:block;text-indent:-99999px;background:url(../svg/CE_Master_Logo_RGB_b.svg) center center no-repeat;height:59px;width:232px;background-size:232px;margin-left:30px;}
 
@@ -692,9 +694,8 @@ MEDIA QUERIES
 	.enl_top_home a{margin-right:50px;}
 	.filter label{width:150px;}
 	.filter.filter-cambridgequalifications label{width:150px;}
-	.rrss_footer ul{max-width:100px;}
+	.rrss_footer ul{max-width:100px;margin-bottom:20px;}
 	.rrss_footer ul li{margin-bottom:10px;}
-	.logo_cup{width:124px;background-size:124px;}
 	
 
 }
@@ -709,6 +710,8 @@ MEDIA QUERIES
 	.opc-f-teacher a{background:#E33C10;}
 	.opc-f-teacher a:first-child{float:inherit !important;margin-bottom:10px;}
 	.opc-f-teacher a:last-child{float:inherit !important;margin-bottom:10px;}
+	.logo_cae{margin-right:27px;}
+	.logo_cup{margin-right:72px;}
 }
 
 
@@ -795,12 +798,15 @@ MEDIA QUERIES
 	.logo_footer{width:193px;height:34px;background-size:193px;}
 	#footer .container{padding-top:51px;}
 	.colum_logo_footer{margin-bottom:42px;}
-	.colum_footer h3{margin-bottom:19px;}
+	.colum_footer h3,.colum_logo_footer h3{margin-bottom:19px;}
 	.colum_footer{margin-bottom:52px;}
 	.opc-f-teacher a:first-child{float:left !important;margin-bottom:0px;}
 	.opc-f-teacher a:last-child{float:right !important;margin-bottom:0px;}
 	.subfilter-teacher{padding-left:0;padding-right:0px;}
 	.rrss_footer ul{max-width:100%;}
+	.colum_logo_footer{text-align:left;}
+	.colum_logo_footer h3{margin-left:30px;}
+	.row_logos{margin-left:30px;}
 }
 
 @media screen and (max-width: 640px) {
@@ -872,15 +878,11 @@ MEDIA QUERIES
 	.cab_top_home .logo-para-ti{width:144px;background-size:144px;height:21px;margin-top:-10px;}
 	.colum-box-2{-webkit-column-count: 1;-moz-column-count: 1;column-count:1;}
 	.opc-f-teacher a{font-size:12px;}
-	/*.box_recurso{width:304px;height:420px;}
-	.color_over{height:256px;}
-	.body_recurso{height:256px;position:relative;}
-	.over_recurso_img{height:256px;}
-	.content_recurso{height:256px;}
-	.over_recurso_all{height:256px;}
-	.over_recurso_all>div{height:256px;}
-	.color_over{height:256px;}
-	.text_recurso{height:330px;}*/
+	.rrss_footer{display:block;}
+	.logo_cae{margin-right:0;margin-bottom:18px;}
+	.logo_cup{margin-right:0;margin-bottom:18px;}
+	.rrss_footer ul{margin-bottom:44px;}
+	.inf_footer{padding-top:71px;}
 }
 
 
