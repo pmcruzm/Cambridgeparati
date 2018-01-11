@@ -811,8 +811,6 @@ var validateForm = {
 
 		var age = getAge(birthDate);
 
-		console.log(age)
-
 		if( age < 14 ) {
 			return false;
 		}
