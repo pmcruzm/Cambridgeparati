@@ -637,6 +637,40 @@ function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
+// Checks a string, a valid date format of DD/MM/YYYY
+function isValidDate(s) {
+    var dateFormat = /^\d{2}\/\d{2}\/\d{4}$/;
+
+    if ( ! dateFormat.test(s) ) {
+        return false;
+    }
+
+    // remove any leading zeros from date values
+    s = s.replace(/0*(\d*)/gi,"$1");
+    var dateArray = s.split(/[\.|\/|-]/);
+
+  	// correct month value
+    dateArray[1] = dateArray[1]-1;
+
+    var testDate = new Date(dateArray[2], dateArray[1], dateArray[0]);
+
+    if (testDate.getDate()!=dateArray[0] || testDate.getMonth()!=dateArray[1] || testDate.getFullYear()!=dateArray[2]) {
+        return false;
+    }
+
+    return true;
+}
+
+function getAge(birthDate) {
+    var today = new Date();
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
 function recaptchaCallback(response) {
 	jQuery('div[data-validation-rule="recaptcha"]').data('is-verified', true);
 }
@@ -687,6 +721,7 @@ var validateForm = {
 		if( 'multi-checkbox' == rule ) {error = ! this.ruleMultiCheckbox(elem);}
 		if( 'min' == rule ) {error = ! this.ruleMinimumChars(elem, parseInt(params[0]));}
 		if( 'screenshot' == rule ) {error = ! this.ruleValidScreenshot(elem, params);}
+		if( 'birth-date' == rule ) {error = ! this.ruleValidBirthDate(elem, params);}
 
 
 		if( error ) {
@@ -762,7 +797,28 @@ var validateForm = {
 		var fileExtension = e.val().split('.').pop().toLowerCase();
 
 		return (jQuery.inArray(fileExtension, ['jpg','jpeg','png','gif']) !== -1 );
-	}
+	},
+
+	ruleValidBirthDate: function(e, params) {
+
+		if( ! isValidDate( e.val() ) ) {
+			return false;
+		}
+
+		var dateParts = e.val().split("/");
+
+		var birthDate = new Date(dateParts[2], dateParts[1]-1, dateParts[0])
+
+		var age = getAge(birthDate);
+
+		console.log(age)
+
+		if( age < 14 ) {
+			return false;
+		}
+
+		return true;
+	},
 
 }
 
