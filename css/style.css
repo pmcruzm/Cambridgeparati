@@ -414,7 +414,7 @@ RECURSOS
 .select_filter a:after{content:'';height:10px;display:block;width:10px;margin:0 auto;background:url(../svg/icon_topbar_arrow_w.svg) bottom center no-repeat;}
 .select_filter a.active:after{background:url(../svg/icon_topbar_arrow_w_c.svg) bottom center no-repeat;}
 
-	
+
 /*****************************
 CONTACTO
 ******************************/
@@ -637,6 +637,7 @@ input, textarea, select {-webkit-appearance: none;}
 .extend_menu_mob{display:none;}
 .helper{display: inline-block;height:100%;vertical-align:middle;}
 .helper_bottom{display: inline-block;height:100%;vertical-align:bottom;}
+.is-device *[hidden-device] {display: none;}
 
 /*Propiedades Placeholder*/
 #form-login input[type=text]::-webkit-input-placeholder,#form-login input[type=password]::-webkit-input-placeholder,#form-forgot-password input[type=text]::-webkit-input-placeholder{color:#c6c6c6 !important;opacity: 1 !important;}
@@ -696,7 +697,7 @@ MEDIA QUERIES
 	.filter.filter-cambridgequalifications label{width:150px;}
 	.rrss_footer ul{max-width:100px;margin-bottom:20px;}
 	.rrss_footer ul li{margin-bottom:10px;}
-	
+
 
 }
 
@@ -857,7 +858,7 @@ MEDIA QUERIES
 	.form-contact input[type="text"], .form-contact input[type="email"],.form-contact select{padding-left:28px;padding-right:28px;}
 	.contenedor-recursos .item .box_recurso{width:100%;}
 	.right-newsletter a{max-width:273px;}
-	
+
 }
 
 
