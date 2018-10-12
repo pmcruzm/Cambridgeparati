@@ -112,8 +112,8 @@ jQuery(document).on('ready',function(){
 						  auto: true,
 					  	  autoHover: true,
 						  controls: false,
-						  pause: 4000,
-						  speed:2000,
+						  pause: 6500,
+						  speed: 800,
 						  easing:'easeInOutCubic',
 						  adaptiveHeight:true,
 						  onSlideBefore: function(slideElement, oldIndex, newIndex){
