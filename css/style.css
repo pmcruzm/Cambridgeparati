@@ -402,7 +402,7 @@ RECURSOS
 .subfilter-teacher{border-bottom:2px solid #E33C10;padding-bottom:7px;padding-top:24px;text-align:center;box-sizing:border-box;padding-left:10px;padding-right:10px;}
 .subfilter-teacher.sin-filtros{border-bottom:none;}
 .subfilter-teacher p{color:#ffffff;font-size:14px;display:inline-block;line-height:40px;margin-right:31px;position:relative;top:-13px;font-family:'montserratregular', Helvetica, sans-serif;}
-.opc-f-teacher{display:inline-block;height: 40px;width:812px;border-radius:20px;background-color:#E33C10;position:relative;overflow:hidden;}
+.opc-f-teacher{display:inline-block;height: 40px;width:auto;border-radius:20px;background-color:#E33C10;position:relative;overflow:hidden;}
 .opc-f-teacher a{color: #FFFFFF;font-family:'montserratregular', Helvetica, sans-serif;font-size: 14px;line-height: 40px;display:inline-block;padding-left:32px;padding-right:32px;border-radius:20px;-webkit-transition: all 0.4s linear;-moz-transition: all 0.4s linear;-o-transition: all 0.4s linear;transition: all 0.4s linear;}
 .opc-f-teacher a:hover,.opc-f-teacher a.active{background:#ffffff;color:#E33C10;}
 .opc-f-teacher a:first-child{float:left;}
